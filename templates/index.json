@@ -39,7 +39,9 @@
     },
     "email-signup": {
       "type": "email-signup",
-      "settings": {}
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/email-cta-img.png"
+      }
     }
   },
   "order": [

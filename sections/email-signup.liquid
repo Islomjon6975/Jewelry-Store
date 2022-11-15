@@ -1,4 +1,24 @@
 {{ 'style.email-signup.css' | asset_url | stylesheet_tag }}\
 
+<style>
+  .email-cta {
+    background-image: url('{{ section.settings.bg_img | img_url: 'large' }}');
+  }
+</style>
 
 <div class="email-cta"></div>
+
+
+{% schema %}
+  {
+    "name": "Email SignUp CTA",
+    "settings": [
+      {
+        "id": "bg_img",
+        "type": "image_picker",
+        "label": "Background Image"
+      }
+
+    ]
+  }
+{% endschema %}

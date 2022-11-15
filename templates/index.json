@@ -31,7 +31,10 @@
       "type": "banners",
       "settings": {
         "banner_img": "shopify:\/\/shop_images\/banners-img1.png",
-        "banner_cta_line": "shopify:\/\/shop_images\/banners-lines.png"
+        "banner_cta_line": "shopify:\/\/shop_images\/banners-lines.png",
+        "cta_img": "shopify:\/\/shop_images\/banner-flower.png",
+        "cta_title": "Lorem ipsum dolor sit Amet.",
+        "cta_description": "Convallis ac faucibus maecenas blandit elit. Placerat tellus fermentum in amet ac vitae, justo, pellentesque. Diam massa neque, blandit proin dapibus nec."
       }
     }
   },

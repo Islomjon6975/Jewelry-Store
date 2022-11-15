@@ -8,12 +8,17 @@
         "nav_link_right": "navlink-right",
         "logo_link": "shopify:\/\/collections\/frontpage",
         "header_logo": "shopify:\/\/shop_images\/logo.png",
-        "header_logo_black": "shopify:\/\/shop_images\/logo-black.png"
+        "header_logo_black": "shopify:\/\/shop_images\/logo-black.png",
+        "header_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Amet.",
+        "header_btn": "Shop Collection"
       }
     },
     "featured-collections": {
       "type": "featured-collections",
-      "settings": {}
+      "settings": {
+        "collect_title": "jewelry that not only entices the eye but enchants the soul",
+        "collect_img": "shopify:\/\/shop_images\/image1.png"
+      }
     }
   },
   "order": [

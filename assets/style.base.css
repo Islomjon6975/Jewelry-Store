@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-black:#1D1D1D;
+    --primary-white: #FFFFFF;
+    --primary-dark-pink-text: #C09188;
+    --primary-dark-pink-background: #C09188;
+    --secondary-white: #F3E7E0;
+    --primary-font: "SF New Republic", sans-serif;
+    --secondary-font: "Minion Pro Regular", sans-serif;
+}

@@ -15,6 +15,11 @@
       <div class="footer__logo--wrapper">
         <img src="{{ section.settings.footer_logo | img_url: 'medium' }}" alt="footer-logo">
       </div>
+      <div class="footer-copyright__container">
+        <a class="footer-copyright__title p" href="#">{{ section.settings.footer_copyright_address }}</a>
+        <a class="footer-copyright__title p" href="#">{{ section.settings.footer_copyright_policy }}</a>
+        <a class="footer-copyright__title p" href="#">{{ section.settings.footer_copyright_year }}</a>
+      </div>
     </div>
     <div class="footer-col footer-col3">
       <ul class="footer-items">
@@ -24,8 +29,8 @@
           </li>
         {% endfor %}
         <li class="footer-item">
-          <a href="#">
-            <img src="{{ section.settings.footer_instagram }}" alt="footer-ingstagram">
+          <a href="{{ section.settings.footer_instagram_url}}" target="_blank">
+            <img src="{{ section.settings.footer_instagram.src | img_url: 'medium' }}" alt="footer-ingstagram">
           </a>
         </li>
       </ul>
@@ -60,6 +65,21 @@
         "id": "footer_instagram_url",
         "type": "url",
         "label": "Footer Icon Url"
+      }, {
+        "id": "footer_copyright_address",
+        "type": "text",
+        "label": "Copyright Address",
+        "default": "1234 Placeholder St. New York, NY"
+      }, {
+        "id": "footer_copyright_policy",
+        "type": "text",
+        "label": "Copyright Policy",
+        "default": "Privacy Policy"
+      }, {
+        "id": "footer_copyright_year",
+        "type": "text",
+        "label": "Copyright Year",
+        "default": "© 2022 D.Gregory"
       }
     ]
   }

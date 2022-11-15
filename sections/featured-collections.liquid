@@ -1,8 +1,24 @@
 {{ 'style.featured-collections.css' | asset_url | stylesheet_tag }}
 
 <div class="featured-collections">
-  <h2 class="featured-collections__title">{{ section.settings.collect_title }}</h2>
-  {% render 'card', image: section.settings.collect_img %}
+  <div class="featured-collections__wrapper">
+    <h2 class="featured-collections__title item1">{{ section.settings.collect_title }}</h2>
+    <script>
+      console.log({{ section.settings.product_list | json }}, 'his')
+    </script>
+    <div class="item2">
+      {% render 'card', title: "hiii" image: section.settings.collect_img | img_url: '1440x661'  %}
+    </div>
+    <div class="item3">
+      {% render 'card', title: "hiii" image: section.settings.collect_img | img_url: '1440x661'  %}
+    </div>
+    <div class="item4">
+      {% render 'card', title: "hiii" image: section.settings.collect_img | img_url: '1440x661'  %}
+    </div>
+    <div class="item5">
+      {% render 'card', title: "hiii" image: section.settings.collect_img | img_url: '1440x661'  %}
+    </div>
+  </div>
 </div>
 
 {% schema %}
@@ -18,6 +34,11 @@
         "id": "collect_img",
         "type": "image_picker",
         "label": "Image"
+      }, {
+        "type": "product_list",
+        "id": "product_list",
+        "label": "Products",
+        "limit": 4
       }
     ]
   }

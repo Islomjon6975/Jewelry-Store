@@ -1,7 +1,14 @@
-{{ 'style.banners.css' | asset_url | stylesheet_tag }}
+{{ 'style.banners.css' | asset_url | stylesheet_tag }}\
+
+<style>
+  .banners__cta: {
+    background-image: url('{{ section.settings.banner_cta_line | img_url: 'medium' }}')
+  }
+</style>
 
 <div class="banners">
   <img src="{{ section.settings.banner_img | img_url: 'medium' }}" alt="banner-img" class="banner-img">
+  <div class="banners__cta"></div>
 </div>
 
 {% schema %}
@@ -12,6 +19,10 @@
         "id": "banner_img",
         "type": "image_picker",
         "label": "Image 1"
+      }, {
+        "id": "banner_cta_line",
+        "type": "image_picker",
+        "label": "Banner Cta Line"
       }
     ]
   }

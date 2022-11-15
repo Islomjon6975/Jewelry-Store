@@ -30,5 +30,5 @@
 }
 
 .card__subtitle {
-    color: #C09188;
+    color: var(--primary-dark-pink-text);
 }

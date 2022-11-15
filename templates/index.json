@@ -25,10 +25,15 @@
           "ophelia"
         ]
       }
+    },
+    "banners": {
+      "type": "banners",
+      "settings": {}
     }
   },
   "order": [
     "header",
-    "featured-collections"
+    "featured-collections",
+    "banners"
   ]
 }

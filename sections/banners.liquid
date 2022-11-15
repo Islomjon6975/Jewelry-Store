@@ -1,0 +1,18 @@
+{{ 'style.banners.css' | asset_url | stylesheet_tag }}
+
+<div class="banners">
+  <img src="{{ section.settings.banner_img | img_url: 'medium' }}" alt="banner-img" class="banner-img">
+</div>
+
+{% schema %}
+  {
+    "name": "Banners",
+    "settings": [
+      {
+        "id": "banner_img",
+        "type": "image_picker",
+        "label": "Image 1"
+      }
+    ]
+  }
+{% endschema %}

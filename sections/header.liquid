@@ -1,0 +1,24 @@
+{{ 'style.header.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .header {
+    background-image: url('{{ section.settings.hero_image | img_url: '1440x661' }}');
+  }
+</style>
+
+<div class="header">
+  <div class="header__nav">header</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "id": "hero_image",
+        "type": "image_picker",
+        "label": "Hero Image"
+      }
+    ]
+  }
+{% endschema %}

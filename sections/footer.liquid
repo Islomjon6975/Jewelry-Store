@@ -3,26 +3,31 @@
 <div class="footer">
   <div class="footer__container">
     <div class="footer-col footer-col1">
-      <ul class="nav-items">
+      <ul class="footer-items">
         {% for link in section.settings.footer_left_links.links %}
-          <li class="nav-item">
-            <a href="{{ link.url }}" class="nav-link p">{{ link.title | escape  }}</a>
+          <li class="footer-item">
+            <a href="{{ link.url }}" class="footer-link p">{{ link.title | escape  }}</a>
           </li>
         {% endfor %}
       </ul>
     </div>
     <div class="footer-col footer-col2">
       <div class="footer__logo--wrapper">
-        <img src="{{ section.settings.footer_logo }}" alt="footer-logo">
+        <img src="{{ section.settings.footer_logo | img_url: 'medium' }}" alt="footer-logo">
       </div>
     </div>
     <div class="footer-col footer-col3">
-      <ul class="nav-items">
+      <ul class="footer-items">
         {% for link in section.settings.footer_right_links.links %}
-          <li class="nav-item">
-            <a href="{{ link.url }}" class="nav-link p">{{ link.title | escape  }}</a>
+          <li class="footer-item">
+            <a href="{{ link.url }}" class="footer-link p">{{ link.title | escape  }}</a>
           </li>
         {% endfor %}
+        <li class="footer-item">
+          <a href="#">
+            <img src="{{ section.settings.footer_instagram }}" alt="footer-ingstagram">
+          </a>
+        </li>
       </ul>
     </div>
   </div>
@@ -36,14 +41,25 @@
         "id": "footer_left_links",
         "type": "link_list",
         "label": "Footer Left Links"
-      }, {
+      },
+      {
         "id": "footer_right_links",
         "type": "link_list",
         "label": "Footer Right Links"
-      }, {
+      },
+      {
         "id": "footer_logo",
         "type": "image_picker",
         "label": "Footer Logo"
+      },
+      {
+        "id": "footer_instagram",
+        "type": "image_picker",
+        "label": "Footer Icon"
+      }, {
+        "id": "footer_instagram_url",
+        "type": "url",
+        "label": "Footer Icon Url"
       }
     ]
   }

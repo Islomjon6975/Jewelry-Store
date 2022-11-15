@@ -20,3 +20,40 @@
     justify-content: center;
     align-items: center;
 }
+
+.footer-col1 {
+    border-right: 1px solid var(--primary-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+
+.footer-item {
+    list-style-type: none
+}
+
+.footer-link {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.footer-col3 {
+    border-left: 1px solid var(--primary-black);
+}
+
+.footer__logo--wrapper {
+    width: 100%;
+    border-bottom: 1px solid var(--primary-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

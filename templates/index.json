@@ -4,7 +4,9 @@
       "type": "header",
       "settings": {
         "hero_image": "shopify:\/\/shop_images\/hero-image.png",
-        "nav_link": "main-menu",
+        "nav_link_left": "main-menu",
+        "nav_link_right": "navlink-right",
+        "logo_link": "",
         "header_logo": "shopify:\/\/shop_images\/logo.png",
         "header_logo_black": "shopify:\/\/shop_images\/logo-black.png"
       }

@@ -40,7 +40,7 @@
     "email-signup": {
       "type": "email-signup",
       "settings": {
-        "bg_img": "shopify:\/\/shop_images\/email-cta-img.png"
+        "bg_img": "shopify:\/\/shop_images\/email-cta-image.jpg"
       }
     }
   },

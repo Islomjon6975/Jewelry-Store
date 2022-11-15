@@ -11,7 +11,7 @@
   <div class="header__nav">
     <div class="nav-col">
       <ul class="nav-items">
-        {% for link in section.settings.nav_link.links %}
+        {% for link in section.settings.nav_link_left.links %}
           <li class="nav-item">
             <a href="{{ link.url }}" class="nav-link p">{{ link.title | escape  }}</a>
           </li>
@@ -20,26 +20,22 @@
     </div>
     <div class="nav-logo">
       {% if template == 'index' %}
-        <a href="#">
+        <a href="{{ section.settings.logo_link }}">
           <img src="{{ section.settings.header_logo.src | img_url: "144x" }}" alt="logo" class="logo">
         </a>
       {% else %}
-        <a href="#">
+        <a href="{{ section.settings.logo_link }}">
           <img src="{{ section.settings.header_logo_black.src | img_url: "144x" }}" alt="logo" class="logo">
         </a>
       {% endif %}
     </div>
     <div class="nav-col nav-right">
       <ul class="nav-items">
-        <li class="nav-item">
-          <a href="#" class="nav-link p">SEARCH</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link p">ACCOUNT</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link p">CART(0)</a>
-        </li>
+        {% for link in section.settings.nav_link_right.links %}
+          <li class="nav-item">
+            <a href="{{ link.url }}" class="nav-link p">{{ link.title | escape  }}</a>
+          </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
@@ -53,10 +49,21 @@
         "id": "hero_image",
         "type": "image_picker",
         "label": "Hero Image"
-      }, {
-        "id": "nav_link",
+      },
+      {
+        "id": "nav_link_left",
         "type": "link_list",
-        "label": "Nav Link"
+        "label": "Nav Link Left"
+      },
+      {
+        "id": "nav_link_right",
+        "type": "link_list",
+        "label": "Nav Link Right"
+      },
+      {
+        "id": "logo_link",
+        "type": "link_list",
+        "label": "Logo Url"
       }, {
         "id": "header_logo",
         "type": "image_picker",

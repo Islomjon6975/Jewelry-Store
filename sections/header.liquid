@@ -36,6 +36,9 @@
             <a href="{{ link.url }}" class="nav-link p">{{ link.title | escape  }}</a>
           </li>
         {% endfor %}
+        <li class="nav-item">
+          <a href="#" class="nav-link p">Cart (0)</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -62,7 +65,7 @@
       },
       {
         "id": "logo_link",
-        "type": "link_list",
+        "type": "url",
         "label": "Logo Url"
       }, {
         "id": "header_logo",

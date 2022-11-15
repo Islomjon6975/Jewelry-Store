@@ -1,14 +1,22 @@
 {{ 'style.banners.css' | asset_url | stylesheet_tag }}\
 
-<style>
-  .banners__cta: {
-    background-image: url('{{ section.settings.banner_cta_line | img_url: 'medium' }}')
-  }
-</style>
-
 <div class="banners">
-  <img src="{{ section.settings.banner_img | img_url: 'medium' }}" alt="banner-img" class="banner-img">
-  <div class="banners__cta"></div>
+  <img src="{{ section.settings.banner_img | img_url: 'large' }}" alt="banner-img" class="banner-img">
+  <div class="banners__cta">
+    {%- comment -%}
+      <img src="{{ section.settings.banner_cta_line |img_url: 'large' }}" alt="cta-line" class="cta-line">
+    {%- endcomment -%}
+    <div class="cta__container">
+      <div class="cta__left">
+        <img src="{{ section.settings.cta_img.src | img_url: 'medium' }}" alt="cta-img" class="cta-img">
+      </div>
+      <div class="cta__right">
+        <h2 class="cta__title">{{ section.settings.cta_title }}</h2>
+        <p class="cta__description">{{ section.settings.cta_description }}</p>
+        {% render 'secondary-button', title: 'SHOP THEM COLLECTION' %}
+      </div>
+    </div>
+  </div>
 </div>
 
 {% schema %}
@@ -18,11 +26,28 @@
       {
         "id": "banner_img",
         "type": "image_picker",
-        "label": "Image 1"
-      }, {
+        "label": "Banner Image"
+      },
+      {
         "id": "banner_cta_line",
         "type": "image_picker",
         "label": "Banner Cta Line"
+      },
+      {
+        "id": "cta_img",
+        "type": "image_picker",
+        "label": "Cta Image"
+      },
+      {
+        "id": "cta_title",
+        "type": "text",
+        "label": "Cta Title",
+        "default": "Lorem ipsum dolor sit Amet."
+      }, {
+        "id": "cta_description",
+        "type": "richtext",
+        "label": "Cta Description",
+        "default": "Convallis ac faucibus maecenas blandit elit. Placerat tellus fermentum in amet ac vitae, justo, pellentesque. Diam massa neque, blandit proin dapibus nec."
       }
     ]
   }

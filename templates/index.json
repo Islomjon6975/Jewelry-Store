@@ -3,7 +3,10 @@
     "header": {
       "type": "header",
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/hero-image.png"
+        "hero_image": "shopify:\/\/shop_images\/hero-image.png",
+        "nav_link": "main-menu",
+        "header_logo": "shopify:\/\/shop_images\/logo.png",
+        "header_logo_black": "shopify:\/\/shop_images\/logo-black.png"
       }
     }
   },

@@ -1,0 +1,10 @@
+.primary-btn {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 253px;
+    height: 44px;
+    background: var(--primary-white);
+    border-radius: 2px;
+    border: none;
+}

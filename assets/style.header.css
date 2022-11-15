@@ -4,6 +4,7 @@
     background-color: red;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 .header__nav {
@@ -12,6 +13,10 @@
     justify-content: space-between;
     padding: 0px 30px;
     padding-top: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .nav-col {
@@ -56,4 +61,32 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
+}
+
+.rich-text__title {
+    max-width: 668px;
+    margin-bottom: 22px;
+}
+
+.rich-text__btn {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 253px;
+    height: 44px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    border: none;
+    border-top-: 20px;
+}
+
+.header-arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-arrow svg:active {
+    transform: scale(0.97);
 }

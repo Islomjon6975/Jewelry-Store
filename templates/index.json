@@ -30,7 +30,7 @@
     "banners": {
       "type": "banners",
       "settings": {
-        "banner_img": "shopify:\/\/shop_images\/banner-img.jpg"
+        "banner_img": "shopify:\/\/shop_images\/banners-img1.png"
       }
     }
   },

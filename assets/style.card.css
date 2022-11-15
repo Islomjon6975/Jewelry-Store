@@ -6,4 +6,29 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    /* -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px; */
+    border-radius: 120% 120%  0%  0%  / 150%   150%   0%  0%; 
+    overflow: hidden;
+}
+
+.card__img {
+}
+
+.card__title {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.card__price {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom:10px;
+}
+
+.card__subtitle {
+    color: #C09188;
 }

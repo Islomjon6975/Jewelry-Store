@@ -1,8 +1,18 @@
 {{ 'style.card.css' | asset_url | stylesheet_tag }}
 
 <div class="card">
-  <img src="{{ image }}" alt="card">
-  <h3 class="card__title">{{ title }}</h3>
-  <h4 class="card__price">$15.700</h4>
+  <img src="{{ product.featured_image.src |img_url: 'medium'}}" alt="{{ product.handle }}" class="card__img">
+  <h3 class="card__title">{{ product.title }}</h3>
+  <h4 class="card__price">{{ product.price }}</h4>
   <h4 class="card__subtitle">New collection</h4>
 </div>
+
+
+<script>
+  formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 2
+  });
+  document.querySelector('.card__price').innerText = formatter.format(Number(document.querySelector('.card__price').innerText) / 100)
+</script>

@@ -1,23 +1,17 @@
 {{ 'style.featured-collections.css' | asset_url | stylesheet_tag }}
 
 <div class="featured-collections">
+  {% assign my_products = section.settings.product_list  %}
   <div class="featured-collections__wrapper">
-    <h2 class="featured-collections__title item1">{{ section.settings.collect_title }}</h2>
-    <script>
-      console.log({{ section.settings.product_list | json }}, 'his')
-    </script>
-    <div class="item2">
-      {% render 'card', title: "hiii" image: section.settings.collect_img | img_url: '1440x661'  %}
-    </div>
-    <div class="item3">
-      {% render 'card', title: "hiii" image: section.settings.collect_img | img_url: '1440x661'  %}
-    </div>
-    <div class="item4">
-      {% render 'card', title: "hiii" image: section.settings.collect_img | img_url: '1440x661'  %}
-    </div>
-    <div class="item5">
-      {% render 'card', title: "hiii" image: section.settings.collect_img | img_url: '1440x661'  %}
-    </div>
+    <h2 class="featured-collections__title item">{{ section.settings.collect_title }}</h2>
+    {% for product in my_products %}
+      <div class="item">
+        {% render 'card', product: product  %}
+      </div>
+    {% endfor  %}
+  </div>
+  <div class="featured-collections__btn">
+    {% render 'secondary-button', title: section.settings.collect_btn%};
   </div>
 </div>
 
@@ -28,7 +22,7 @@
       {
         "id": "collect_title",
         "type": "text",
-        "label": "CollectionTitle",
+        "label": "Title",
         "default": "jewelry that not only entices the eye but enchants the soul"
       }, {
         "id": "collect_img",
@@ -39,6 +33,11 @@
         "id": "product_list",
         "label": "Products",
         "limit": 4
+      }, {
+        "id": "collect_btn",
+        "type": "text",
+        "label": "Button",
+        "default": "SHOP ALL"
       }
     ]
   }

@@ -1,5 +1,48 @@
 .header {
     width: 100%;
-    height: calc(100vh-50px);
+    height: calc(100vh - 50px);
     background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+
+.nav-col {
+    flex: 1;
+    background: green;
+    border: 1px solid black;
+}
+
+.nav-logo {
+    width: 150px;
+    background: blue;
+}
+
+.nav-right {
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+.nav-items {
+    display: flex;
+    align-items:center;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--primary-white);
+}
+
+.logo {
+    width: 144px;
+    height: 80px;
 }

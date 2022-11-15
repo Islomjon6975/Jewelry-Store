@@ -154,6 +154,14 @@
         ],
         "settings": {
         }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "footer_left_links": "footer",
+          "footer_right_links": "footer-right",
+          "footer_logo": "shopify:\/\/shop_images\/logo-black.png"
+        }
       }
     },
     "content_for_index": [

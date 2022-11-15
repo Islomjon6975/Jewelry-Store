@@ -1,0 +1,24 @@
+{{ 'style.featured-collections.css' | asset_url | stylesheet_tag }}
+
+<div class="featured-collections">
+  <h2 class="featured-collections__title">{{ section.settings.collect_title }}</h2>
+  {% render 'card', image: section.settings.collect_img %}
+</div>
+
+{% schema %}
+  {
+    "name": "Featured Collections",
+    "settings": [
+      {
+        "id": "collect_title",
+        "type": "text",
+        "label": "CollectionTitle",
+        "default": "jewelry that not only entices the eye but enchants the soul"
+      }, {
+        "id": "collect_img",
+        "type": "image_picker",
+        "label": "Image"
+      }
+    ]
+  }
+{% endschema %}

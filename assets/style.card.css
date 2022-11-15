@@ -1,0 +1,5 @@
+.card {
+    width: 255px;
+    height: 386px;
+    background: var(--primary-white);
+}

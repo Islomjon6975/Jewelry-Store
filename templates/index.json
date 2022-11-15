@@ -10,9 +10,14 @@
         "header_logo": "shopify:\/\/shop_images\/logo.png",
         "header_logo_black": "shopify:\/\/shop_images\/logo-black.png"
       }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "settings": {}
     }
   },
   "order": [
-    "header"
+    "header",
+    "featured-collections"
   ]
 }

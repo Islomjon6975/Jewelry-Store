@@ -7,4 +7,11 @@
     background: var(--primary-white);
     border-radius: 2px;
     border: none;
+    position: relative;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    transition: transform .4s ease-in-out;
+}
+
+.primary-btn:active {
+    transform: scale(0.97);
 }

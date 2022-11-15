@@ -1,0 +1,30 @@
+{{ 'style.footer.css' | asset_url | stylesheet_tag }}
+
+<div class="footer">
+  <div class="footer__container">
+    <div class="footer-col footer-col1">1</div>
+    <div class="footer-col footer-col2">
+      <div class="footer__logo--wrapper">
+        <img src="{{ section.settings.footer_logo }}" alt="footer-logo">
+      </div>
+    </div>
+    <div class="footer-col footer-col3">3</div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "id": "footer_left_links",
+        "type": "link_list",
+        "label": "Footer Left Links"
+      }, {
+        "id": "footer_logo",
+        "type": "image_picker",
+        "label": "Footer Logo"
+      }
+    ]
+  }
+{% endschema %}

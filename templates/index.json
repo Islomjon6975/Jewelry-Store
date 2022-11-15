@@ -1,13 +1,13 @@
 {
-    "sections": {
-        "header": {
-            "type": "header",
-            "settings": {
-                
-            }
-        }
-    },
-    "order": [
-        "header"
-    ]
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "hero_image": "shopify:\/\/shop_images\/hero-image.png"
+      }
+    }
+  },
+  "order": [
+    "header"
+  ]
 }

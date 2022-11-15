@@ -135,14 +135,14 @@
           "eb1dc5e2-6f32-4d7e-bc72-14443c1b2a54": {
             "type": "announcement",
             "settings": {
-              "announcement_title": "Promo banner placeholder text",
+              "announcement_title": "20% OFF Sitewide until 9\/12",
               "announcement_link": "\/"
             }
           },
           "06078cc0-bac5-4a3e-8d5e-fb9cadffce6c": {
             "type": "announcement",
             "settings": {
-              "announcement_title": "Promo banner placeholder text",
+              "announcement_title": "30% OFF Sitewide until 9\/12",
               "announcement_link": "\/"
             }
           }

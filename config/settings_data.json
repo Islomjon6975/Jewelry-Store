@@ -160,7 +160,9 @@
         "settings": {
           "footer_left_links": "footer",
           "footer_right_links": "footer-right",
-          "footer_logo": "shopify:\/\/shop_images\/logo-black.png"
+          "footer_logo": "shopify:\/\/shop_images\/logo-black.png",
+          "footer_instagram": "shopify:\/\/shop_images\/instagram.png",
+          "footer_instagram_url": ""
         }
       }
     },

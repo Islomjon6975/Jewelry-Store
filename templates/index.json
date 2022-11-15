@@ -23,12 +23,15 @@
           "button-ruby",
           "medici",
           "ophelia"
-        ]
+        ],
+        "collect_btn": "SHOP ALL"
       }
     },
     "banners": {
       "type": "banners",
-      "settings": {}
+      "settings": {
+        "banner_img": "shopify:\/\/shop_images\/banners-img1.png"
+      }
     }
   },
   "order": [

@@ -1,9 +1,10 @@
-.primary-btn {
+.secondary-btn {
     display: flex;
     justify-content: center;
     align-items:center;
-    width: 253px;
-    height: 44px;
+    min-width: 253px;
+    padding: 11px 48px;
+    /* height: 44px; */
     background: var(--primary-black);
     border-radius: 2px;
     border: none;
@@ -13,6 +14,6 @@
     color: var(--primary-white);
 }
 
-.primary-btn:active {
+.secondary-btn:active {
     transform: scale(0.97);
 }

@@ -36,11 +36,16 @@
         "cta_title": "Lorem ipsum dolor sit Amet.",
         "cta_description": "Convallis ac faucibus maecenas blandit elit. Placerat tellus fermentum in amet ac vitae, justo, pellentesque. Diam massa neque, blandit proin dapibus nec."
       }
+    },
+    "email-signup": {
+      "type": "email-signup",
+      "settings": {}
     }
   },
   "order": [
     "header",
     "featured-collections",
-    "banners"
+    "banners",
+    "email-signup"
   ]
 }

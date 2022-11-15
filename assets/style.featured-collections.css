@@ -1,7 +1,7 @@
 
 .featured-collections {
     width: 100%;
-    background: var(--primary-dark-pink-background);
+    background: var(--secondary-dark-pink-background);
     padding: 60px 0;
     display: flex;
     flex-direction: column;

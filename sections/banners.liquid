@@ -3,10 +3,10 @@
 <div class="banners">
   <img src="{{ section.settings.banner_img | img_url: 'large' }}" alt="banner-img" class="banner-img">
   <div class="banners__cta">
-    {%- comment -%}
-      <img src="{{ section.settings.banner_cta_line |img_url: 'large' }}" alt="cta-line" class="cta-line">
-    {%- endcomment -%}
     <div class="cta__container">
+      {%- comment -%}
+        <img src="{{ section.settings.banner_cta_line |img_url: 'large' }}" alt="cta-line" class="cta-line">
+      {%- endcomment -%}
       <div class="cta__left">
         <img src="{{ section.settings.cta_img.src | img_url: 'medium' }}" alt="cta-img" class="cta-img">
       </div>

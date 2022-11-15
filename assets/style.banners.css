@@ -2,8 +2,9 @@
 .banners {
     width: 100%;
     background-color: var(--secondary-dark-pink-background);
-    border-top: 1px solid black;
-    height: 1400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
 }
 
 .banner-img {
@@ -14,18 +15,16 @@
 }
 
 .banners__cta {
-    padding: 60px 150px;
+    padding: 90px 150px;
 }
 
 .cta-line {
     position: absolute;
-    width: 100%;
+    width: 90%;
 }
 
 .cta__container {
     display: flex;
-    /* align-items:center; */
-    background: red;
     height: 571px;
 }
 

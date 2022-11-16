@@ -1,7 +1,5 @@
 {{ 'style.plp.css' | asset_url | stylesheet_tag }}
 
-
-
 <div class="plp">
   <div class="plp__header">
     <img src="{{ section.settings.plp_hero | img_url: 'large' }}" alt="plp-hero" class="plp__hero">
@@ -14,6 +12,7 @@
         {% endfor %}
       </ul>
     </div>
+    {% render 'product' %}
   </div>
 </div>
 

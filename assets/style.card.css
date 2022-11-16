@@ -1,17 +1,27 @@
 .card {
     width: 255px;
     height: 386px;
-    background: var(--primary-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    /* -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px; */
-    border-radius: 120% 120%  0%  0%  / 150%   150%   0%  0%; 
     overflow: hidden;
+    background-size: cover;
+    position: relative;
 }
 
 .card__img {
+    position: absolute;
+    bottom: 60px;
+}
+
+.card__details {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .card__title {

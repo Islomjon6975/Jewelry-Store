@@ -3,7 +3,8 @@
     "plp": {
       "type": "plp",
       "settings": {
-        "plp_hero": "shopify:\/\/shop_images\/email-cta-image.jpg"
+        "plp_hero": "shopify:\/\/shop_images\/email-cta-image.jpg",
+        "plp_title": "something"
       }
     }
   },

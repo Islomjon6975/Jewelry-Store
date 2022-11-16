@@ -4,54 +4,6 @@
     background-color: red;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-}
-
-.header__nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 30px;
-    padding-top: 4px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.nav-col {
-    flex: 1;
-}
-
-.nav-logo {
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-}
-
-.nav-right {
-    display: flex;
-    align-items:center;
-    justify-content: flex-end;
-}
-
-.nav-items {
-    display: flex;
-    align-items:center;
-    gap: 30px;
-    list-style-type: none;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--primary-white);
-    text-transform: uppercase;
-}
-
-.logo {
-    width: 144px;
-    height: 80px;
 }
 
 .rich-text {

@@ -43,6 +43,10 @@
     text-transform: uppercase;
 }
 
+.nav-black {
+    color: var(--primary-black);
+}
+
 .logo {
     width: 144px;
     height: 80px;

@@ -5,7 +5,7 @@
     <ul class="nav-items">
       {% for link in section.settings.nav_link_left.links %}
         <li class="nav-item">
-          <a href="{{ link.url }}" class="nav-link p">{{ link.title | escape  }}</a>
+          <a href="{{ link.url }}" class="nav-link p {% unless template == 'index' %}nav-black{% endunless %}">{{ link.title | escape  }}</a>
         </li>
       {% endfor %}
     </ul>
@@ -25,11 +25,11 @@
     <ul class="nav-items">
       {% for link in section.settings.nav_link_right.links %}
         <li class="nav-item">
-          <a href="{{ link.url }}" class="nav-link p">{{ link.title | escape  }}</a>
+          <a href="{{ link.url }}" class="nav-link p {% unless template == 'index' %}nav-black{% endunless %}">{{ link.title | escape  }}</a>
         </li>
       {% endfor %}
       <li class="nav-item">
-        <a href="#" class="nav-link p">Cart (0)</a>
+        <a href="#" class="nav-link p {% unless template == 'index' %}nav-black{% endunless %}">Cart (0)</a>
       </li>
     </ul>
   </div>

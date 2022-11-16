@@ -8,3 +8,7 @@
     height: 553px;
     background-color: var(--secondary-dark-pink-background);
 }
+
+.plp__hero {
+    width: 100%;
+}

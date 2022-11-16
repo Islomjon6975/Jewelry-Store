@@ -4,7 +4,8 @@
       "type": "plp",
       "settings": {
         "plp_hero": "shopify:\/\/shop_images\/email-cta-image.jpg",
-        "plp_title": "something"
+        "plp_title": "something",
+        "plp_paragraph": "tisfsdfsdf"
       }
     }
   },

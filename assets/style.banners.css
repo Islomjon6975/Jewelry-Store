@@ -16,6 +16,7 @@
 
 .banners__cta {
     padding: 90px 150px;
+
 }
 
 .cta-line {
@@ -23,9 +24,57 @@
     width: 90%;
 }
 
+.cta__line {
+    padding: 37px 85px;
+    border: 1px solid var(--primary-black);
+    position: relative;
+}
+
+.line_left-top {
+    position: absolute;
+    top: 15px;
+    left: -24px;
+    transform: rotate(24deg);
+    width: 95px;
+    height: 95px;
+    border-top:1px solid var(--primary-black);
+}
+
+.line_left-bottom {
+    position: absolute;
+    bottom: -72px;
+    left: 14px;
+    transform: rotate(-24deg);
+    width: 95px;
+    height: 95px;
+    border-top:1px solid var(--primary-black);
+}
+
+.line_right-top {
+    position: absolute;
+    top: 14px;
+    right: -24px;
+    transform: rotate(-24deg);
+    width: 95px;
+    height: 95px;
+    border-top:1px solid var(--primary-black);
+}
+
+.line_right-bottom {
+    position: absolute;
+    bottom: -72px;
+    right: 14px;
+    transform: rotate(24deg);
+    width: 95px;
+    height: 95px;
+    border-top:1px solid var(--primary-black);
+}
+
 .cta__container {
     display: flex;
     height: 571px;
+    background: green;
+    border: 1px solid var(--primary-black);
 }
 
 .cta__left {

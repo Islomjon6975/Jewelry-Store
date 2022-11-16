@@ -3,17 +3,20 @@
 <div class="banners">
   <img src="{{ section.settings.banner_img | img_url: 'large' }}" alt="banner-img" class="banner-img">
   <div class="banners__cta">
-    <div class="cta__container">
-      {%- comment -%}
-        <img src="{{ section.settings.banner_cta_line |img_url: 'large' }}" alt="cta-line" class="cta-line">
-      {%- endcomment -%}
-      <div class="cta__left">
-        <img src="{{ section.settings.cta_img.src | img_url: 'medium' }}" alt="cta-img" class="cta-img">
-      </div>
-      <div class="cta__right">
-        <h2 class="cta__title">{{ section.settings.cta_title }}</h2>
-        <p class="cta__description">{{ section.settings.cta_description }}</p>
-        {% render 'secondary-button', title: 'SHOP THEM COLLECTION' %}
+    <div class="cta__line">
+      <span class="line_left-top"></span>
+      <span class="line_left-bottom"></span>
+      <span class="line_right-top"></span>
+      <span class="line_right-bottom"></span>
+      <div class="cta__container">
+        <div class="cta__left">
+          <img src="{{ section.settings.cta_img.src | img_url: 'medium' }}" alt="cta-img" class="cta-img">
+        </div>
+        <div class="cta__right">
+          <h2 class="cta__title">{{ section.settings.cta_title }}</h2>
+          <p class="cta__description">{{ section.settings.cta_description }}</p>
+          {% render 'secondary-button', title: 'SHOP THEM COLLECTION' %}
+        </div>
       </div>
     </div>
   </div>

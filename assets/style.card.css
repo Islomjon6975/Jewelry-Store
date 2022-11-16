@@ -1,7 +1,3 @@
-.card__container {
-    text-decoration: none;
-}
-
 .card {
     width: 255px;
     height: 386px;
@@ -36,4 +32,3 @@
 .card__subtitle {
     color: var(--primary-dark-pink-text);
 }
-

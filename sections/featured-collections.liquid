@@ -3,10 +3,6 @@
 
 <div class="featured-collections">
   {% assign my_products = section.settings.product_list  %}
-  <script>
-    console.log({{ my_products |json }}, 'collections')
-    console.log('hhhh')
-  </script>
   <div class="featured-collections__wrapper">
     <h2 class="featured-collections__title item">{{ section.settings.collect_title }}</h2>
     {% for product in my_products %}
@@ -34,9 +30,9 @@
         "type": "image_picker",
         "label": "Image"
       }, {
-        "type": "collection_list",
+        "type": "product_list",
         "id": "product_list",
-        "label": "Collections",
+        "label": "Products",
         "limit": 4
       }, {
         "id": "collect_btn",

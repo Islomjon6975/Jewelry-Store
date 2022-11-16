@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "plp": {
+      "type": "plp",
+      "settings": {
+        "plp_hero": "shopify:\/\/shop_images\/email-cta-image.jpg",
+        "plp_nav_list": "plp-header-link"
+      }
+    }
+  },
+  "order": [
+    "plp"
+  ]
+}

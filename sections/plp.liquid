@@ -1,5 +1,22 @@
 {{ 'style.plp.css' | asset_url | stylesheet_tag }}
 
+
+
 <div class="plp">
-  plp
+  <div class="plp__header">
+    <img src="{{ section.settings.plp_hero | img_tag: 'x100' }}" alt="{plp-hero}" class="plp__hero">
+  </div>
 </div>
+
+{% schema %}
+  {
+    "name": "Product List Page",
+    "settings": [
+      {
+        "id": "plp_hero",
+        "type": "image_picker",
+        "label": "PLP Hero"
+      }
+    ]
+  }
+{% endschema %}

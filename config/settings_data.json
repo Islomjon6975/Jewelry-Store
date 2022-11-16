@@ -173,7 +173,7 @@
         "settings": {
           "nav_link_left": "main-menu",
           "nav_link_right": "navlink-right",
-          "logo_link": "shopify:\/\/collections\/frontpage",
+          "logo_link": "shopify:\/\/collections",
           "nav_logo": "shopify:\/\/shop_images\/logo.png",
           "nav_logo_black": "shopify:\/\/shop_images\/logo-black.png"
         }

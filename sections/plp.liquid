@@ -5,6 +5,7 @@
 <div class="plp">
   <div class="plp__header">
     <img src="{{ section.settings.plp_hero | img_url: 'x209' }}" alt="{plp-hero}" class="plp__hero">
+    <title>{{ section.settings.plp_title }}</title>
   </div>
 </div>
 
@@ -16,6 +17,10 @@
         "id": "plp_hero",
         "type": "image_picker",
         "label": "PLP Hero"
+      }, {
+        "id": "plp_title",
+        "type": "text",
+        "label": "PLP Title"
       }
     ]
   }

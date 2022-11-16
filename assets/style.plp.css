@@ -11,4 +11,7 @@
 
 .plp__hero {
     width: 100%;
+    min-height: 209px;
+    max-height: 309px;
+    margin-top: 80px;
 }

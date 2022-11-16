@@ -1,13 +1,12 @@
-
 {
-    "sections": {
-      "plp": {
-        "type": "plp",
-        "settings": {        }
+  "sections": {
+    "plp": {
+      "type": "plp",
+      "settings": {
       }
-    },
-    "order": [
-      "plp"
-    ]
-  }
-  
+    }
+  },
+  "order": [
+    "plp"
+  ]
+}

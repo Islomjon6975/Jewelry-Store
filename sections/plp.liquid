@@ -4,8 +4,9 @@
 
 <div class="plp">
   <div class="plp__header">
-    <img src="{{ section.settings.plp_hero | img_url: 'x209' }}" alt="{plp-hero}" class="plp__hero">
-    <title>{{ section.settings.plp_title }}</title>
+    <img src="{{ section.settings.plp_hero.src | img_url: '1440x209' }}" alt="{plp-hero}" class="plp__hero">
+    <h1>{{ section.settings.plp_title }}</h1>
+    <h1>{{ section.settings.plp_paragraph }}</h1>
   </div>
 </div>
 
@@ -20,7 +21,13 @@
       }, {
         "id": "plp_title",
         "type": "text",
-        "label": "PLP Title"
+        "label": "PLP Title",
+        "default": "ti"
+      }, {
+        "id": "plp_paragraph",
+        "type": "text",
+        "label": "PLP p",
+        "default": "ti"
       }
     ]
   }

@@ -13,11 +13,11 @@
   <div class="nav-logo">
     {% if template == 'index' %}
       <a href="{{ section.settings.logo_link }}">
-        <img src="{{ section.settings.header_logo.src | img_url: "144x" }}" alt="logo" class="logo">
+        <img src="{{ section.settings.nav_logo.src | img_url: "144x" }}" alt="logo" class="logo">
       </a>
     {% else %}
       <a href="{{ section.settings.logo_link }}">
-        <img src="{{ section.settings.header_logo_black.src | img_url: "144x" }}" alt="logo" class="logo">
+        <img src="{{ section.settings.nav_logo_black.src | img_url: "144x" }}" alt="logo" class="logo">
       </a>
     {% endif %}
   </div>
@@ -38,13 +38,8 @@
 
 {% schema %}
   {
-    "name": "Header",
+    "name": "Navbar",
     "settings": [
-      {
-        "id": "hero_image",
-        "type": "image_picker",
-        "label": "Hero Image"
-      },
       {
         "id": "nav_link_left",
         "type": "link_list",
@@ -59,24 +54,15 @@
         "id": "logo_link",
         "type": "url",
         "label": "Logo Url"
-      }, {
-        "id": "header_logo",
+      },
+      {
+        "id": "nav_logo",
         "type": "image_picker",
         "label": "Logo"
       }, {
-        "id": "header_logo_black",
+        "id": "nav_logo_black",
         "type": "image_picker",
         "label": "Logo Black"
-      }, {
-        "id": "header_title",
-        "type": "text",
-        "label": "Rich Text",
-        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Amet."
-      }, {
-        "id": "header_btn",
-        "type": "text",
-        "label": "Rich Text Button",
-        "default": "Shop Collection"
       }
     ]
   }

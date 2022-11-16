@@ -1,17 +1,18 @@
 {{ 'style.featured-collections.css' | asset_url | stylesheet_tag }}
 
+
 <div class="featured-collections">
   {% assign my_products = section.settings.product_list  %}
   <div class="featured-collections__wrapper">
     <h2 class="featured-collections__title item">{{ section.settings.collect_title }}</h2>
     {% for product in my_products %}
       <div class="item">
-        {% render 'card', product: product  %}
+        {% render 'card', product: product   %}
       </div>
     {% endfor  %}
   </div>
   <div class="featured-collections__btn">
-    {% render 'secondary-button', title: section.settings.collect_btn%};
+    {% render 'secondary-button', title: section.settings.collect_btn%}
   </div>
 </div>
 

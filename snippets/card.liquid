@@ -3,7 +3,7 @@
 <div class="card">
   <img src="{{ product.featured_image.src |img_url: 'medium'}}" alt="{{ product.handle }}" class="card__img">
   <h3 class="card__title">{{ product.title }}</h3>
-  <h4 class="card__price">{{ product.price }}</h4>
+  <h4 class="card__price">{{ product.price | money }}</h4>
   <h4 class="card__subtitle">New collection</h4>
 </div>
 
@@ -14,5 +14,4 @@
     currency: 'USD',
     maximumFractionDigits: 2
   });
-  document.querySelector('.card__price').innerText = formatter.format(Number(document.querySelector('.card__price').innerText) / 100)
 </script>

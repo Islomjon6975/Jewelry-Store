@@ -7,40 +7,7 @@
 </style>
 
 <div class="header">
-  <div class="header__nav">
-    <div class="nav-col">
-      <ul class="nav-items">
-        {% for link in section.settings.nav_link_left.links %}
-          <li class="nav-item">
-            <a href="{{ link.url }}" class="nav-link p">{{ link.title | escape  }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="nav-logo">
-      {% if template == 'index' %}
-        <a href="{{ section.settings.logo_link }}">
-          <img src="{{ section.settings.header_logo.src | img_url: "144x" }}" alt="logo" class="logo">
-        </a>
-      {% else %}
-        <a href="{{ section.settings.logo_link }}">
-          <img src="{{ section.settings.header_logo_black.src | img_url: "144x" }}" alt="logo" class="logo">
-        </a>
-      {% endif %}
-    </div>
-    <div class="nav-col nav-right">
-      <ul class="nav-items">
-        {% for link in section.settings.nav_link_right.links %}
-          <li class="nav-item">
-            <a href="{{ link.url }}" class="nav-link p">{{ link.title | escape  }}</a>
-          </li>
-        {% endfor %}
-        <li class="nav-item">
-          <a href="#" class="nav-link p">Cart (0)</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+
   <div class="rich-text">
     <h1 class="rich-text__title">{{ section.settings.header_title }}</h1>
     {% render 'primary-button', title: section.settings.header_btn  %}

@@ -1,0 +1,83 @@
+{{ 'style.navbar.css' | asset_url | stylesheet_tag }}
+
+<div class="header__nav">
+  <div class="nav-col">
+    <ul class="nav-items">
+      {% for link in section.settings.nav_link_left.links %}
+        <li class="nav-item">
+          <a href="{{ link.url }}" class="nav-link p">{{ link.title | escape  }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="nav-logo">
+    {% if template == 'index' %}
+      <a href="{{ section.settings.logo_link }}">
+        <img src="{{ section.settings.header_logo.src | img_url: "144x" }}" alt="logo" class="logo">
+      </a>
+    {% else %}
+      <a href="{{ section.settings.logo_link }}">
+        <img src="{{ section.settings.header_logo_black.src | img_url: "144x" }}" alt="logo" class="logo">
+      </a>
+    {% endif %}
+  </div>
+  <div class="nav-col nav-right">
+    <ul class="nav-items">
+      {% for link in section.settings.nav_link_right.links %}
+        <li class="nav-item">
+          <a href="{{ link.url }}" class="nav-link p">{{ link.title | escape  }}</a>
+        </li>
+      {% endfor %}
+      <li class="nav-item">
+        <a href="#" class="nav-link p">Cart (0)</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "id": "hero_image",
+        "type": "image_picker",
+        "label": "Hero Image"
+      },
+      {
+        "id": "nav_link_left",
+        "type": "link_list",
+        "label": "Nav Link Left"
+      },
+      {
+        "id": "nav_link_right",
+        "type": "link_list",
+        "label": "Nav Link Right"
+      },
+      {
+        "id": "logo_link",
+        "type": "url",
+        "label": "Logo Url"
+      }, {
+        "id": "header_logo",
+        "type": "image_picker",
+        "label": "Logo"
+      }, {
+        "id": "header_logo_black",
+        "type": "image_picker",
+        "label": "Logo Black"
+      }, {
+        "id": "header_title",
+        "type": "text",
+        "label": "Rich Text",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Amet."
+      }, {
+        "id": "header_btn",
+        "type": "text",
+        "label": "Rich Text Button",
+        "default": "Shop Collection"
+      }
+    ]
+  }
+{% endschema %}

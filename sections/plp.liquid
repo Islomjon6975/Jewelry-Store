@@ -4,9 +4,16 @@
 
 <div class="plp">
   <div class="plp__header">
-    <img src="{{ section.settings.plp_hero.src | img_url: '1440x209' }}" alt="{plp-hero}" class="plp__hero">
-    <h1>{{ section.settings.plp_title }}</h1>
-    <h1>{{ section.settings.plp_paragraph }}</h1>
+    <img src="{{ section.settings.plp_hero | img_url: 'large' }}" alt="plp-hero" class="plp__hero">
+    <div class="plp__header__nav">
+      <ul class="plp__header__items">
+        {% for link in section.settings.plp_nav_list.links %}
+          <li class="plp__header__item plp__header__item--btn">
+            <a href="{{ link.url }}" class="plp__header__link h3 ">{{ link.title | escape }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -19,15 +26,9 @@
         "type": "image_picker",
         "label": "PLP Hero"
       }, {
-        "id": "plp_title",
-        "type": "text",
-        "label": "PLP Title",
-        "default": "ti"
-      }, {
-        "id": "plp_paragraph",
-        "type": "text",
-        "label": "PLP p",
-        "default": "ti"
+        "id": "plp_nav_list",
+        "type": "link_list",
+        "label": "PLP Header List"
       }
     ]
   }

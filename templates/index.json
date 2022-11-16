@@ -4,11 +4,6 @@
       "type": "header",
       "settings": {
         "hero_image": "shopify:\/\/shop_images\/hero-image.png",
-        "nav_link_left": "main-menu",
-        "nav_link_right": "navlink-right",
-        "logo_link": "shopify:\/\/collections\/frontpage",
-        "header_logo": "shopify:\/\/shop_images\/logo.png",
-        "header_logo_black": "shopify:\/\/shop_images\/logo-black.png",
         "header_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Amet.",
         "header_btn": "Shop Collection"
       }
@@ -19,10 +14,10 @@
         "collect_title": "jewelry that not only entices the eye but enchants the soul",
         "collect_img": "shopify:\/\/shop_images\/image1.png",
         "product_list": [
-          "alla",
-          "button-ruby",
-          "medici",
-          "ophelia"
+          "bracelets",
+          "earrings",
+          "necklaces",
+          "rings"
         ],
         "collect_btn": "SHOP ALL"
       }
@@ -40,7 +35,10 @@
     "email-signup": {
       "type": "email-signup",
       "settings": {
-        "bg_img": "shopify:\/\/shop_images\/email-cta-image.jpg"
+        "bg_img": "shopify:\/\/shop_images\/email-cta-image.jpg",
+        "email_cta_title": "Lorem ipsum dolor sit amet consectetur adipiscing.",
+        "email_cta_input_placeholder": "Enter your Email",
+        "email_cta_btn": "Sign up"
       }
     }
   },

@@ -162,7 +162,20 @@
           "footer_right_links": "footer-right",
           "footer_logo": "shopify:\/\/shop_images\/logo-black.png",
           "footer_instagram": "shopify:\/\/shop_images\/instagram.png",
-          "footer_instagram_url": "https:\/\/www.instagram.com\/appliedlabs\/"
+          "footer_instagram_url": "https:\/\/www.instagram.com\/appliedlabs\/",
+          "footer_copyright_address": "1234 Placeholder St. New York, NY",
+          "footer_copyright_policy": "Privacy Policy",
+          "footer_copyright_year": "© 2022 D.Gregory"
+        }
+      },
+      "navbar": {
+        "type": "navbar",
+        "settings": {
+          "nav_link_left": "main-menu",
+          "nav_link_right": "navlink-right",
+          "logo_link": "shopify:\/\/collections\/frontpage",
+          "nav_logo": "shopify:\/\/shop_images\/logo.png",
+          "nav_logo_black": "shopify:\/\/shop_images\/logo-black.png"
         }
       }
     },

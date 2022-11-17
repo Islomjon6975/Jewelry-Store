@@ -1,0 +1,12 @@
+{{ 'style.product.css' | asset_url | stylesheet_tag }}
+
+<div class="product">
+  <div class="product-image__wrapper">
+    <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="" class="product__image">
+  </div>
+  <div class="product__info">
+    <h3 class="product__title">{{ product.title }}</h3>
+    <h4 class="product__price">{{ product.price | money }}</h4>
+    <h4 class="product__subtitle">{{ product.collections[0] }}</h4>
+  </div>
+</div>

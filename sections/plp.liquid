@@ -1,7 +1,5 @@
 {{ 'style.plp.css' | asset_url | stylesheet_tag }}
 
-
-
 <div class="plp">
   <div class="plp__header">
     <img src="{{ section.settings.plp_hero | img_url: 'large' }}" alt="plp-hero" class="plp__hero">
@@ -15,6 +13,35 @@
       </ul>
     </div>
   </div>
+
+  <div class="products__container">
+    <div class="products__selection__wrapper">
+      <div class="sort__wrapper">
+        <label class="label h4" for="sort">Sort By</label>
+        <select class="select h4" name="" id="sort">
+          <option class="option h4" value="Select">Select</option>
+          <option class="option h4" value="Select">Select</option>
+          <option class="option h4" value="Select">Select</option>
+        </select>
+      </div>
+
+      <div class="collection__wrapper">
+        <label class="label h4" for="collections">Collections</label>
+        <select class="select h4" name="" id="collections">
+          <option class="option h4" value="Select">Select</option>
+          <option class="option h4" value="Select">Select</option>
+          <option class="option h4" value="Select">Select</option>
+        </select>
+      </div>
+
+    </div>
+    <div class="products__list">
+      {% for product in collection.products %}
+        {% render 'product', product: product %}
+      {% endfor %}
+    </div>
+  </div>
+
 </div>
 
 {% schema %}

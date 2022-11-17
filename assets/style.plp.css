@@ -5,8 +5,8 @@
 }
 
 .plp__header {
-    height: 553px;
     background-color: var(--secondary-dark-pink-background);
+    border-bottom: 1px solid black;
 }
 
 .plp__hero {
@@ -21,7 +21,6 @@
     display: flex;
     align-items:center;
     justify-content: center;
-    border: 1px solid black;
 }
 
 .plp__header__items {

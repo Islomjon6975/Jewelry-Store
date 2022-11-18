@@ -125,11 +125,26 @@
     border: 1px solid var(--primary-black);
 }
 
+.pagination__content {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 40px;
+}
+
 .pagination__link {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.pagination__link:first-child {
+    border-radius: 1px solid var(--primary-black);
+}
+
+.pagination__link:last-child {
+    border-radius: 1px solid var(--primary-black);
 }
 
 .pagination-active {

@@ -60,7 +60,7 @@
     z-index: 999;
     background-color: white;
     display: none;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .image-modal__wrapper {
@@ -88,4 +88,5 @@
 
 .modal__image {
     width: 500px;
+    border: 1px solid black;
 }

@@ -35,10 +35,14 @@
     height: 78px;
 }
 
+.pdp__image--item:hover {
+    transform: scale(1.05);
+}
+
 .pdp__image--wrapper {
     height: 100%;
     width: 100%;
-    padding: 80px;
+    padding: 100px;
     display: flex;
     justify-content: center;
     align-items:center;

@@ -117,8 +117,9 @@
 
 /* Pagination */
 .pagination {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     width: 100%;
     margin-top: 82px;
@@ -129,9 +130,11 @@
 .pagination .prev {
     height: 100%;
     border: 1px solid black;
+    flex: 1;
 }
 
 .pagination .next {
     height: 100%;
     border: 1px solid black;
+    flex: 1;
 }

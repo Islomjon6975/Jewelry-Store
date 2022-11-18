@@ -12,11 +12,25 @@
 
 .pdp__image--container {
     border-right: 1px solid black;
-}
-
-.pdp__image--wrapper {
     width: 100%;
     height: 608px;
     clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
     background-color: var(--primary-white);
+    display: flex;
+    align-items: center;
+}
+
+.pdp__images--wrapper {
+    width: 100%;
+    background-color: green;
+}
+
+.pdp__image--wrapper {
+    height: 100%;
+    width: 648px;
+}
+
+.pdp__image {
+    width: 100%;
+    height: 100%;
 }

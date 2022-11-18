@@ -132,7 +132,7 @@
     gap: 40px;
 }
 
-.pagination__content {
+.pagination__content a {
     width: 40px;
     height: 40px;
     background: #FFFFFF;

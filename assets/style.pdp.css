@@ -1,7 +1,6 @@
 .pdp {
     background-color: var(--secondary-dark-pink-background);
     padding-top: 132px;
-    position: relative;
 }
 
 .pdp__container {

@@ -89,10 +89,11 @@
 <script>
   const pagination = document.querySelector('.pagination');
   const pages = document.querySelectorAll('.page');
+  const next = document.querySelectorAll('.next');
   const pageWrapper = document.createElement('div')
-  pagination.insertBefore('.next', pageWrapper)
   pageWrapper.classList.add('page__wrapper')
   pages.forEach(page => {
     pageWrapper.innerHTML+=page
   })
+  pagination.insertBefore(pageWrapper, next )
 </script>

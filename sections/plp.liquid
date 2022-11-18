@@ -1,4 +1,6 @@
 {{ 'style.plp.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'script.sort_by.js' | asset_url }}" defer></script>
+
 
 <div class="plp">
   <div class="plp__header">
@@ -29,12 +31,6 @@
       {%- comment -%} ---------- Products Sort ------------- {%- endcomment -%}
       <div class="sort__wrapper">
         <label class="label h4" for="sort">Sort By</label>
-        {%- comment -%} <select class="select h4" name="" id="sort">
-          <option class="option h4" value="Select">Select</option>
-          <option class="option h4" value="Select">Select</option>
-          <option class="option h4" value="Select">Select</option>
-        </select> {%- endcomment -%}
-
         <select class="sort-by select h4" id="sort-by">
           {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
           Sort By
@@ -49,10 +45,11 @@
       <div class="collection__wrapper">
         <label class="label h4" for="collections">Collections</label>
         <select class="select h4" name="" id="collections">
-          <option class="option h4" value="Select">Select</option>
-          <option class="option h4" value="Select">Select</option>
-          <option class="option h4" value="Select">Select</option>
+          {% for collection in section.settings.plp_collections %}
+            <option class="option h4" value="{{ collection.title }}"><a href="{{ collection.url }}">{{ collection.title }}</a></option>
+          {% endfor %}
         </select>
+        
       </div>
     </div>
     <div class="products__list">
@@ -73,6 +70,11 @@
         "id": "plp_nav_list",
         "type": "link_list",
         "label": "PLP Header List"
+      },
+      {
+        "id": "plp_collections",
+        "type": "link_list",
+        "label": "Collections"
       }
     ]
   }

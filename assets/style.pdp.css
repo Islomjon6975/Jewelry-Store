@@ -1,9 +1,9 @@
 .pdp {
-    margin-top: 80px;
     background-color: var(--secondary-dark-pink-background);
 }
 
 .pdp__container {
+    margin-top: 80px;
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     grid-gap: 40px;
@@ -35,6 +35,9 @@
     width: 100%;
     background-color: blue;
     padding: 80px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 }
 
 .pdp__image {

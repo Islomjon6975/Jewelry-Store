@@ -90,7 +90,7 @@
   const pagination = document.querySelector('.pagination');
   const pages = document.querySelectorAll('.page');
   const pageWrapper = document.createElement('div')
-  pagination.insertBefore('.next')
+  pagination.insertBefore('.next', pageWrapper)
   pageWrapper.classList.add('page__wrapper')
   pages.forEach(page => {
     pageWrapper.innerHTML+=page

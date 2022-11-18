@@ -137,14 +137,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .pagination__link:first-child {
-    border-radius: 1px solid var(--primary-black);
+    border-right: 1px solid var(--primary-black);
 }
 
 .pagination__link:last-child {
-    border-radius: 1px solid var(--primary-black);
+    border-left: 1px solid var(--primary-black);
 }
 
 .pagination-active {

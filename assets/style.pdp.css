@@ -36,7 +36,7 @@
 }
 
 .pdp__image--item:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .pdp__image--wrapper {
@@ -90,4 +90,11 @@
 .modal__image {
     width: 300px;
     border: 1px solid black;
+}
+
+/* Product Details */
+
+.pdp__details--container {
+    display: flex;
+    flex-direction: column;
 }

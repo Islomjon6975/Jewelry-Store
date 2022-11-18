@@ -1,6 +1,7 @@
 .pdp {
     background-color: var(--secondary-dark-pink-background);
     padding-top: 132px;
+    position: relative;
 }
 
 .pdp__container {
@@ -80,6 +81,6 @@
 }
 
 .modal__image {
-    width: 1000px;
-    height: 1000px;
+    width: 700px;
+    height: 700px;
 }

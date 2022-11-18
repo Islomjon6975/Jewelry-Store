@@ -58,15 +58,12 @@
             {% render 'product', product: {{product}} %}
           {% endfor %}
       </div>
-      <div>
+      <div class="pagination">
         {{- paginate | default_pagination -}}
       </div>
     {% endpaginate %}
 </div>
 
-<div class="pagination">
-    
-</div>
 {% schema %}
   {
     "name": "Product List Page",

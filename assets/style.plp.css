@@ -65,7 +65,6 @@
 .products__container {
     width: 100%;
     background-color: var(--secondary-dark-pink-background);
-    padding-bottom: 80px;
 }
 
 .products__selection__wrapper {
@@ -113,4 +112,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
+}
+
+
+/* Pagination */
+.pagination {
+    width: 100%;
+    margin-top: 82px;
+    height: 91px;
+    border: 1px solid var(--primary-black);
 }

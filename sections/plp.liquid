@@ -3,14 +3,8 @@
 <div class="plp">
   <div class="plp__header">
     <img src="{{ section.settings.plp_hero | img_url: 'large' }}" alt="plp-hero" class="plp__hero">
+    {%- comment -%} ---------- Product Types ------------- {%- endcomment -%}
     <div class="plp__header__nav">
-      {%- comment -%} <ul class="plp__header__items">
-        {% for link in section.settings.plp_nav_list.links %}
-          <li class="plp__header__item plp__header__item--btn">
-            <a href="{{ link.url }}" class="plp__header__link h3 ">{{ link.title | escape }}</a>
-          </li>
-        {% endfor %}
-      </ul> {%- endcomment -%}
       <form class="filter-form">
         {%- for filter in collection.filters -%}
             <ul class="filter-group-display plp__header__items">
@@ -28,16 +22,27 @@
       </form>
     </div>
   </div>
-
+    {%- comment -%} ---------- Products Container ------------- {%- endcomment -%}
   <div class="products__container">
+    {%- comment -%} ---------- Products Selection ------------- {%- endcomment -%}
     <div class="products__selection__wrapper">
+      {%- comment -%} ---------- Products Sort ------------- {%- endcomment -%}
       <div class="sort__wrapper">
         <label class="label h4" for="sort">Sort By</label>
-        <select class="select h4" name="" id="sort">
+        {%- comment -%} <select class="select h4" name="" id="sort">
           <option class="option h4" value="Select">Select</option>
           <option class="option h4" value="Select">Select</option>
           <option class="option h4" value="Select">Select</option>
-        </select>
+        </select> {%- endcomment -%}
+        <select class="sort-by" id="sort-by">
+        {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+        Sort By
+        {% for option in collection.sort_options %}
+          <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
+            {{ option.name }}
+          </option>
+        {% endfor %}
+      </select>
       </div>
 
       <div class="collection__wrapper">

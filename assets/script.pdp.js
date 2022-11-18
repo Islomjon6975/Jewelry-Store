@@ -1,7 +1,7 @@
 
 // product image
-const image = document.querySelector('.pdp__image--wrapper');
-const openModal = document.querySelector('.image-modal');
+const openModal = document.querySelector('.pdp__image--wrapper');
+const imageModal = document.querySelector('.image-modal');
 const closeModal = document.querySelector('.close svg');
 
 openModal.addEventListener('click', () => {

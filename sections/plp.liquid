@@ -14,16 +14,23 @@
       <form class="filter-form">
         {%- for filter in collection.filters -%}
           <details class="filter-group">
-            
+            {%- comment -%} <summary class="filter-group-summary">
+              <div>
+                <span>{{ filter.label }}</span>
+                {%- if filter.active_values.size > 0 -%}
+                  <span>({{ filter.active_values.size }})</span>
+                {%- endif -%}
+              </div>
+            </summary> {%- endcomment -%}
 
             <div class="filter-group-display">
-              <div class="filter-group-display__header">
+              {%- comment -%} <div class="filter-group-display__header">
                 <span class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</span>
 
                 {%- if filter.active_values.size > 0 -%}
                   <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset">Reset</a>
                 {%- endif -%}
-              </div>
+              </div> {%- endcomment -%}
 
               {%- case filter.type -%}
                 {%- when 'boolean' or 'list' -%}
@@ -57,9 +64,9 @@
                     </div>
                   </div>
 
-                  <div class="filter-group-display__submit">
+                  {%- comment -%} <div class="filter-group-display__submit">
                     <input type="submit" value="Apply">
-                  </div>
+                  </div> {%- endcomment -%}
               {%- endcase -%}
             </div>
           </details>

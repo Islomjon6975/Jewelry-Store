@@ -117,85 +117,21 @@
 
 /* Pagination */
 .pagination {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     margin-top: 82px;
     height: 91px;
     border: 1px solid var(--primary-black);
 }
 
-.pagination .prev {
+.pagination__link {
     height: 100%;
-    border-right: 1px solid black;
-    width: 400px;
     display: flex;
     justify-content: center;
-    align-items:center;
-
-    font-family: 'SF New Republic';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    /* identical to box height, or 143% */
-
-    display: flex;
     align-items: center;
-    text-align: center;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-
-    /* Black */
-
-    color: #1D1D1D;
-    text-decoration: none !important;
-    display: flex !important;
 }
 
-.pagination .next {
-    height: 100%;
-    border-left: 1px solid black;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-
-    font-family: 'SF New Republic';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    /* identical to box height, or 143% */
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-
-    /* Black */
-
-    color: #1D1D1D !important;
-    text-decoration: none !important;
-    display: flex !important;
+.pagination-active {
+    opacity: 0.5;
 }
-
-.pagination .next a, .pagination .prev a {
-    color: #1D1D1D !important;
-    text-decoration: none !important;
-    display: flex !important;
-}
-
-.pagination .current {
-    width: 40px;
-    height: 40px;
-    background: #FFFFFF;
-    border-radius: 2px;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-}
-

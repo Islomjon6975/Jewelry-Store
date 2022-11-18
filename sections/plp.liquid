@@ -76,7 +76,7 @@
           {% endfor %}
       </div>
       <div class="pagination">
-        <a href="{{ pagination.previous.url }}" class="pagination__link {% if pagination.previous.url %}pagination-active{% endif %}">Previous</a>
+        <a href="{{ pagination.previous.url }}" class="pagination__link h4 {% if pagination.previous.url %}pagination-active{% endif %}">Previous</a>
         <div class="pagination__content">
           {% for part in paginate.parts %}
             {% if part.is_link -%}

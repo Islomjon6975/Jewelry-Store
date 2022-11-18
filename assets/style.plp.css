@@ -117,9 +117,21 @@
 
 /* Pagination */
 .pagination {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
     width: 100%;
     margin-top: 82px;
     height: 91px;
     border: 1px solid var(--primary-black);
 }
 
+.pagination .prev {
+    height: 100%;
+    border: 1px solid black;
+}
+
+.pagination .next {
+    height: 100%;
+    border: 1px solid black;
+}

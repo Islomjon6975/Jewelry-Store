@@ -53,20 +53,17 @@
       </div>
     </div>
     <div class="products__list">
-      {% for product in collection.products %}
-        {% render 'product', product: {{product}} %}
-      {% endfor %}
+      {% paginate collection.products by 2 %}
+        {% for product in collection.products %}
+          {% render 'product', product: {{product}} %}
+        {% endfor %}
+          {{- paginate | default_pagination -}}
+      {% endpaginate %}
     </div>
 </div>
 
 <div class="pagination">
-  {% paginate collection.products by 2 %}
-    {% for product in collection.products %}
-      {{- product.title }} product card
-    {% endfor %}
-
-    {{- paginate | default_pagination -}}
-  {% endpaginate %}
+    
 </div>
 {% schema %}
   {

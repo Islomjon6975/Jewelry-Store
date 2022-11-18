@@ -1,13 +1,15 @@
 .pdp {
     background-color: var(--secondary-dark-pink-background);
+    padding-top: 80px;
 }
 
 .pdp__container {
-    margin-top: 80px;
+    padding-top: 72px;
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     grid-gap: 40px;
     padding: 0 32px;
+    border-top: 1px solid var(--primary-black);
 }
 
 .pdp__image--container {
@@ -23,11 +25,11 @@
 .pdp__images--wrapper {
     height: 100%;
     width: 150px;
-    background-color: green;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    border-right: 1px solid black;
 }
 
 .pdp__image--wrapper {

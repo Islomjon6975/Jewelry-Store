@@ -3,15 +3,16 @@
 
 <div class="pdp">
   <div class="image-modal">
-    <span class="close">
-      {% render 'icon-close' %}
-    </span>
-    <div class="modal__images">
-      {% for item in product.images %}
-        <img class="modal__image lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
-      {% endfor %}
+    <div class="image-modal__wrapper">
+      <span class="close">
+        {% render 'icon-close' %}
+      </span>
+      <div class="modal__images">
+        {% for item in product.images %}
+          <img class="modal__image lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
+        {% endfor %}
+      </div>
     </div>
-
   </div>
   <div class="pdp__container">
     <div class="pdp__image--container">

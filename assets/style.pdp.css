@@ -60,6 +60,10 @@
     z-index: 999;
     background-color: white;
     display: none;
+}
+
+.image-modal__wrapper {
+    display: flex;
     justify-content: center;
     align-items:center;
     position: relative;

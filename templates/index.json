@@ -3,9 +3,6 @@
     "header": {
       "type": "header",
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/hero-image.png",
-        "header_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Amet.",
-        "header_btn": "Shop Collection"
       }
     },
     "featured-collections": {

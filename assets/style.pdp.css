@@ -21,13 +21,14 @@
 }
 
 .pdp__images--wrapper {
-    width: 100%;
+    width: 138px;
     background-color: green;
 }
 
 .pdp__image--wrapper {
     height: 100%;
-    width: 648px;
+    width: 100%;
+    background-color: blue;
 }
 
 .pdp__image {

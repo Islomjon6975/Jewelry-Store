@@ -132,6 +132,16 @@
     gap: 40px;
 }
 
+.pagination__content {
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .pagination__link {
     height: 100%;
     display: flex;

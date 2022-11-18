@@ -5,21 +5,7 @@
     <img src="{{ section.settings.plp_hero | img_url: 'large' }}" alt="plp-hero" class="plp__hero">
     {%- comment -%} ---------- Product Types ------------- {%- endcomment -%}
     <div class="plp__header__nav">
-      <form class="filter-form">
-        {%- for filter in collection.filters -%}
-            <ul class="filter-group-display plp__header__items">
-              <li class="filter-group-display__list-item plp__header__item">
-                  <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset plp__header__link h3">All</a>
-              </li>
-              {%- for filter_value in filter.values -%}
-                <li class="filter-group-display__list-item plp__header__item">
-                  <label  onclick="this.form.submit()" for="Filter-{{ filter.param_name }}-{{ forloop.index }}" class="plp__header__link h3">
-                    <input onclick="this.form.submit()" hidden type="checkbox" name="{{ filter_value.param_name }}" value="{{ filter_value.value }}" id="Filter-{{ filter.param_name }}-{{ forloop.index }}" {% if filter_value.active -%}checked{%- endif %} {% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}>{{ filter_value.label }}</label>
-                </li>
-              {%- endfor -%}
-            </ul>
-        {%- endfor -%}
-      </form>
+     
     </div>
   </div>
     {%- comment -%} ---------- Products Container ------------- {%- endcomment -%}

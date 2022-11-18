@@ -4,14 +4,13 @@
   <div class="pdp__container">
     <div class="pdp__image--container">
       <div class="pdp__images--wrapper">
-        images
+        {% for item in product.images %}
+          <img class="pdp__image--item lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
+        {% endfor %}
       </div>
-
-      {% for item in product.images %}
-        <div class="pdp__image--wrapper">
-          <img class="pdp__image lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
-        </div>
-      {% endfor %}
+      <div class="pdp__image--wrapper">
+        <img class="pdp__image lazyload" src="{{ product.images[0].src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
+      </div>
     </div>
     <div class="divpdp__details--container">
       details

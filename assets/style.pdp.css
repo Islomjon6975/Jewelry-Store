@@ -27,7 +27,13 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    gap: 20px;
     border-right: 1px solid black;
+}
+
+.pdp__image--item {
+    width: 78px;
+    height: 78px;
 }
 
 .pdp__image--wrapper {

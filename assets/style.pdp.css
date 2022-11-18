@@ -21,7 +21,8 @@
 }
 
 .pdp__images--wrapper {
-    width: 138px;
+    height: 100%;
+    width: 150px;
     background-color: green;
 }
 
@@ -29,6 +30,7 @@
     height: 100%;
     width: 100%;
     background-color: blue;
+    padding: 80px;
 }
 
 .pdp__image {

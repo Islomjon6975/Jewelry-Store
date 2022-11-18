@@ -52,7 +52,7 @@
         
       </div>
     </div>
-    {% paginate collection.products by 10 %}
+    {% paginate collection.products by 5 %}
       <div class="products__list">
           {% for product in collection.products %}
             {% render 'product', product: {{product}} %}

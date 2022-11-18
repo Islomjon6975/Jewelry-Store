@@ -54,7 +54,7 @@
     </div>
     {{ collection.metafields.accentuate.banner }}
     <script>
-      console.log({{ collection.metafields.accentuate.banner_content | json }}, 'metafield')
+      console.log({{ collection.metafields.accentuate | json }}, 'metafield')
     </script>
     {% paginate collection.products by 5 %}
       <div class="products__list">

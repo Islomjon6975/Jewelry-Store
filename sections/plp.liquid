@@ -52,10 +52,6 @@
         
       </div>
     </div>
-    {{ collection.metafields.accentuate.banner }}
-    <script>
-      console.log({{ collection.metafields.accentuate.banner_content | json }}, 'metafield')
-    </script>
     {% paginate collection.products by 6 %}
       <div class="products__list">
         {% assign banner_markup = collection.metafields.accentuate.banner_content %}
@@ -80,7 +76,17 @@
           {% endfor %}
       </div>
       <div class="pagination">
-        {{- paginate | default_pagination -}}
+        <a href="{{ pagination.previous.url }}" class="pagination__link {% if pagination.previous.url %}pagination-active{% endif %}">Previous</a>
+        <div class="pagination__content">
+          {% for part in paginate.parts %}
+            {% if part.is_link -%}
+                {{ part.title | link_to: part.url }}
+            {%- else -%}
+                <span>{{ part.title }}</span>
+            {% endif %}
+          {%- endfor %}
+        </div>
+        <a href="{{ pagination.next.url }}" class="pagination__link {% if pagination.next.url %}pagination-active{% endif %}">Next</a>
       </div>
     {% endpaginate %}
 </div>

@@ -52,14 +52,16 @@
         
       </div>
     </div>
-    <div class="products__list">
-      {% paginate collection.products by 10 %}
-        {% for product in collection.products %}
-          {% render 'product', product: {{product}} %}
-        {% endfor %}
-          {{- paginate | default_pagination -}}
-      {% endpaginate %}
-    </div>
+    {% paginate collection.products by 10 %}
+      <div class="products__list">
+          {% for product in collection.products %}
+            {% render 'product', product: {{product}} %}
+          {% endfor %}
+      </div>
+      <div>
+        {{- paginate | default_pagination -}}
+      </div>
+    {% endpaginate %}
 </div>
 
 <div class="pagination">

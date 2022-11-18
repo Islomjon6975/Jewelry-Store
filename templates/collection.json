@@ -7,7 +7,8 @@
         "plp_nav_list": "plp-header-link",
         "plp_collections": [
           "necklaces",
-          "earrings"
+          "earrings",
+          "bag-collection"
         ]
       }
     }

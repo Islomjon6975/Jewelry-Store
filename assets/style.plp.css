@@ -185,5 +185,7 @@
     height: 40px;
     background: #FFFFFF;
     border-radius: 2px;
-    transform: rotate(-45deg);
+    display: flex;
+    justify-content: center;
+    align-items:center;
 }

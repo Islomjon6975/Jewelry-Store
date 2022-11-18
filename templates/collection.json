@@ -1,6 +1,6 @@
 {
   "sections": {
-    "collection": {
+    "plp": {
       "type": "plp",
       "settings": {
         "plp_hero": "shopify:\/\/shop_images\/banner-img.jpg",
@@ -9,6 +9,6 @@
     }
   },
   "order": [
-    "collection"
+    "plp"
   ]
 }

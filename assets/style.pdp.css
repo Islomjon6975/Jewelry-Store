@@ -54,7 +54,7 @@
 .image-modal {
     width: 100%;
     min-height: 100vh;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 999;
@@ -83,10 +83,9 @@
     flex-direction: column;
     align-items:center;
     justify-content: center;
-    gap: 30px;
 }
 
 .modal__image {
-    width: 500px;
+    width: 300px;
     border: 1px solid black;
 }

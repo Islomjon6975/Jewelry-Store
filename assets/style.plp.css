@@ -123,6 +123,7 @@
     margin-top: 82px;
     height: 91px;
     border: 1px solid var(--primary-black);
+    border-bottom: none;
 }
 
 .pagination__content {
@@ -149,6 +150,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    color: var(--primary-black)
 }
 
 .pagination__link:first-child {
@@ -161,4 +163,5 @@
 
 .pagination-active {
     opacity: 0.5;
+    color: var(--primary-black)
 }

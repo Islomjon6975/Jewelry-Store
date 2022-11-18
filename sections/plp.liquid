@@ -43,11 +43,11 @@
                     {%- endfor -%}
                   </ul>
 
-                  <div class="filter-group-display__submit">
+                  {%- comment -%} <div class="filter-group-display__submit">
                     <input type="submit" value="Apply">
-                  </div>
+                  </div> {%- endcomment -%}
                 {%- when 'price_range' -%}
-                  <div class="filter-group-display__price-range">
+                  {%- comment -%} <div class="filter-group-display__price-range">
                     <div class="filter-group-display__price-range-from">
                       <span>{{ cart.currency.symbol }}</span>
 
@@ -64,7 +64,7 @@
                     </div>
                   </div>
 
-                  {%- comment -%} <div class="filter-group-display__submit">
+                  <div class="filter-group-display__submit">
                     <input type="submit" value="Apply">
                   </div> {%- endcomment -%}
               {%- endcase -%}

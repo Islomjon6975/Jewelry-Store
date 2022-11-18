@@ -3,8 +3,7 @@
 }
 
 .pdp__container {
-    margin-top: 80px;
-    padding-top: 72px;
+    margin-top: 132px;
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     grid-gap: 40px;

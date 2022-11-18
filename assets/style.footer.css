@@ -7,7 +7,6 @@
 }
 
 .footer__container {
-    max-width: 1440px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;

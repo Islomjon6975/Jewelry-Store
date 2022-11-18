@@ -72,9 +72,7 @@
           </details>
         {%- endfor -%}
 
-
-
-        <div class="active-filters">
+        {%- comment -%} <div class="active-filters">
           <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}" class="active-filters__clear">{{ filter.active_values.size }} {{ filter.size }} {{ 'plp_page.plp.plp_clear' | t }}</a>
 
           {%- for filter in collection.filters -%}
@@ -96,7 +94,7 @@
             {%- endif- %}
 
           {%- endfor -%}
-        </div>
+        </div> {%- endcomment -%}
       </form>
     </div>
   </div>

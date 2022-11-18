@@ -1,6 +1,6 @@
 {{ 'style.navbar.css' | asset_url | stylesheet_tag }}
 
-<div class="navbar__nav">
+<div class="navbar__nav {% if template == 'index' %}navbar-border{% endif %} ">
   <div class="nav-col">
     <ul class="nav-items">
       {% for link in section.settings.nav_link_left.links %}

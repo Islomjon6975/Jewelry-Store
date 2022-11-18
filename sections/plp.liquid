@@ -14,14 +14,7 @@
       <form class="filter-form">
         {%- for filter in collection.filters -%}
           <details class="filter-group">
-            <summary class="filter-group-summary">
-              <div>
-                <span>{{ filter.label }}</span>
-                {%- if filter.active_values.size > 0 -%}
-                  <span>({{ filter.active_values.size }})</span>
-                {%- endif -%}
-              </div>
-            </summary>
+            
 
             <div class="filter-group-display">
               <div class="filter-group-display__header">
@@ -71,30 +64,6 @@
             </div>
           </details>
         {%- endfor -%}
-
-        {%- comment -%} <div class="active-filters">
-          <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}" class="active-filters__clear">{{ filter.active_values.size }} {{ filter.size }} {{ 'plp_page.plp.plp_clear' | t }}</a>
-
-          {%- for filter in collection.filters -%}
-
-            {%- if filter.type == "price_range" -%}
-              {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
-                <a class="active-filters__remove-filter" href="{{ filter.url_to_remove }}">
-                  {%- assign min_value = filter.min_value.value | default: 0 -%}
-                  {%- assign max_value = filter.max_value.value | default: filter.range_max -%}
-                  {{ min_value | money }} - {{ max_value | money }} x
-                </a>
-              {%- endif -%}
-            {%- else -%}
-              {%- for filter_value in filter.active_values -%}
-                <a class="active-filters__remove-filter" href="{{ filter_value.url_to_remove }}">
-                  {{ filter_value.label }} x
-                </a>
-              {%- endfor -%}
-            {%- endif- %}
-
-          {%- endfor -%}
-        </div> {%- endcomment -%}
       </form>
     </div>
   </div>

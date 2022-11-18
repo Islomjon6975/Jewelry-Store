@@ -78,9 +78,12 @@
   }
 {% endschema %}
 
-
 <script>
-  document.querySelector('.filter-form').addEventListener('submit', (e) => {
-    e.preventDefault()
-  })
+  // Update sort_by query parameter on select change
+  document.querySelector('#sort-by').addEventListener('change', function(e) {
+    var value = e.target.value;
+
+    Shopify.queryParams.sort_by = value;
+    location.search = new URLSearchParams(Shopify.queryParams).toString();
+  });
 </script>

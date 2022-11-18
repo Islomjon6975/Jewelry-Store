@@ -183,7 +183,7 @@
     display: flex !important;
 }
 
-.pagination .next, .pagination .prev a {
+.pagination .next a, .pagination .prev a {
     color: #1D1D1D !important;
     text-decoration: none !important;
     display: flex !important;

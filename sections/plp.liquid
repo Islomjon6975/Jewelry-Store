@@ -58,6 +58,15 @@
       {% endfor %}
     </div>
 </div>
+
+<div class="pagination">
+  {% paginate collection.products by 5 %}
+    {% for product in collection.products %}
+      <!--show product details here -->    
+    {% endfor %}
+    <!-- show pagination links here -->  
+  {% endpaginate %}
+</div>
 {% schema %}
   {
     "name": "Product List Page",

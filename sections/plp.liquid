@@ -54,26 +54,27 @@
     </div>
     {{ collection.metafields.accentuate.banner }}
     <script>
-      console.log({{ collection.metafields.accentuate | json }}, 'metafield')
+      console.log({{ collection.metafields.accentuate.banner_content | json }}, 'metafield')
     </script>
-    {% paginate collection.products by 5 %}
+    {% paginate collection.products by 6 %}
       <div class="products__list">
         {% assign banner_markup = collection.metafields.accentuate.banner_content %}
         {% assign banner_image = collection.metafields.accentuate.banner_image %}
         {% for item in (1..banner_markup.size) %}
-        <div class="product-banner">
-          <div class="product-banner__img-box">
-            {% if banner_image[forloop.index0] != blank %}
-              <img class="product-banner__img" src="{{ banner_image[forloop.index0][0].src }}" width height loading="lazy" alt="" loading="lazy">
-            {% endif %}
+          <div class="product-banner">
+            <div class="product-banner__img-box">
+              {% if banner_image[forloop.index0] != blank %}
+                <img class="product-banner__img" src="{{ banner_image[forloop.index0][0].src }}" width height loading="lazy" alt="" loading="lazy">
+              {% endif %}
+            </div>
+            <div class="product-banner__content">
+              {% if banner_markup[forloop.index0] != blank %}
+                {{ banner_markup[forloop.index0] }}
+              {% endif %}
+            </div>
           </div>
-          <div class="product-banner__content">
-            {% if banner_markup[forloop.index0] != blank %}
-              {{ banner_markup[forloop.index0] }}
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+
           {% for product in collection.products %}
             {% render 'product', product: {{product}} %}
           {% endfor %}

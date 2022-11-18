@@ -4,13 +4,13 @@
   <div class="plp__header">
     <img src="{{ section.settings.plp_hero | img_url: 'large' }}" alt="plp-hero" class="plp__hero">
     <div class="plp__header__nav">
-      <ul class="plp__header__items">
+      {%- comment -%} <ul class="plp__header__items">
         {% for link in section.settings.plp_nav_list.links %}
           <li class="plp__header__item plp__header__item--btn">
             <a href="{{ link.url }}" class="plp__header__link h3 ">{{ link.title | escape }}</a>
           </li>
         {% endfor %}
-      </ul>
+      </ul> {%- endcomment -%}
       <form class="filter-form">
         {%- for filter in collection.filters -%}
           <details class="filter-group">

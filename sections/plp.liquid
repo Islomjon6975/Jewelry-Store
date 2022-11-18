@@ -34,15 +34,15 @@
           <option class="option h4" value="Select">Select</option>
           <option class="option h4" value="Select">Select</option>
         </select> {%- endcomment -%}
-        <select class="sort-by" id="sort-by">
-        {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
-        Sort By
-        {% for option in collection.sort_options %}
-          <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
-            {{ option.name }}
-          </option>
-        {% endfor %}
-      </select>
+        <select class="sort-by select h4" id="sort-by">
+          {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+          Sort By
+          {% for option in collection.sort_options %}
+            <option class="option h4" value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
+              {{ option.name }}
+            </option>
+          {% endfor %}
+        </select>
       </div>
 
       <div class="collection__wrapper">

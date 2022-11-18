@@ -4,7 +4,8 @@
       "type": "plp",
       "settings": {
         "plp_hero": "shopify:\/\/shop_images\/banner-img.jpg",
-        "plp_nav_list": "plp-header-link"
+        "plp_nav_list": "plp-header-link",
+        "plp_collections": "collections"
       }
     }
   },

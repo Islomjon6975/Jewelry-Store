@@ -1,4 +1,6 @@
 {{ 'style.plp.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'js.sort_by.js' | asset_url }}" defer></script>
+
 
 <div class="plp">
   <div class="plp__header">
@@ -29,12 +31,6 @@
       {%- comment -%} ---------- Products Sort ------------- {%- endcomment -%}
       <div class="sort__wrapper">
         <label class="label h4" for="sort">Sort By</label>
-        {%- comment -%} <select class="select h4" name="" id="sort">
-          <option class="option h4" value="Select">Select</option>
-          <option class="option h4" value="Select">Select</option>
-          <option class="option h4" value="Select">Select</option>
-        </select> {%- endcomment -%}
-
         <select class="sort-by select h4" id="sort-by">
           {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
           Sort By
@@ -77,34 +73,3 @@
     ]
   }
 {% endschema %}
-
-<script>
-  // Update sort_by query parameter on select change
-  Shopify.queryParams = {};
-
-  // Preserve existing query parameters
-  if (location.search.length) {
-    var params = location.search.substr(1).split('&');
-
-    for (var i = 0; i < params.length; i++) {
-      var keyValue = params[i].split('=');
-
-      if (keyValue.length) {
-        Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
-      }
-    }
-  }
-
-  // Update sort_by query parameter on select change
-  document.querySelector('#sort-by').addEventListener('change', function(e) {
-    e.preventDefault()
-    var value = e.target.value;
-
-    Shopify.queryParams.sort_by = value;
-    location.search = new URLSearchParams(Shopify.queryParams).toString();
-  });
-
-  document.querySelector('.filter-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-  })
-</script>

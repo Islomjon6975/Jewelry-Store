@@ -22,11 +22,14 @@
         {% endfor %}
       </div>
       <div class="pdp__image--wrapper">
-        <img class="pdp__image lazyload" src="{{ product.images[0].src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
+        <img class="pdp__image lazyload" src="{{ product.featured_image.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
       </div>
     </div>
-    <div class="divpdp__details--container">
-      details
+    <div class="pdp__details--container">
+      <h4 class="product__type">{{ product.type }}</h4>
+      <h1 class="product__title">{{ product.title }}</h1>
+      <h2 class="product__price">{{ product.price | money }}</h2>
+      {% render 'primary-button', 'Add To Cart' %}
     </div>
   </div>
 </div>

@@ -54,12 +54,12 @@
     </div>
     {{ collection.metafields.accentuate.banner }}
     <script>
-      console.log({{ collection.metafields.accentuate | json }}, 'metafield')
+      console.log({{ collection.metafields.accentuate.banner_content | json }}, 'metafield')
     </script>
     {% paginate collection.products by 5 %}
       <div class="products__list">
         {% assign banner_markup = collection.metafields.accentuate.banner_content %}
-        {% assign banner_image = collection.metafields.accentuate.banner_img %}
+        {% assign banner_image = collection.metafields.accentuate.banner_image %}
         {% for item in (1..banner_markup.size) %}
         <div class="product-banner">
           <div class="product-banner__img-box">

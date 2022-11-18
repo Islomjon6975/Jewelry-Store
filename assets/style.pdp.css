@@ -61,7 +61,6 @@
     z-index: 999;
     background-color: white;
     display: none;
-    overflow-y: scroll;
 }
 
 .image-modal__wrapper {

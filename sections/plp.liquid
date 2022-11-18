@@ -33,18 +33,13 @@
           <option class="option h4" value="Select">Select</option>
         </select>
       </div>
-
     </div>
     <div class="products__list">
       {% for product in collection.products %}
-        {% render 'product', product: product %}
+        {% render 'product', product: {{product}} %}
       {% endfor %}
     </div>
-
-  </div>
-
 </div>
-
 {% schema %}
   {
     "name": "Product List Page",

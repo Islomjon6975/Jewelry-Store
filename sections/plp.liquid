@@ -35,7 +35,7 @@
           <option class="option h4" value="Select">Select</option>
         </select> {%- endcomment -%}
 
-        <select name="sort_by" class="sort-by select h4 facet-filters__sort" id="SortBy">
+        <select class="sort-by select h4" id="sort-by">
           {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
           Sort By
           {% for option in collection.sort_options %}

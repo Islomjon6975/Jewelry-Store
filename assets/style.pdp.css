@@ -60,4 +60,26 @@
     z-index: 999;
     background-color: white;
     display: none;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 56px;
+    right: 32px;
+}
+
+.modal__images {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.modal__image {
+    width: 1000px;
+    height: 1000px;
 }

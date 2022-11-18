@@ -92,8 +92,10 @@
   const next = document.querySelectorAll('.next');
   const pageWrapper = document.createElement('div')
   pageWrapper.classList.add('page__wrapper')
+  let pagess = ``
   pages.forEach(page => {
-    pageWrapper.innerHTML+=page
+    pagess +=page
   })
+  pageWrapper.innerHTML = pagess
   pagination.append(pageWrapper)
 </script>

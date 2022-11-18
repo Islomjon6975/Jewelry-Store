@@ -129,7 +129,7 @@
 
 .pagination .prev {
     height: 100%;
-    border: 1px solid black;
+    border-right: 1px solid black;
     width: 400px;
     display: flex;
     justify-content: center;
@@ -155,7 +155,7 @@
 
 .pagination .next {
     height: 100%;
-    border: 1px solid black;
+    border-left: 1px solid black;
     width: 400px;
     display: flex;
     justify-content: center;
@@ -176,5 +176,6 @@
 
     /* Black */
 
-    color: #1D1D1D;
+    color: #1D1D1D !important;
+    text-decoration: none !important;
 }

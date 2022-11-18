@@ -14,7 +14,7 @@
       <form class="filter-form">
         {%- for filter in collection.filters -%}
             <ul class="filter-group-display plp__header__items">
-              <li class="filter-group-display__list-item plp__header__item">All
+              <li class="filter-group-display__list-item plp__header__item">
                 {%- if filter.active_values.size > 0 -%}
                   <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset plp__header__link h3">All</a>
                 {%- endif -%}

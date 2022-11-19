@@ -117,3 +117,30 @@
 .product__price {
     text-align: left;
 }
+
+/* Select */
+
+
+.select {
+    width: 314px;
+    height: 40px;
+    outline: none;
+    padding: 0 14px;
+    color: var(--primary-dark-pink-text);
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+    border: none;
+}
+
+.select .option {
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--primary-dark-pink-text)
+}
+
+.label {
+    display: block;
+    text-transform: uppercase;
+}

@@ -7,7 +7,7 @@
 .pdp__container {
     display: grid;
     grid-template-columns: 1.3fr 1fr;
-    grid-gap: 40px;
+    grid-gap: 60px;
     padding: 0 32px;
 }
 
@@ -99,7 +99,7 @@
 .pdp__details--container {
     display: flex;
     flex-direction: column;
-    max-width: 432px;
+    max-width: 482px;
 }
 
 .product__type {

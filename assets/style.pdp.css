@@ -97,6 +97,7 @@
 .pdp__details--container {
     display: flex;
     flex-direction: column;
+    max-width: 432px;
 }
 
 .product__type {

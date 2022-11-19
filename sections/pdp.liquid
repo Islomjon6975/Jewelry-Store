@@ -70,7 +70,6 @@
     {% for product in selected_handles %}{% endfor %}
     <img src="{{all_products[product].featured_image.src | img_url: 'large' }}" alt="">
 
-    {% render 'card', product: all_products[product] %}
   </div>
 </div>
 

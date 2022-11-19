@@ -47,7 +47,7 @@
 <script>
   const select = document.querySelector('.select');
   const option = document.querySelector('.option');
-  console.log(select.getAttribute('data-set'), ' datset')
+  console.log(JSON.parse(select.getAttribute('data-set')), ' datset')
   product.variants.forEach((variant) => {
     console.log({{variant | json}}, 'mmm')
   })

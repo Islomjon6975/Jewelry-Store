@@ -49,7 +49,7 @@
   const select = document.querySelector('.select_size');
   const options = document.querySelectorAll('.option_size');
   options.forEach((option) => {
-    option.addEventListener('click', (e) => {
+    option.addEventListener('change', (e) => {
       console.log(option.value, e.target.value, 'value')
     })
   })

@@ -29,22 +29,17 @@
       <h4 class="product__type">{{ product.type }}</h4>
       <h1 class="product__title">{{ product.title }}</h1>
       <h2 class="product__price">{{ product.price | money }}</h2>
-      {% for variant in product.variants %}
-        <script>
-          console.log({{ variant.option1 | json }}, 'size')
-        </script>
-        {% assign size = variant.options1 %}
-        {% assign price = variant.price %}
-        <p>{{ variant.option1 }}</p>
-      {% endfor %}
+
 
       <select default="Select Size" class="select h4" id="">
-        console.log({{ product.options | json }}, 'productVariant')
         <option class="option h4" value="Select Size" selected disabled>Select Size</option>
-        <option class="option h4" value="10">10</option>
-        <option class="option h4" value="20">20</option>
-        <option class="option h4" value="30">30</option>
-        <option class="option h4" value="40">40</option>
+        {% for variant in product.variants %}
+          {% assign size = variant.options1 %}
+          {% assign price = variant.price %}
+          <p>{{ variant.option1 }}</p>
+          <option class="option h4" value="{{ size }}">{{ size }}</option>
+        {% endfor %}
+
       </select>
       {% render 'secondary-button', title: 'Add To Cart', width: '253px' %}
     </div>

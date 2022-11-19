@@ -30,9 +30,9 @@
       <h1 class="product__title">{{ product.title }}</h1>
       <h2 class="product__price">{{ product.price | money }}</h2>
       <script>
-        console.log({{product.variants.length | length}}, 'cound')
+        console.log({{product.variants.length | json}}, 'cound')
       </script>
-      {% if product.variants.length >= 1  %}
+      {% if product.variants  %}
 
         <select class="select select_size h4" id="" data-set="{{ product.variants }}">
           <option class="option h4" value="Select Size" selected disabled>Select Size</option>

@@ -31,7 +31,7 @@
       <h2 class="product__price">{{ product.price | money }}</h2>
       <select default="Select Size" class="select h4" id="">
         <option class="option h4" value="Select Size" selected disabled>Select Size</option>
-        {% for variant in product?.variants %}
+        {% for variant in product.variants %}
           <script>
             console.log({{variant.option1 | json }}, 'size')
           </script>

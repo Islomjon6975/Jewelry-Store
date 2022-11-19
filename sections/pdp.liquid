@@ -44,6 +44,9 @@
       {% render 'secondary-button', title: 'Add To Cart', width: '253px' %}
       <div class="pdp__product__metafield">
         {% assign product_subtitles = product.metafields.accentuate.product_subtitles %}
+        <script>
+          console.log({{product_subtitles | json}}, 'metafield')
+        </script>
         {% for item in (1..product_subtitles.size) %}
           {% if product_subtitles[forloop.index0] != blank %}
             {{ product_subtitles[forloop.index0] }}

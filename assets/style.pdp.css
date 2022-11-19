@@ -106,6 +106,12 @@
 .product__title {
     text-align: left;
     color: var(--primary-black);
+    margin: 0;
+    padding: 0;
+    margin-top: 4;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
 }
 
 .product__price {

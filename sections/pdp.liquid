@@ -34,10 +34,7 @@
       <select default="Select Size" class="select h4" id="">
         <option class="option h4" value="Select Size" selected disabled>Select Size</option>
         {% for variant in product.variants %}
-          {% assign size = variant.options1 %}
-          {% assign price = variant.price %}
-          <p>{{ variant.option1 }}</p>
-          <option class="option h4" value="{{ size }}">{{ size }}</option>
+          <option class="option h4" value="{{ variant?.options1 }}">{{ variant?.options1 }}</option>
         {% endfor %}
 
       </select>

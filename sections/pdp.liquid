@@ -42,17 +42,22 @@
         </select>
       {% endif %}
       {% render 'secondary-button', title: 'Add To Cart', width: '253px' %}
+      <div class="pdp__product__info">
+        {% assign product_info = product.metafields.accentuate.product_info %}
+        {{ product_info }}
+      </div>
       <div class="pdp__product__metafield">
-        {% assign product_subtitles = product.metafields.accentuate.product_subtitles %}
-        <script>
-          console.log({{ product.metafields.accentuate.product_description | json}}, 'metafield')
-        </script>
-        {{ product.metafields.accentuate.product_description}}
-
+        {% assign product_description = product.metafields.accentuate.product_description %}
+        {{ product_description }}
       </div>
     </div>
   </div>
 </div>
+{%- comment -%}
+  <script>
+  console.log({{ product.metafields.accentuate.product_description | json}}, 'metafield')
+  </script>
+{%- endcomment -%}
 
 <script>
   const opt = {

@@ -53,6 +53,10 @@
     console.log(e, 'value')
     const productVariants = {{ product.variants | json }}
     console.log(productVariants, 'valuevvvv')
-
+    productVariants.forEach(variant => {
+      if (variant.option1 = e.target.value) {
+        console.log(variant, 'variant')
+      }
+    })
   })
 </script>

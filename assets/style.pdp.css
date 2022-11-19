@@ -19,7 +19,7 @@
     background-color: var(--primary-white);
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-self: end;
 }
 
 .pdp__images--wrapper {

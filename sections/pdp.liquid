@@ -46,9 +46,13 @@
         {% assign product_info = product.metafields.accentuate.product_info %}
         {{ product_info }}
       </div>
-      <div class="pdp__product__metafield">
+      <div class="pdp__product__description">
         {% assign product_description = product.metafields.accentuate.product_description %}
         {{ product_description }}
+      </div>
+      <div class="pdp__product__metafield">
+        {% assign product_details = product.metafields.accentuate.product_details %}
+        {{ product_details }}
       </div>
     </div>
   </div>

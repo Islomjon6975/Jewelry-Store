@@ -30,7 +30,7 @@
       <h1 class="product__title">{{ product.title }}</h1>
       <h2 class="product__price">{{ product.price | money }}</h2>
         {% for variant in product.variants %}
-        {% assign size = variant.size %}
+        {% assign size = variant.option[0].size %}
         {% assign price = variant.price %}
         <p></p>{{ size }}</p>
         <p></p>{{ price }}</p>

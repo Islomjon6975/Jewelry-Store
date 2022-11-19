@@ -100,5 +100,14 @@
 }
 
 .product__type {
-    color: var(--secondary-dark-pink-text);
+    color: var(--primary-dark-pink-text);
+}
+
+.product__title {
+    text-align: left;
+    color: var(--primary-black);
+}
+
+.product__price {
+    text-align: left;
 }

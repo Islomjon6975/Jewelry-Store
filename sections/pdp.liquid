@@ -66,7 +66,9 @@
           ? variant.name
           : "{{ product.title }}"
         const varaintPrice = new Intl.NumberFormat('en-US', opt).format(variant.price / 100);
-        productPrice.innerText = `${varaintPrice}`
+        productPrice.innerText = `${
+          varaintPrice.splice(-1, 3)
+        }`
       }
     })
   })

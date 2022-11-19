@@ -49,6 +49,8 @@
 <script>
   const select = document.querySelector('.select_size');
   const options = document.querySelectorAll('.option_size');
+  const productTitle = document.querySelector('.product__title');
+  const productPrice = document.querySelector('.product__price');
   select.addEventListener('change', (e) => {
     console.log(e.target.value, 'value')
     const productVariants = {{ product.variants | json }}
@@ -56,6 +58,12 @@
     productVariants.forEach(variant => {
       if (variant.option1 == e.target.value) {
         console.log(variant, 'variant')
+        productTitle.innerText = variant.name
+          ? variant.name
+          : "{{ product.title }}"
+        productPrice.innerText = `$${
+          variant.price
+        }`
       }
     })
   })

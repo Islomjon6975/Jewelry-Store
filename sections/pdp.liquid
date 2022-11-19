@@ -30,9 +30,9 @@
       <h1 class="product__title">{{ product.title }}</h1>
       <h2 class="product__price">{{ product.price | money }}</h2>
         {% for variant in product.variants %}
-        {% assign size = variant.options[0].size %}
+        {% assign size = variant.options1 %}
         <script>
-          console.log({{ variant | json }}, 'size')
+          console.log({{ variant.option1 | json }}, 'size')
         </script>
         {% assign price = variant.price %}
         <p></p>{{ size }}</p>

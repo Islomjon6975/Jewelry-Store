@@ -50,7 +50,7 @@
   const select = document.querySelector('.select_size');
   const options = document.querySelectorAll('.option_size');
   select.addEventListener('change', (e) => {
-    console.log(e, 'value')
+    console.log(e.target.value, 'value')
     const productVariants = {{ product.variants | json }}
     console.log(productVariants, 'valuevvvv')
     productVariants.forEach(variant => {

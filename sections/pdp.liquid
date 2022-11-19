@@ -29,7 +29,7 @@
       <h4 class="product__type">{{ product.type }}</h4>
       <h1 class="product__title">{{ product.title }}</h1>
       <h2 class="product__price">{{ product.price | money }}</h2>
-      {% if product.variants  %}
+      {% if product.variants.length >= 1  %}
         <select class="select select_size h4" id="" data-set="{{ product.variants }}">
           <option class="option h4" value="Select Size" selected disabled>Select Size</option>
           {% for variant in product.variants %}
@@ -56,12 +56,9 @@
   const productTitle = document.querySelector('.product__title');
   const productPrice = document.querySelector('.product__price');
   select.addEventListener('change', (e) => {
-    console.log(e.target.value, 'value')
-    const productVariants = {{ product.variants | json }}
-    console.log(productVariants, 'valuevvvv')
+    const productVariants = {{ product.variants | json }};
     productVariants.forEach(variant => {
       if (variant.option1 == e.target.value) {
-        console.log(variant, 'variant')
         productTitle.innerText = variant.name
           ? variant.name
           : "{{ product.title }}"

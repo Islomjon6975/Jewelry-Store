@@ -35,8 +35,7 @@
         </script>
         {% assign size = variant.options1 %}
         {% assign price = variant.price %}
-        <p>{{ size }}</p>
-        <p>{{ price }}</p>
+        <p>{{ variant.option1 }}</p>
       {% endfor %}
 
       <select default="Select Size" class="select h4" id="">

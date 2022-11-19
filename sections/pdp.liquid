@@ -29,26 +29,19 @@
       <h4 class="product__type">{{ product.type }}</h4>
       <h1 class="product__title">{{ product.title }}</h1>
       <h2 class="product__price">{{ product.price | money }}</h2>
-      <select class="select h4" id="" data-set="{{ product.variants }}">
-        {% for variant in product.variants %}
-          <option class="option h4" value="Select Size" selected disabled>Select Size</option>
-          <script>
-            console.log({{variant.option1 | json }}, 'size')
-          </script>
-          <p>{{ varian.option1  }}</p>
-          <option class="option h4" value="{{ variant.options1 }}">{{ variant.options1 }}</option>
-        {% endfor %}
-      </select>
+      {% if product.variants  %}
+        <select class="select h4" id="" data-set="{{ product.variants }}">
+          {% for variant in product.variants %}
+            <option class="option h4" value="Select Size" selected disabled>Select Size</option>
+            <script>
+              console.log({{variant.option1 | json }}, 'size')
+            </script>
+            <p>{{ varian.option1  }}</p>
+            <option class="option h4" value="{{ variant.options1 }}">{{ variant.options1 }}</option>
+          {% endfor %}
+        </select>
+      {% endif %}
       {% render 'secondary-button', title: 'Add To Cart', width: '253px' %}
     </div>
   </div>
 </div>
-
-<script>
-  const select = document.querySelector('.select');
-  const option = document.querySelector('.option');
-  console.log(select.getAttribute('data-set'), ' datset')
-  product.variants.forEach((variant) => {
-    console.log({{variant | json}}, 'mmm')
-  })
-</script>

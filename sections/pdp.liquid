@@ -47,6 +47,10 @@
 </div>
 
 <script>
+  const opt = {
+    style: 'currency',
+    currency: 'USD'
+  };
   const select = document.querySelector('.select_size');
   const options = document.querySelectorAll('.option_size');
   const productTitle = document.querySelector('.product__title');
@@ -62,7 +66,7 @@
           ? variant.name
           : "{{ product.title }}"
         productPrice.innerText = `$${
-          variant.price
+          new Intl.NumberFormat('en-US', opt).format(variant.price / 100);
         }`
       }
     })

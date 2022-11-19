@@ -191,11 +191,11 @@
 
 .pdp__product__details h4 {
     margin-bottom: 10px;
-    text-align: left;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.02em;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
 }
 
 .pdp__product__details ul {

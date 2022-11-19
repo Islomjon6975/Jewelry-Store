@@ -51,7 +51,7 @@
   const options = document.querySelectorAll('.option_size');
   select.addEventListener('change', (e) => {
     console.log(e, 'value')
-    const productVariants = "{{ product.variants }}"
+    const productVariants = "{{ product.variants | json }}"
     console.log(productVariants, 'valuevvvv')
 
   })

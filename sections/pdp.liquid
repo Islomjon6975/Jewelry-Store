@@ -65,9 +65,8 @@
         productTitle.innerText = variant.name
           ? variant.name
           : "{{ product.title }}"
-        productPrice.innerText = `$${
-          new Intl.NumberFormat('en-US', opt).format(variant.price / 100);
-        }`
+        const varaintPrice = new Intl.NumberFormat('en-US', opt).format(variant.price / 100);
+        productPrice.innerText = `$${varaintPrice}`
       }
     })
   })

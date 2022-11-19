@@ -215,3 +215,22 @@
     line-height: 19px;
     letter-spacing: 0.02em;
 }
+
+/* Product Contact */
+.pdp__product__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pdp__product__contact h4 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.pdp__product__contact h4:last-child {
+    color: var(--primary-dark-pink-text);
+}

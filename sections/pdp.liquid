@@ -29,8 +29,14 @@
       <h4 class="product__type">{{ product.type }}</h4>
       <h1 class="product__title">{{ product.title }}</h1>
       <h2 class="product__price">{{ product.price | money }}</h2>
+        {% for variant in product.variants %}
+        {% assign size = variant.size %}
+        {% assign price = variant.price %}
+        <p></p>{{ size }}</p>
+        <p></p>{{ price }}</p>
+        {% endfor %}
+
       <select default="Select Size" class="select h4" id="">
-        {% assign productVariant = product.options %}
         console.log({{ product.options | json }}, 'productVariant')
         <option class="option h4" value="Select Size" selected disabled>Select Size</option>
         <option class="option h4" value="10">10</option>

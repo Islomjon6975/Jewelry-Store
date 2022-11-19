@@ -147,7 +147,22 @@
 }
 
 /* Metafields */
-/* Description Metafield */
+/* Product Info Metafield */
+.pdp__product__info {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pdp__product__info h4 {
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+/* Product Description Metafield */
 .pdp__product__metafield {
     margin: 30px 0px;
 }

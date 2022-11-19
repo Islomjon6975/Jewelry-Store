@@ -148,6 +148,9 @@
 
 /* Metafields */
 /* Description Metafield */
+.pdp__product__metafield {
+    margin: 30px 0px;
+}
 .pdp__product__metafield h4 {
     margin-bottom: 10px;
     font-weight: 700;

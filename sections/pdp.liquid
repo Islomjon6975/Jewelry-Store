@@ -35,7 +35,7 @@
           <script>
             console.log({{variant.option1 | json }}, 'size')
           </script>
-          <p>{{ varian.option1 | json }}</p>
+          <p>{{ varian.option1  }}</p>
           <option class="option h4" value="{{ variant.options1 }}">{{ variant.options1 }}</option>
         {% endfor %}
       </select>
@@ -43,3 +43,11 @@
     </div>
   </div>
 </div>
+
+<script>
+  const select = document.querySelector('.select');
+  const option = document.querySelector('.option');
+  product.variants.forEach((variant) => {
+    console.log({{variant | json}}, 'mmm')
+  })
+</script>

@@ -42,6 +42,15 @@
         </select>
       {% endif %}
       {% render 'secondary-button', title: 'Add To Cart', width: '253px' %}
+      <div class="pdp__product__metafield">
+        {% assign product_subtitles = product.metafields.accentuate.product_subtitles %}
+        {% for item in (1..product_subtitles.size) %}
+          {% if product_subtitles[forloop.index0] != blank %}
+            {{ product_subtitles[forloop.index0] }}
+          {% endif %}
+        {% endfor %}
+
+      </div>
     </div>
   </div>
 </div>

@@ -47,11 +47,7 @@
         <script>
           console.log({{ product.metafields.accentuate.product_description | json}}, 'metafield')
         </script>
-        {% for item in (1..product_subtitles.size) %}
-          {% if product_subtitles[forloop.index0] != blank %}
-            {{ product_subtitles[forloop.index0] }}
-          {% endif %}
-        {% endfor %}
+        {{ product.metafields.accentuate.product_description}}
 
       </div>
     </div>

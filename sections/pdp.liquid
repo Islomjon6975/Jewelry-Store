@@ -36,7 +36,7 @@
             <script>
               console.log({{variant.option1 | json }}, 'size')
             </script>
-            <option data-variant={{variant}} class="option option_size h4" value="{{ variant.option1 }}">{{ variant.option1 }} <input type="text" data-variant={{variant}} hidden></option>
+            <option data-variant={{variant}} class="option option_size h4" value="{{ variant.option1 }}">{{ variant.option1 }} <input class="sizeInput" type="text" data-variant={{variant}} hidden></option>
           {% endfor %}
         </select>
       {% endif %}
@@ -48,8 +48,10 @@
 <script>
   const select = document.querySelector('.select_size');
   const options = document.querySelectorAll('.option_size');
+  const input = document.querySelector('.sizeInput')
   select.addEventListener('change', (e) => {
     console.log(e, 'value')
+    console.log(input, 'value')
 
   })
 </script>

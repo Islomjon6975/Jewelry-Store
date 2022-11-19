@@ -29,14 +29,14 @@
       <h4 class="product__type">{{ product.type }}</h4>
       <h1 class="product__title">{{ product.title }}</h1>
       <h2 class="product__price">{{ product.price | money }}</h2>
-      <select class="select h4" id="">
-        {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
-        Sort By
-        {% for option in collection.sort_options %}
-          <option class="option h4" value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
-            {{ option.name }}
-          </option>
-        {% endfor %}
+      <select default="Select Size" class="select h4" id="">
+        {%- comment -%}
+          {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+        {%- endcomment -%}
+        <option class="option h4" value="10">10</option>
+        <option class="option h4" value="20">20</option>
+        <option class="option h4" value="30">30</option>
+        <option class="option h4" value="40">40</option>
       </select>
       {% render 'secondary-button', title: 'Add To Cart', width: '253px' %}
     </div>

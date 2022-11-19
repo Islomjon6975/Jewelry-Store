@@ -126,7 +126,7 @@
     height: 40px;
     outline: none;
     padding: 0 14px;
-    color: var(--primary-dark-pink-text);
+    color: var(--primary-black);
     text-align: left;
     font-size: 14px;
     line-height: 20px;
@@ -137,7 +137,7 @@
     text-align: left;
     font-size: 14px;
     line-height: 20px;
-    color: var(--primary-dark-pink-text)
+    color: var(--primary-black)
 }
 
 .label {

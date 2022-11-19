@@ -29,7 +29,7 @@
       <h4 class="product__type">{{ product.type }}</h4>
       <h1 class="product__title">{{ product.title }}</h1>
       <h2 class="product__price">{{ product.price | money }}</h2>
-      <select class="select h4" id="">
+      <select class="select h4" id="" data-set="{{ product.variants }}">
         {% for variant in product.variants %}
           <option class="option h4" value="Select Size" selected disabled>Select Size</option>
           <script>
@@ -47,6 +47,7 @@
 <script>
   const select = document.querySelector('.select');
   const option = document.querySelector('.option');
+  console.log(select.dataset, ' datset')
   product.variants.forEach((variant) => {
     console.log({{variant | json}}, 'mmm')
   })

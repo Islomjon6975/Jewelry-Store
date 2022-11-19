@@ -162,6 +162,15 @@
     text-transform: uppercase;
 }
 
+.pdp__product__info p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+}
+
+
+
 /* Product Description Metafield */
 .pdp__product__description {
     margin: 30px 0px;
@@ -199,8 +208,15 @@
 }
 
 .pdp__product__details ul {
-    padding-left: 15px;
+    padding-left: 22px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.pdp__product__info li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
 }

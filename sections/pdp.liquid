@@ -30,10 +30,9 @@
       <h1 class="product__title">{{ product.title }}</h1>
       <h2 class="product__price">{{ product.price | money }}</h2>
       <select default="Select Size" class="select h4" id="">
-        {%- comment -%}
-          {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
-        {%- endcomment -%}
-        <option class="option h4" value="Select Size" selected disabled>10</option>
+        {% assign productVariant = product.options %}
+        console.log({{ productVariant | json }}, 'productVariant')
+        <option class="option h4" value="Select Size" selected disabled>Select Size</option>
         <option class="option h4" value="10">10</option>
         <option class="option h4" value="20">20</option>
         <option class="option h4" value="30">30</option>

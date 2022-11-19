@@ -187,7 +187,6 @@
 /* Product Details Metafield */
 .pdp__product__details {
     margin-bottom: 30px;
-    
 }
 
 .pdp__product__details h4 {
@@ -197,6 +196,10 @@
     line-height: 20px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
+}
+
+.pdp__product__details h4:not(:first-child) {
+    margin-top: 30px;
 }
 
 .pdp__product__details ul {

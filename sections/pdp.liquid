@@ -68,10 +68,10 @@
     {% assign selected_handles = product.metafields.accentuate.banner_image | split: "|" %}
     <p>1</p>
     {% for product in selected_handles %}{% endfor %}
-    {% render 'card', product: all_products[product] %}
     <script>
-      console.log({{product.metafields.accentuate.banner_image |  split: "|"  | json}}, 'you might also like')
+      console.log({{all_products[product] | json}}, 'you might also like')
     </script>
+    {% render 'card', product: all_products[product] %}
   </div>
 </div>
 

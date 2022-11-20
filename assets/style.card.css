@@ -8,13 +8,11 @@
     overflow: hidden;
     background-size: cover;
     position: relative;
-    border: 1px solid red;
 }
 
 .card__img {
     position: absolute;
     bottom: 40px;
-    border: 1px solid black;
     max-width: 230px;
 }
 

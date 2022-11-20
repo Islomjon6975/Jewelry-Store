@@ -82,7 +82,7 @@
     </div>
 
     <div class="banner__image--wrapper">
-      <img class="banner__img lazyload" src="{{  product_banner_image.src }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ product_banner_image.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ product_banner_image.alt | escape }}">
+      <img class="modal__image lazyload" src="{{ product_banner_image.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ product_banner_image.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ product_banner_image.alt | escape }}">
     </div>
   </div>
   {%- comment -%}

@@ -1,11 +1,13 @@
-
 {
   "sections": {
-      "pdp": {
-          "type": "pdp"
+    "pdp": {
+      "type": "pdp",
+      "settings": {
+        "product_banner_bg_img": "shopify:\/\/shop_images\/pdp__banner-bg.png"
       }
+    }
   },
   "order": [
-      "pdp"
+    "pdp"
   ]
 }

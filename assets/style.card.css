@@ -49,6 +49,9 @@
     border: 1px solid black;
     overflow: hidden;
     padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 }
 
 .card__price {

@@ -74,7 +74,7 @@
     {% assign product_banner_content = product.metafields.accentuate.product_banner_content %}
     {% assign product_banner_image = product.metafields.accentuate.product_banner_image %}
     {{ product_banner_content }}
-    {{ product_banner_image }}
+    <img src="{{ product_banner_image }}" alt="">
   </div>
   {%- comment -%}
     You might also like

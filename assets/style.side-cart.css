@@ -25,6 +25,7 @@
     position: absolute;
     top: 30px;
     right: 30px;
+    width: fit-content;
 }
 
 .close__cart svg:active {

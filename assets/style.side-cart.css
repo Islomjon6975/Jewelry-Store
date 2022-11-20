@@ -115,6 +115,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
 }
 
 .cart__footer__title {
@@ -123,6 +124,7 @@
 
 .cart__footer__shipping {
     margin: 10px 0px 20px 0px;
+    text-align: center;
 }
 
 

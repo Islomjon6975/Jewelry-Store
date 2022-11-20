@@ -237,12 +237,15 @@
 
 .pdp__product__contact h4:last-child {
     color: var(--primary-dark-pink-text);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Banner metafield */
 .pdp__banner__metafield {
     width: 100%;
     max-height: 691px;
+    height: 100%;
     background-color: red;
 }
 

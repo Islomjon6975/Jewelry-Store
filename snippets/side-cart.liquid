@@ -1,6 +1,6 @@
 {{ 'style.side-cart.css' | asset_url | stylesheet_tag}}
 
-<div class="cart">
+<div class="cart side-cart">
   <div class="cart__container">
     <div class="close__cart">
       {% render 'icon-close' %}
@@ -86,9 +86,9 @@
 
 <script>
   const closeCart = document.querySelector('.close__cart');
-  const cart = document.querySelector('.cart')
+  const cart = document.querySelector('.side-cart')
   closeCart.addEventListener('click', () => {
-    cart.classList.add('close-cart')
+    cart.classList.remove('close-open')
     console.log('close')
   })
 </script>

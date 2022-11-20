@@ -76,10 +76,10 @@
   <div class="pdp__you-might-also-like">
     <h2 class="pdp__you-might-also-like__title">You might also like</h2>
     {% assign selected_handles = product.metafields.accentuate.banner_image | split: "|" %}
-    <div class="pdp__you-migh-also-like__cards  swiper swiperLikes">
+    <div class="pdp__you-migh-also-like__cards swiper swiperLikes">
       <div class="swiper-wrapper">
         {% for product in selected_handles %}
-          <div class="card swiper slide">
+          <div class="card swiper-slide">
             <img src="{{ all_products[product].featured_image.src | img_url}}" alt="{{ all_products[product].handle }}" class="card__img">
             <div class="card__details">
               <h3 class="card__title">{{ all_products[product].title }}</h3>

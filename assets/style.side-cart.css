@@ -18,6 +18,17 @@
     width: 100%;
     height: 100%;
     padding-bottom: 50px;
+    position: relative;
+}
+
+.close__cart {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.close__cart svg:active {
+    transform: scale(0.97);
 }
 
 .cart__title {

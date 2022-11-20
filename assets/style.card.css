@@ -13,12 +13,14 @@
 
 .card__image-wrapper {
     position: absolute;
-    bottom: 40px;
+    bottom: 60px;
     border: 1px solid black;
     max-width: 220px;
     width: 100%;
     overflow: hidden;
     height: 220px;
+    display: flex;
+    justify-content: center;
 }
 
 .card__img {

@@ -1,7 +1,7 @@
 
 .cart {
     width: 600px;
-    height: 100vh;
+    height: 90vh;
     background-color: var(--primary-dark-pink-background);
     padding: 50px 87px;
     border: 1px solid black;
@@ -82,6 +82,7 @@
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .cart__product__price {

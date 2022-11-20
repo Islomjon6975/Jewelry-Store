@@ -18,3 +18,11 @@
 .gradient {
     min-height: 100vh;
 }
+
+close-cart{
+    right: -600px;
+}
+
+open-cart {
+    right: 0;
+}

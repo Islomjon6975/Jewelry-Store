@@ -1,5 +1,18 @@
 {{ 'style.pdp.css' | asset_url | stylesheet_tag}}
+{{ 'style.card.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="{{ 'script.pdp.js' | asset_url }}" defer></script>
+
+<style>
+  .card {
+    background-image: url("{{ 'gumbaz.svg' | asset_url }}");
+  }
+
+  .pdp__banner__metafield {
+    background-image: url("{{ section.settings.product_banner_bg_img | img_url: 'large' }}")
+  }
+</style>
 
 <div class="pdp">
   <div class="image-modal">
@@ -46,18 +59,80 @@
         {% assign product_info = product.metafields.accentuate.product_info %}
         {{ product_info }}
       </div>
-      <div class="pdp__product__metafield">
+      <div class="pdp__product__description">
         {% assign product_description = product.metafields.accentuate.product_description %}
         {{ product_description }}
+      </div>
+      <div class="pdp__product__details">
+        {% assign product_details = product.metafields.accentuate.product_details %}
+        {{ product_details }}
+      </div>
+      <div class="pdp__product__contact">
+        {% assign product_contact = product.metafields.accentuate.product_contact_us %}
+        {{ product_contact }}
+      </div>
+
+    </div>
+  </div>
+  <h1>hi</h1>
+  <div class="pdp__banner__metafield">
+    {% assign product_banner_content = product.metafields.accentuate.product_banner_content %}
+    {% assign product_banner_image = product.metafields.accentuate.product_banner_image %}
+    <div class="banner__content">
+      {% if product_banner_content[forloop.index0] != blank %}
+        {{ product_banner_content[forloop.index0] }}
+      {% endif %}
+    </div>
+    <script>
+      console.log({{product_banner_content | json}}, 'product content')
+      console.log({{product_banner_image | json}}, 'product img')
+    </script>
+
+    <div class="banner__image--wrapper">
+      {% if product_banner_image[forloop.index0] != blank %}
+        <img class="banner__img lazyload" src="{{  product_banner_image[forloop.index0][0][0].src }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ product_banner_image[forloop.index0][0].aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ product_banner_image[forloop.index0][0].alt | escape }}">
+      {% endif %}
+    </div>
+  </div>
+  {%- comment -%}
+    You might also like
+  {%- endcomment -%}
+  <div class="pdp__you-might-also-like">
+    <h2 class="pdp__you-might-also-like__title">You might also like</h2>
+    {% assign selected_handles = product.metafields.accentuate.banner_image | split: "|" %}
+    <div class="pdp__you-migh-also-like__cards swiper swiperLikes">
+      <div class="swiper-wrapper">
+        {% for product in selected_handles %}
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card__image-wrapper">
+                <img src="{{ all_products[product].featured_image.src | img_url}}" alt="{{ all_products[product].handle }}" class="card__img">
+              </div>
+              <div class="card__details">
+                <h3 class="card__title">{{ all_products[product].title }}</h3>
+                <h4 class="card__price">{{ all_products[product].price | money }}</h4>
+                <h4 class="card__subtitle">{{ all_products[product].tags }}</h4>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
       </div>
     </div>
   </div>
 </div>
-{%- comment -%}
-  <script>
-  console.log({{ product.metafields.accentuate.product_description | json}}, 'metafield')
-  </script>
-{%- endcomment -%}
+
+{% schema %}
+  {
+    "name": "Product List Page",
+    "settings": [
+      {
+        "id": "product_banner_bg_img",
+        "type": "image_picker",
+        "label": "Banner Background Image"
+      }
+    ]
+  }
+{% endschema %}
 
 <script>
   const opt = {
@@ -80,4 +155,17 @@
       }
     })
   })
+
+
+  var swiperr = new Swiper(".swiperLikes", {
+    direction: "horizontal",
+    slidesPerView: 4,
+    spaceBetween: 40,
+    mousewheel: true,
+    loop: true,
+    pagination: {
+      el: ".swiperLikes-pagination",
+      clickable: true
+    }
+  });
 </script>

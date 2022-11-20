@@ -69,8 +69,8 @@
 {% endschema %}
 
 <script>
-  const cartOpen = document.querySelector('.side-cart-open');
-  const sideCartNav = document.querySelector('.side-cart')
+  let cartOpen = document.querySelector('.side-cart-open');
+  let sideCartNav = document.querySelector('.side-cart')
   cartOpen.addEventListener('click', () => {
     sideCartNav.classList.remove('open-side-cart')
     console.log('open cart')

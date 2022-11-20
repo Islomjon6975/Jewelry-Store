@@ -3,7 +3,7 @@
     width: 600px;
     height: 100vh;
     background-color: var(--primary-dark-pink-background);
-    padding: 50px 87px 0px 87px;
+    padding: 50px 87px;
     border: 1px solid black;
     position: fixed;
     top: 0;
@@ -124,6 +124,7 @@
 
 .cart__footer__shipping {
     margin: 10px 0px 20px 0px;
+    text-align: center;
 }
 
 

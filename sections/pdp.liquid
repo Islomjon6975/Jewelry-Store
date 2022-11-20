@@ -1,5 +1,7 @@
 {{ 'style.pdp.css' | asset_url | stylesheet_tag}}
 {{ 'style.card.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="{{ 'script.pdp.js' | asset_url }}" defer></script>
 
 <style>
@@ -74,17 +76,19 @@
   <div class="pdp__you-might-also-like">
     <h2 class="pdp__you-might-also-like__title">You might also like</h2>
     {% assign selected_handles = product.metafields.accentuate.banner_image | split: "|" %}
-    <div class="pdp__you-migh-also-like__cards">
-      {% for product in selected_handles %}
-        <div class="card">
-          <img src="{{ all_products[product].featured_image.src | img_url: 'medium'}}" alt="{{ all_products[product].handle }}" class="card__img">
-          <div class="card__details">
-            <h3 class="card__title">{{ all_products[product].title }}</h3>
-            <h4 class="card__price">{{ all_products[product].price | money }}</h4>
-            <h4 class="card__subtitle">{{ all_products[product].tags }}</h4>
+    <div class="pdp__you-migh-also-like__cards  swiper swiperLikes">
+      <div class="swiper-wrapper">
+        {% for product in selected_handles %}
+          <div class="card swiper slide">
+            <img src="{{ all_products[product].featured_image.src | img_url}}" alt="{{ all_products[product].handle }}" class="card__img">
+            <div class="card__details">
+              <h3 class="card__title">{{ all_products[product].title }}</h3>
+              <h4 class="card__price">{{ all_products[product].price | money }}</h4>
+              <h4 class="card__subtitle">{{ all_products[product].tags }}</h4>
+            </div>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
 
   </div>
@@ -111,4 +115,17 @@
       }
     })
   })
+
+
+  var swiperr = new Swiper(".swiperLikes", {
+    direction: "horizontal",
+    slidesPerView: 4,
+    spaceBetween: 40,
+    mousewheel: true,
+    loop: true,
+    pagination: {
+      el: ".swiperLikes-pagination",
+      clickable: true
+    }
+  });
 </script>

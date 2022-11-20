@@ -244,7 +244,8 @@
 
 .pdp__you-might-also-like {
     width: 100%;
-    margin: 60px 0px 80px 0px;
+    padding-bottom: 80px;
+    margin-top: 60px;
 }
 
 .pdp__you-might-also-like__title {

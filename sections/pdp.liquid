@@ -76,14 +76,7 @@
     {% assign selected_handles = product.metafields.accentuate.banner_image | split: "|" %}
     <div class="pdp__you-migh-also-like__cards">
       {% for product in selected_handles %}
-        <div class="card">
-          <img src="{{ all_products[product].featured_image.src | img_url: 'small'}}" alt="{{ product.handle }}" class="card__img">
-          <div class="card__details">
-            <h3 class="card__title">{{ all_products[product].title }}</h3>
-            <h4 class="card__price">{{ all_products[product].price | money }}</h4>
-            <h4 class="card__subtitle">{{ all_products[product].tags }}</h4>
-          </div>
-        </div>
+        {% render 'card', product: all_product[product] %}
       {% endfor %}
     </div>
 

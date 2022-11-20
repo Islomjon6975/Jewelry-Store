@@ -10,7 +10,7 @@
   }
 
   .pdp__banner__metafield {
-    background-image: url("{{ section.settings.product_banner_bg_img.src | img_url }}")
+    background-image: url("{{ section.settings.product_banner_bg_img | img_url: 'large' }}")
   }
 </style>
 

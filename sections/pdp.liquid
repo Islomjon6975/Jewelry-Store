@@ -81,7 +81,9 @@
         {% for product in selected_handles %}
           <div class="swiper-slide">
             <div class="card">
-              <img src="{{ all_products[product].featured_image.src | img_url}}" alt="{{ all_products[product].handle }}" class="card__img">
+              <div class="card__image-wrapper">
+                <img src="{{ all_products[product].featured_image.src | img_url}}" alt="{{ all_products[product].handle }}" class="card__img">
+              </div>
               <div class="card__details">
                 <h3 class="card__title">{{ all_products[product].title }}</h3>
                 <h4 class="card__price">{{ all_products[product].price | money }}</h4>

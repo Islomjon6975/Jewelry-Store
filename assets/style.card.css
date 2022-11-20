@@ -11,11 +11,17 @@
     border: 1px solid red;
 }
 
-.card__img {
+.card__image-wrapper {
     position: absolute;
     bottom: 40px;
     border: 1px solid black;
     max-width: 220px;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.card__img {
     width: 100%;
 }
 

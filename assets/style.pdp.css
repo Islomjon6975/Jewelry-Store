@@ -238,3 +238,12 @@
 .pdp__product__contact h4:last-child {
     color: var(--primary-dark-pink-text);
 }
+
+
+/* You might also like */
+
+.pdp__you-might-also-like {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}

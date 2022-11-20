@@ -75,13 +75,13 @@
     {% assign product_banner_image = product.metafields.accentuate.product_banner_image %}
     <div class="banner__content">
       {% if product_banner_content[forloop.index0] != blank %}
-        {{ banner_text[forloop.index0] }}
+        {{ product_banner_content[forloop.index0] }}
       {% endif %}
     </div>
 
     <div class="banner__image--wrapper">
       {% if product_banner_image[forloop.index0] != blank %}
-        <img class="banner__img lazyload" src="{{  banner_images[forloop.index0][0].src }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ banner_images[forloop.index0][0].aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ banner_images[forloop.index0][0].alt | escape }}">
+        <img class="banner__img lazyload" src="{{  product_banner_content[forloop.index0][0].src }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ product_banner_content[forloop.index0][0].aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ product_banner_content[forloop.index0][0].alt | escape }}">
       {% endif %}
     </div>
   </div>

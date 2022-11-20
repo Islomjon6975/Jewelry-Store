@@ -8,6 +8,7 @@
     overflow: hidden;
     background-size: cover;
     position: relative;
+    border: 1px solid red;
 }
 
 .card__img {

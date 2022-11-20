@@ -43,6 +43,9 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
     margin-bottom: 1px;
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
 }
 
 .card__price {

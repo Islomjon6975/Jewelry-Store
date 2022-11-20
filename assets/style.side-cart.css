@@ -1,7 +1,7 @@
 
 .cart {
     width: 600px;
-    height: 90vh;
+    height: 100vh;
     background-color: var(--primary-dark-pink-background);
     padding: 50px 87px;
     border: 1px solid black;
@@ -30,6 +30,10 @@
     line-height: 24px;
     margin-bottom: 2px;
     text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cart__wrapper {

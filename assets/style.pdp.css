@@ -243,7 +243,9 @@
 /* You might also like */
 
 .pdp__you-might-also-like {
+    width: fit-content;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    
+    grid-gap: 40px;
+    margin: auto;
 }

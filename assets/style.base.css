@@ -26,13 +26,14 @@
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: gainsboro;
+    background: var(--primary-white);
     border-radius: 5px;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: black;
+    background: var(--primary-black);
+    opacity: 0.8;
     border-radius: 5px;
   }
   

@@ -17,9 +17,8 @@
 
 .gradient {
     min-height: 100vh;
-    position: relative;
 }
 
 .open-side-cart {
-    right: -600px;
+    right: 0px;
 }

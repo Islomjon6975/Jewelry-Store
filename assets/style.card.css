@@ -13,8 +13,9 @@
 
 .card__img {
     position: absolute;
-    bottom: 45px;
+    bottom: 40px;
     border: 1px solid black;
+    max-width: 230px;
 }
 
 .card__details {

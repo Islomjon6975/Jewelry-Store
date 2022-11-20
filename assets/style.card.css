@@ -16,6 +16,7 @@
     bottom: 40px;
     border: 1px solid black;
     max-width: 230px;
+    width: 100%;
 }
 
 .card__details {

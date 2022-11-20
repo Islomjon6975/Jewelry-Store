@@ -73,15 +73,16 @@
   </div>
   <div class="pdp__you-might-also-like">
     {% assign selected_handles = product.metafields.accentuate.banner_image | split: "|" %}
-    {% for product in selected_handles %}{% endfor %}
-    <div class="card">
-      <img src="{{ all_products[product].featured_image.src | img_url: 'medium'}}" alt="{{ product.handle }}" class="card__img">
-      <div class="card__details">
-        <h3 class="card__title">{{ all_products[product].title.title }}</h3>
-        <h4 class="card__price">{{ all_products[product].price | money }}</h4>
-        <h4 class="card__subtitle">{{ all_products[product].tags }}</h4>
+    {% for product in selected_handles %}
+      <div class="card">
+        <img src="{{ all_products[product].featured_image.src | img_url: 'medium'}}" alt="{{ product.handle }}" class="card__img">
+        <div class="card__details">
+          <h3 class="card__title">{{ all_products[product].title }}</h3>
+          <h4 class="card__price">{{ all_products[product].price | money }}</h4>
+          <h4 class="card__subtitle">{{ all_products[product].tags }}</h4>
+        </div>
       </div>
-    </div>
+    {% endfor %}
   </div>
 </div>
 

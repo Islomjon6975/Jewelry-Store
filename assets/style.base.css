@@ -18,26 +18,3 @@
 .gradient {
     min-height: 100vh;
 }
-
-/* Designing for scroll-bar */
-::-webkit-scrollbar {
-    width: 2px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: var(--primary-white);
-    border-radius: 5px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: var(--primary-black);
-    opacity: 0.8;
-    border-radius: 5px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }

@@ -1,11 +1,12 @@
-
 {
   "sections": {
-      "pdp": {
-          "type": "pdp"
+    "pdp": {
+      "type": "pdp",
+      "settings": {
       }
+    }
   },
   "order": [
-      "pdp"
+    "pdp"
   ]
 }

@@ -21,7 +21,7 @@
 
 /* Designing for scroll-bar */
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 2px;
   }
   
   /* Track */

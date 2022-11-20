@@ -254,7 +254,7 @@
 }
 
 .pdp__you-migh-also-like__cards {
-    width: 500px;
+    width: 1000px;
     background-color: red;
     display: grid;
     grid-template-columns: repeat(4, 1fr);

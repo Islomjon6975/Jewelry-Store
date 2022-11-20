@@ -13,6 +13,7 @@
 .card__img {
     position: absolute;
     bottom: 45px;
+    border: 1px solid black;
 }
 
 .card__details {

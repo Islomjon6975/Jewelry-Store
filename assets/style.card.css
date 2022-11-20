@@ -8,13 +8,11 @@
     overflow: hidden;
     background-size: cover;
     position: relative;
-    border: 1px solid red;
 }
 
 .card__image-wrapper {
     position: absolute;
     bottom: 80px;
-    border: 1px solid black;
     max-width: 200px;
     width: 100%;
     overflow: hidden;
@@ -46,12 +44,10 @@
     margin-bottom: 1px;
     width: 100%;
     height: 20px;
-    border: 1px solid black;
     overflow: hidden;
     padding: 0 20px;
     display: flex;
     justify-content: center;
-    align-items:center;
 }
 
 .card__price {

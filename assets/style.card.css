@@ -48,6 +48,7 @@
     height: 20px;
     border: 1px solid black;
     overflow: hidden;
+    padding: 0 20px;
 }
 
 .card__price {

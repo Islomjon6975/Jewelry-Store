@@ -77,7 +77,7 @@
     <div class="pdp__you-migh-also-like__cards">
       {% for product in selected_handles %}
         <div class="card">
-          <img src="{{ all_products[product].featured_image.src | img_url: 'small'}}" alt="{{ all_products[product].handle }}" class="card__img">
+          <img src="{{ all_products[product].featured_image.src | img_url: 'medium'}}" alt="{{ all_products[product].handle }}" class="card__img">
           <div class="card__details">
             <h3 class="card__title">{{ all_products[product].title }}</h3>
             <h4 class="card__price">{{ all_products[product].price | money }}</h4>

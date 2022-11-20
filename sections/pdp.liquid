@@ -1,5 +1,12 @@
 {{ 'style.pdp.css' | asset_url | stylesheet_tag}}
+{{ 'style.card.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'script.pdp.js' | asset_url }}" defer></script>
+
+<style>
+  .card {
+    background-image: url("{{ 'gumbaz.svg' | asset_url }}");
+  }
+</style>
 
 <div class="pdp">
   <div class="image-modal">
@@ -66,10 +73,15 @@
   </div>
   <div class="pdp__you-might-also-like">
     {% assign selected_handles = product.metafields.accentuate.banner_image | split: "|" %}
-    <p>1</p>
     {% for product in selected_handles %}{% endfor %}
-    <img src="{{all_products[product].featured_image.src | img_url: 'large' }}" alt="">
-
+    <div class="card">
+      <img src="{{ all_products[product].featured_image.src | img_url: 'medium'}}" alt="{{ product.handle }}" class="card__img">
+      <div class="card__details">
+        <h3 class="card__title">{{ all_products[product].title.title }}</h3>
+        <h4 class="card__price">{{ all_products[product].price | money }}</h4>
+        <h4 class="card__subtitle">{{ all_products[product].tags }}</h4>
+      </div>
+    </div>
   </div>
 </div>
 

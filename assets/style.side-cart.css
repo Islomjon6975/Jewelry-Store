@@ -17,6 +17,7 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
+    padding-bottom: 50px;
 }
 
 .cart__title {
@@ -49,7 +50,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border: 1px solid black;
     overflow-y: auto;
     width: 100%;
 }
@@ -106,8 +106,12 @@
 
 }
 
+.cart__product__remove-lin:active {
+    color: rgb(222, 156, 169);
+    
+}
+
 .cart__footer {
-    border: 1px solid black;
     width: 100%;
     display: flex;
     flex-direction: column;

@@ -71,8 +71,14 @@
     </div>
   </div>
   <div class="pdp__banner__metafield">
-    banner
+    {% assign product_banner_content = product.metafields.accentuate.product_banner_content %}
+    {% assign product_banner_image = product.metafields.accentuate.product_banner_image %}
+    {{ product_banner_content }}
+    {{ product_banner_image }}
   </div>
+  {%- comment -%}
+    You might also like
+  {%- endcomment -%}
   <div class="pdp__you-might-also-like">
     <h2 class="pdp__you-might-also-like__title">You might also like</h2>
     {% assign selected_handles = product.metafields.accentuate.banner_image | split: "|" %}
@@ -94,7 +100,6 @@
         {% endfor %}
       </div>
     </div>
-
   </div>
 </div>
 

@@ -1,6 +1,6 @@
 
 .cart {
-    width: 583px;
+    width: 600px;
     height: 100vh;
     background-color: var(--primary-dark-pink-background);
     padding: 50px 87px;
@@ -22,12 +22,14 @@
 .cart__title {
     font-size: 28px;
     line-height: 40px;
+    color: var(--primary-black);
 }
 
 .cart__count {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 2px;
+    text-align: center;
 }
 
 .cart__wrapper {
@@ -36,6 +38,7 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
+    gap: 40px;
 }
 
 .cart__products {
@@ -43,7 +46,7 @@
     flex-direction: column;
     gap: 20px;
     border: 1px solid black;
-    
+    overflow-y: auto;
 }
 
 .cart__product {

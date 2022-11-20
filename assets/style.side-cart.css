@@ -125,24 +125,24 @@
 
 
 /* Designing for scroll-bar */
-::-webkit-scrollbar {
+.cart__products::-webkit-scrollbar {
     width: 2px;
   }
   
   /* Track */
-  ::-webkit-scrollbar-track {
+  .cart__products::-webkit-scrollbar-track {
     background: var(--primary-white);
     border-radius: 5px;
   }
   
   /* Handle */
-  ::-webkit-scrollbar-thumb {
+  .cart__products::-webkit-scrollbar-thumb {
     background: var(--primary-black);
     opacity: 0.8;
     border-radius: 5px;
   }
   
   /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+  .cart__products::-webkit-scrollbar-thumb:hover {
     background: #555;
   }

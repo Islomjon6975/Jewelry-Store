@@ -1,5 +1,5 @@
 
-.cart {
+.side-cart {
     width: 600px;
     height: 100vh;
     background-color: var(--primary-dark-pink-background);
@@ -10,7 +10,6 @@
     right: -600px;
     z-index: 999;
 }
-
 
 .cart__container {
     display: flex;

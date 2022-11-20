@@ -7,7 +7,7 @@
     border: 1px solid black;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -600px;
     z-index: 999;
 }
 

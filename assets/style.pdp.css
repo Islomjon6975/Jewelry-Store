@@ -56,6 +56,16 @@
     height: 78px !important;
 }
 
+.mySwiperPdp .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.mySmySwiperPdpwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
 .pdp__images--wrapper {
     height: 300px;
     width: 150px;

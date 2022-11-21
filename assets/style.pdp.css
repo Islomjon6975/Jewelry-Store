@@ -42,13 +42,11 @@
 }
 
 .product__big-image {
-    border: 1px solid green;
 }
 
 .product__small-images {
     width: 138px;
     height: 100%;
-    background: blue;
     
 }
 

@@ -42,14 +42,14 @@
 }
 
 
-/* .o-image {
+.o-image {
     background: crimson ;
     height: 100% !important;
     display: flex !important;
     flex-direction: column !important;
     align-items:center !important;
     justify-content: center !important;
-} */
+}
 
 .o-gul {
     width: 78px !important;

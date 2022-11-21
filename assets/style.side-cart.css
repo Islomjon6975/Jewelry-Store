@@ -9,6 +9,7 @@
     top: 0;
     right: -600px;
     z-index: 999;
+    transition: all .8s ease;
 }
 
 .cart__container {

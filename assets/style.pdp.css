@@ -299,3 +299,11 @@
     grid-gap: 40px;
     margin: auto;
 }
+
+.swiper-wrapper {
+    background: red;
+}
+
+.swiper-slide {
+    background: blue;
+}

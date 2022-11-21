@@ -1,13 +1,3 @@
-let cartOpen = document.querySelector('#cart-count');
-let sideCartNav = document.querySelector('.side-cart');
-let closeCart = document.querySelector('.close__cart');
-cartOpen.addEventListener('click', () => {
-    sideCartNav.classList.add('open-side-cart');
-});
-
-closeCart.addEventListener('click', () => {
-    sideCartNav.classList.remove('open-side-cart');
-});
 
 
 class Cart {
@@ -62,8 +52,6 @@ class Cart {
     }
 
     renderCartItems(cartDetails) {
-
-
         const cartItemsWrapper = document.querySelector(".cart__products");
         cartItemsWrapper.innerHTML = "";
         for (let item of cartDetails.items) {
@@ -102,4 +90,80 @@ class Cart {
         } 
     }
 
+    async toggleCart() {
+        await this.updateCart();
+        const sideCart = document.querySelector(".side-cart");
+        
+        sideCart.classList.toggle("open-side-cart");
+        document.body.setAttribute('style', 'overflow: hidden');
+    }
+
+    addToCart() {
+        const hasOnlyDefaultVariant = document.querySelector('#form-product')
+        const novariant = document.querySelector('.product-details__noVariant')
+        const variantId = document.querySelector(".product__item-selected:selected");
+        const formData = {
+            items: [{
+                id: hasOnlyDefaultVariant.getAttribute('data-noVariant') == 'true' ? novariant.getAttribute('data-id') :  variantId.value,
+                quantity: 1
+            }]
+        }
+
+        this.addItem(formData).then(() => this.toggleCart());
+    }
+
+    addCartItemCount() {
+        this.getCartDetails().then(cartDetails => {
+            const headerCartLinks = document.querySelectorAll(".header-cart-link");
+            headerCartLinks.forEach(link => {
+                link.innerHTML +=  cartDetails.item_count
+            })
+        })
+    }
+
+    deleteItem({itemID}) {
+        const formData = {
+            id: itemID,
+            quantity: 0
+        }
+        this.toggleCart()
+        this.changeItem(formData).then(() => this.updateCart())
+    }
+
+    increaseItemAmount({ itemID, itemAmount }) {
+        const formData = {
+          id: itemID,
+          quantity:Number(itemAmount) + 1
+        };
+    
+        this.changeItem(formData).then(() => this.updateCart());
+    }
+      
+    decreaseItemAmount({ itemID, itemAmount }) {
+     
+        const formData = {
+          id: itemID,
+          quantity:Number(itemAmount) - 1
+        };
+      
+        this.changeItem(formData).then(() => this.updateCart());
+    }
+
 }
+
+const sideCart = new Cart();
+sideCart.updateCart();
+
+// Basket
+const cartOpen = document.querySelectorAll('#cart-count');
+cartOpen.addEventListener('click', () => {
+    sideCart.toggleCart()
+})
+
+// Close Modal
+const close = document.querySelector('.close__cart')
+close.addEventListener('click', () => {
+    sideCart.closeModal()
+})
+
+

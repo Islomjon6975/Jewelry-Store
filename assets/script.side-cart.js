@@ -217,7 +217,7 @@ async function increment () {
 }
 
 const cart__product__increment = document.querySelector('.cart__product__increment')
-removeItem.addEventListener('click', increment)
+cart__product__increment.addEventListener('click', increment)
   
 
 
@@ -228,6 +228,6 @@ async function decrement () {
     sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
 }
 
-const decrement = document.querySelector('.cart__product__decrement')
-removeItem.addEventListener('click', decrement)
+const cart__product__decrement = document.querySelector('.cart__product__decrement')
+cart__product__decrement.addEventListener('click', decrement)
   

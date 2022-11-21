@@ -196,8 +196,8 @@ form.addEventListener("submit", (e) => {
     // }
   });
 
-const mycartProducts = document.querySelector('.cart__product__remove')
-mycartProducts.addEventListener('click', async(e) => {
+const removeItem = document.querySelector('.cart__product__remove')
+removeItem.addEventListener('click', async(e) => {
     await sideCart.renderCartItems()
     const cartItem = document.querySelector('.cart__product')
     console.log(cartItem?.dataset?.id, 'remove')

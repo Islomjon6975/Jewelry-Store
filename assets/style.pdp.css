@@ -66,18 +66,18 @@
     width: 40px !important;
     height: 40px;
   }
-  .mySwiper2 {
+  .pdpswiper2 {
     max-height: 700px;
     height: 100%;
     width: 90%;
   }
-  .mySwiper .swiper-slide {
+  .mySwiperPdp .swiper-slide {
     width: 10%;
     height: 100%;
     opacity: 0.4;
     cursor: pointer;
   }
-  .mySwiper .swiper-slide-thumb-active {
+  .mySwiperPdp .swiper-slide-thumb-active {
     opacity: 1;
   }
   .swiper-button-next,

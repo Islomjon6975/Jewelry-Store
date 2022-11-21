@@ -28,7 +28,7 @@
     </div>
   </div>
   <div class="pdp__container">
-    <div class="pdp__image--container pdp__image--wrapper">
+    <div class="pdp__image--container ">
       <div thumbsSlider="" class="swiper mySwiperPdp o-imagee">
         <div class="swiper-wrapper o-image">
           {% for item in product.images %}
@@ -38,7 +38,7 @@
           {% endfor %}
         </div>
       </div>
-      <div class="swiper mySwiper2Pdp big-image">
+      <div class="swiper mySwiper2Pdp big-image pdp__image--wrapper">
         <div class="swiper-wrapper">
           {% for item in product.images %}
             <div class="swiper-slide big-image">

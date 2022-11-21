@@ -206,3 +206,28 @@ async function remove () {
 const removeItem = document.querySelector('.cart__product__remove')
 removeItem.addEventListener('click', remove)
   
+
+
+async function increment () {
+    await sideCart.renderCartItems()
+    const cartItem = document.querySelector('.cart__product')
+    console.log(cartItem?.dataset?.id, 'plus')
+    sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
+
+}
+
+const cart__product__increment = document.querySelector('.cart__product__increment')
+removeItem.addEventListener('click', increment)
+  
+
+
+async function decrement () {
+    await sideCart.renderCartItems()
+    const cartItem = document.querySelector('.cart__product')
+    console.log(cartItem?.dataset?.id, 'decrement')
+    sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
+}
+
+const decrement = document.querySelector('.cart__product__decrement')
+removeItem.addEventListener('click', decrement)
+  

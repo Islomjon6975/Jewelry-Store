@@ -33,7 +33,7 @@
         <div class="swiper-wrapper o-image">
           {% for item in product.images %}
             <div class="swiper-slide swiper-slide2">
-              <img class="pdp__full--image" src="{{ item.src | img_url: '720x900' }}" loading="lazy" alt="{{ item.alt | escape }}"/>
+              <img class="o-gul-item" src="{{ item.src | img_url: '720x900' }}" loading="lazy" alt="{{ item.alt | escape }}"/>
             </div>
           {% endfor %}
         </div>
@@ -41,8 +41,8 @@
       <div class="swiper mySwiper2Pdp big-image">
         <div class="swiper-wrapper">
           {% for item in product.images %}
-            <div class="swiper-slide">
-              <img src="{{ item.src | img_url: '120x200' }}" loading="lazy" alt="{{ item.alt | escape }}"/>
+            <div class="swiper-slide big-image">
+              <img class="big-image" src="{{ item.src | img_url: '120x200' }}" loading="lazy" alt="{{ item.alt | escape }}"/>
             </div>
           {% endfor %}
         </div>

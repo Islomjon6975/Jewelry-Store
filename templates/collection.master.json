@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "collection-master": {
+      "type": "collection-master",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "collection-master"
+  ]
+}

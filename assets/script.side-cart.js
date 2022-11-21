@@ -55,6 +55,7 @@ class Cart {
         const cartItemsWrapper = document.querySelector(".cart__products");
         cartItemsWrapper.innerHTML = "";
         for (let item of cartDetails.items) {
+            console.log(item, 'item')
             const template = `
                 <div class="cart__product" length=${cartDetails.items.length} data-id="${item.id}" data-amount="${item.quantity}>
                     <div class="cart__product__image-wrapper">

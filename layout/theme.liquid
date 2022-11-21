@@ -14,13 +14,23 @@
     {{ 'style.side-cart.css' | asset_url | stylesheet_tag}}
     {{ 'style.base.css' | asset_url | stylesheet_tag }}
     {{ 'style.normalize.css' | asset_url | stylesheet_tag }}
-  {{ 'style.typography.css' | asset_url | stylesheet_tag }}
+    {{ 'style.typography.css' | asset_url | stylesheet_tag }}
     <!-- ======================================== Js ======================================== -->
-
+      <style>
+@font-face {
+  font-family: "MinionPro-Regular";
+  src: local("MinionPro-Regular"), url('{{ "MinionPro-Regular" | asset_url }}') format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF New Republic";
+  src: local("SF New Republic"), url('{{ "SF New Republic.woff" | asset_url }}') format("woff");
+  font-display: swap;
+}
+</style>
   </head>
 
-  <body class="gradient">
-    {% section 'announcement-bar' %}
+    <body class="gradient"> {% section 'announcement-bar' %}
     {% section 'navbar' %}
     {% section 'side-cart' %}
     {{ content_for_layout }}

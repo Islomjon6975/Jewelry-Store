@@ -74,27 +74,24 @@
 
     </div>
   </div>
-  {% assign product_banner_content = product.metafields.accentuate.product_banner_content %}
-  {% assign product_banner_image = product.metafields.accentuate.product_banner_image %}
-  {% for item in (1..product_banner_content.size) %}
-    <div class="pdp__banner__metafield">
-      <div>
-        {% if product_banner_content[forloop.index0] != blank %}
-          {{ product_banner_content[forloop.index0] }}
-        {% endif %}
+  <div class="pdp__banner__metafield">
+    {% assign product_banner_content = product.metafields.accentuate.product_banner_content %}
+    {% assign product_banner_image = product.metafields.accentuate.product_banner_image %}
+    {% for item in (1..product_banner_content.size) %}
+      <div class="pdp__banner__wrapper">
+        <div class="pdp__banner__image">
+          {% if product_banner_image[forloop.index0] != blank %}
+            <img class="banner__img lazyload" src="{{  product_banner_image[forloop.index0][0].src }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ product_banner_image[forloop.index0][0].aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ product_banner_image[forloop.index0][0].alt | escape }}">
+          {% endif %}
+        </div>
+        <div class="pdp__banner__content">
+          {% if product_banner_content[forloop.index0] != blank %}
+            {{ product_banner_content[forloop.index0] }}
+          {% endif %}
+        </div>
       </div>
-      <script>
-        console.log({{product_banner_content | json}}, 'product content')
-        console.log({{product_banner_image | json}}, 'product img')
-      </script>
-
-      <div>
-        {% if product_banner_image[forloop.index0] != blank %}
-          <img class="banner__img lazyload" src="{{  product_banner_image[forloop.index0][0].src }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ product_banner_image[forloop.index0][0].aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ product_banner_image[forloop.index0][0].alt | escape }}">
-        {% endif %}
-      </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 
   {%- comment -%}
     You might also like

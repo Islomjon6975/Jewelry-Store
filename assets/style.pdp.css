@@ -245,6 +245,29 @@
     height: 691px;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.pdp__banner__wrapper {
+    display: flex;
+    align-items:center;
+    border: 1px solid black;
+    max-width: 1140px;
+    width: 100%;
+}
+
+.pdp__banner__image {
+    flex: 1;
+}
+
+.pdp__banner__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
 }
 
 /* You might also like */

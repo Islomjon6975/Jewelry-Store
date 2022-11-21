@@ -155,7 +155,7 @@ const sideCart = new Cart();
 sideCart.updateCart();
 
 // Basket
-const cartOpen = document.querySelectorAll('#cart-count');
+const cartOpen = document.querySelector('#cart-count');
 cartOpen.addEventListener('click', () => {
     sideCart.toggleCart()
 })

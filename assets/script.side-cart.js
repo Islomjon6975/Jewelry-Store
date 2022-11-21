@@ -56,7 +56,7 @@ class Cart {
         cartItemsWrapper.innerHTML = "";
         for (let item of cartDetails.items) {
             const template = `
-                <div class="cart__product" length=${cartDetails.items.length} data-id="${item.key}" data-amount="${item.quantity}>
+                <div class="cart__product" length=${cartDetails.items.length} data-id="${item.id}" data-amount="${item.quantity}>
                     <div class="cart__product__image-wrapper">
                         <img src="${ item.image }" alt="${ item.title }" class="cart__product__image">
                     </div>

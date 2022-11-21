@@ -101,7 +101,7 @@ class Cart {
     addToCart() {
         const hasOnlyDefaultVariant = document.querySelector('#form-product')
         const novariant = document.querySelector('.product-details__noVariant')
-        const variantId = document.querySelector(".product__item-selected:selected");
+        const variantId = document.querySelector(".product__item-selected");
         const formData = {
             items: [{
                 id: hasOnlyDefaultVariant.getAttribute('data-noVariant') == 'true' ? novariant.getAttribute('data-id') :  variantId.value,

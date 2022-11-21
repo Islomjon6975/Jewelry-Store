@@ -38,6 +38,12 @@
     background: blue;
 }
 
+.horyzontal__slider .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
 /* .o-image {
     background: crimson ;
     height: 100% !important;

@@ -1,0 +1,92 @@
+<div class="cart side-cart open-side-cart">
+  <div class="cart__container">
+    <div class="close__cart">
+      {% render 'icon-close' %}
+    </div>
+    <h1 class="cart__title">Your Cart</h1>
+    <h3 class="cart__count">(2)</h3>
+    <div class="cart__wrapper">
+      <div class="cart__products">
+        <div class="cart__product">
+          <div class="cart__product__image-wrapper">
+            <img src="" alt="" class="cart__product__image">
+          </div>
+          <div class="cart__product__details">
+            <h2 class="cart__product__title">Button Ruby</h2>
+            <h3 class="cart__product__price">$2.000</h3>
+            <h4 class="cart__product__remove">
+              <a href="#" class="cart__product__remove-link h4">Remove</a>
+            </h4>
+          </div>
+        </div>
+
+        <div class="cart__product">
+          <div class="cart__product__image-wrapper">
+            <img src="" alt="" class="cart__product__image">
+          </div>
+          <div class="cart__product__details">
+            <h2 class="cart__product__title">Button Ruby</h2>
+            <h3 class="cart__product__price">$2.000</h3>
+            <h4 class="cart__product__remove">
+              <a href="#" class="cart__product__remove-link h4">Remove</a>
+            </h4>
+          </div>
+        </div>
+
+        <div class="cart__product">
+          <div class="cart__product__image-wrapper">
+            <img src="" alt="" class="cart__product__image">
+          </div>
+          <div class="cart__product__details">
+            <h2 class="cart__product__title">Button Ruby</h2>
+            <h3 class="cart__product__price">$2.000</h3>
+            <h4 class="cart__product__remove">
+              <a href="#" class="cart__product__remove-link h4">Remove</a>
+            </h4>
+          </div>
+        </div>
+
+        <div class="cart__product">
+          <div class="cart__product__image-wrapper">
+            <img src="" alt="" class="cart__product__image">
+          </div>
+          <div class="cart__product__details">
+            <h2 class="cart__product__title">Button Ruby</h2>
+            <h3 class="cart__product__price">$2.000</h3>
+            <h4 class="cart__product__remove">
+              <a href="#" class="cart__product__remove-link h4">Remove</a>
+            </h4>
+          </div>
+        </div>
+
+        <div class="cart__product">
+          <div class="cart__product__image-wrapper">
+            <img src="" alt="" class="cart__product__image">
+          </div>
+          <div class="cart__product__details">
+            <h2 class="cart__product__title">Button Ruby</h2>
+            <h3 class="cart__product__price">$2.000</h3>
+            <h4 class="cart__product__remove">
+              <a href="#" class="cart__product__remove-link h4">Remove</a>
+            </h4>
+          </div>
+        </div>
+
+      </div>
+      <div class="cart__footer">
+        <h2 class="cart__footer__title">Subtotal $17.700</h2>
+        <h4 class="cart__footer__shipping">Shipping and taxes calculated next</h4>
+        {% render 'secondary-button', title: 'Chechout' %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const closeCart = document.querySelector('.close__cart');
+  const sideCart = document.querySelector('.side-cart')
+  closeCart.addEventListener('click', () => {
+    sideCart.classList.remove('open-side-cart')
+    console.log('close')
+  })
+</script>

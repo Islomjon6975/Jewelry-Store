@@ -29,7 +29,7 @@
         </li>
       {% endfor %}
       <li class="nav-item">
-        <a href="#" class="nav-link p {% unless template == 'index' %}nav-black{% endunless %}">Cart (0)</a>
+        <a href="#" id="side-cart-open" class="nav-link p side-cart-open {% unless template == 'index' %}nav-black{% endunless %}">Cart (0)</a>
       </li>
     </ul>
   </div>
@@ -67,3 +67,12 @@
     ]
   }
 {% endschema %}
+
+<script>
+  let cartOpen = document.querySelector('.side-cart-open');
+  let sideCartNav = document.querySelector('.side-cart')
+  cartOpen.addEventListener('click', () => {
+    sideCartNav.classList.remove('open-side-cart')
+    console.log('open cart')
+  })
+</script>

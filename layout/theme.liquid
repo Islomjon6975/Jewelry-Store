@@ -11,6 +11,7 @@
     <!-- ======================================== Header hook for plugins ======================================== -->
     <!-- ======================================== Styles ======================================== -->
     {{ 'style.fonts.css' | asset_url | stylesheet_tag }}
+    {{ 'style.side-cart.css' | asset_url | stylesheet_tag}}
     {{ 'style.base.css' | asset_url | stylesheet_tag }}
     {{ 'style.normalize.css' | asset_url | stylesheet_tag }}
   {{ 'style.typography.css' | asset_url | stylesheet_tag }}
@@ -20,9 +21,18 @@
 
   <body class="gradient">
     {% section 'announcement-bar' %}
-    {% render 'side-cart' %}
     {% section 'navbar' %}
+    {% section 'side-cart' %}
     {{ content_for_layout }}
     {% section 'footer' %}
   </body>
 </html>
+
+<script>
+  let cartOpen = document.querySelector('.side-cart-open');
+  let sideCartNav = document.querySelector('.side-cart')
+  cartOpen.addEventListener('click', () => {
+    sideCartNav.classList.remove('open-side-cart')
+    console.log('open cart')
+  })
+</script>

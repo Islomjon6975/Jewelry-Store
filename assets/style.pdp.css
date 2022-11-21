@@ -33,7 +33,11 @@
     border: 1px solid black;
 }
 
-
+.product__small-images {
+    width: 138px;
+    height: 100%;
+    background: blue;
+}
 
 /* Product Details */
 

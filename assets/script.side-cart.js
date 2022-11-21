@@ -158,12 +158,14 @@ sideCart.updateCart();
 const cartOpen = document.querySelector('#cart-count');
 cartOpen.addEventListener('click', () => {
     sideCart.toggleCart()
+    console.log('open')
 })
 
 // Close Modal
 const close = document.querySelector('.close__cart')
 close.addEventListener('click', () => {
     sideCart.closeModal()
+    console.log('close')
 })
 
 

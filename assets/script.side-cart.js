@@ -196,14 +196,13 @@ form.addEventListener("submit", (e) => {
     // }
   });
 
-async function remove() {
+async function remove () {
     await sideCart.renderCartItems()
-    const removeItem = document.querySelector('.cart__product__remove')
-    removeItem.addEventListener('click', (e) => {
-        const cartItem = document.querySelector('.cart__product')
-        console.log(cartItem?.dataset?.id, 'remove')
-        sideCart.deleteItem({itemID:cartItem?.dataset?.id})
-    })
+    const cartItem = document.querySelector('.cart__product')
+    console.log(cartItem?.dataset?.id, 'remove')
+    sideCart.deleteItem({itemID:cartItem?.dataset?.id})
 }
-remove()
 
+const removeItem = document.querySelector('.cart__product__remove')
+removeItem.addEventListener('click', remove)
+  

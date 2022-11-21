@@ -39,8 +39,6 @@
     display: flex !important;
     justify-content: center !important;
     align-items:center !important;
-    border: 1px solid black;
-    background: crimson;
 }
 
 .product__big-image {
@@ -53,6 +51,11 @@
     background: blue;
     display: flex;
     flex-direction: column;
+}
+
+.product__small-image--wrapper {
+    width: 78px;
+    height: 78px;
 }
 
 /* Product Details */

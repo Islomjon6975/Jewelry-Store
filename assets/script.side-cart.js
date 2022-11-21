@@ -212,5 +212,5 @@ mycartProducts.addEventListener('click', (e) => {
     }
 })
   
-  
-console.log(document.querySelector('.product__item-selected:selected'), 'variant')
+let aaa = document.querySelector('.product__item-selected:selected')
+console.log(aaa, 'selected')

@@ -46,16 +46,17 @@
 }
 
 .product__small-images {
-    width: 238px;
+    width: 138px;
     height: 100%;
     background: blue;
-    display: flex;
-    justify-content: center;
-    align-items:center;    
+    
 }
 
 .product__small-images__swiper--wrapper {
     width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items:center;    
 }
 
 .product__small-image--wrapper {

@@ -1,181 +1,199 @@
 {
   "current": {
-    "colors_solid_button_labels": "#ffffff",
-    "colors_accent_1": "#121212",
-    "gradient_accent_1": "",
-    "colors_accent_2": "#334fb4",
-    "gradient_accent_2": "",
-    "colors_text": "#121212",
-    "colors_outline_button_labels": "#121212",
-    "colors_background_1": "#ffffff",
-    "gradient_background_1": "",
-    "colors_background_2": "#f3f3f3",
-    "gradient_background_2": "",
-    "type_header_font": "assistant_n4",
-    "heading_scale": 100,
-    "type_body_font": "assistant_n4",
-    "body_scale": 100,
-    "page_width": 1200,
-    "spacing_sections": 0,
-    "spacing_grid_horizontal": 8,
-    "spacing_grid_vertical": 8,
-    "buttons_border_thickness": 1,
-    "buttons_border_opacity": 100,
-    "buttons_radius": 0,
-    "buttons_shadow_opacity": 0,
-    "buttons_shadow_horizontal_offset": 0,
-    "buttons_shadow_vertical_offset": 4,
-    "buttons_shadow_blur": 5,
-    "variant_pills_border_thickness": 1,
-    "variant_pills_border_opacity": 55,
-    "variant_pills_radius": 40,
-    "variant_pills_shadow_opacity": 0,
-    "variant_pills_shadow_horizontal_offset": 0,
-    "variant_pills_shadow_vertical_offset": 4,
-    "variant_pills_shadow_blur": 5,
-    "inputs_border_thickness": 1,
-    "inputs_border_opacity": 55,
-    "inputs_radius": 0,
-    "inputs_shadow_opacity": 0,
-    "inputs_shadow_horizontal_offset": 0,
-    "inputs_shadow_vertical_offset": 4,
-    "inputs_shadow_blur": 5,
-    "card_style": "standard",
-    "card_image_padding": 0,
-    "card_text_alignment": "left",
-    "card_color_scheme": "background-2",
-    "card_border_thickness": 0,
-    "card_border_opacity": 10,
-    "card_corner_radius": 0,
-    "card_shadow_opacity": 0,
-    "card_shadow_horizontal_offset": 0,
-    "card_shadow_vertical_offset": 4,
-    "card_shadow_blur": 5,
-    "collection_card_style": "standard",
-    "collection_card_image_padding": 0,
-    "collection_card_text_alignment": "left",
-    "collection_card_color_scheme": "background-2",
-    "collection_card_border_thickness": 0,
-    "collection_card_border_opacity": 10,
-    "collection_card_corner_radius": 0,
-    "collection_card_shadow_opacity": 0,
-    "collection_card_shadow_horizontal_offset": 0,
-    "collection_card_shadow_vertical_offset": 4,
-    "collection_card_shadow_blur": 5,
-    "blog_card_style": "standard",
-    "blog_card_image_padding": 0,
-    "blog_card_text_alignment": "left",
-    "blog_card_color_scheme": "background-2",
-    "blog_card_border_thickness": 0,
-    "blog_card_border_opacity": 10,
-    "blog_card_corner_radius": 0,
-    "blog_card_shadow_opacity": 0,
-    "blog_card_shadow_horizontal_offset": 0,
-    "blog_card_shadow_vertical_offset": 4,
-    "blog_card_shadow_blur": 5,
-    "text_boxes_border_thickness": 0,
-    "text_boxes_border_opacity": 10,
-    "text_boxes_radius": 0,
-    "text_boxes_shadow_opacity": 0,
-    "text_boxes_shadow_horizontal_offset": 0,
-    "text_boxes_shadow_vertical_offset": 4,
-    "text_boxes_shadow_blur": 5,
-    "media_border_thickness": 1,
-    "media_border_opacity": 5,
-    "media_radius": 0,
-    "media_shadow_opacity": 0,
-    "media_shadow_horizontal_offset": 0,
-    "media_shadow_vertical_offset": 4,
-    "media_shadow_blur": 5,
-    "popup_border_thickness": 1,
-    "popup_border_opacity": 10,
-    "popup_corner_radius": 0,
-    "popup_shadow_opacity": 0,
-    "popup_shadow_horizontal_offset": 0,
-    "popup_shadow_vertical_offset": 4,
-    "popup_shadow_blur": 5,
-    "drawer_border_thickness": 1,
-    "drawer_border_opacity": 10,
-    "drawer_shadow_opacity": 0,
-    "drawer_shadow_horizontal_offset": 0,
-    "drawer_shadow_vertical_offset": 4,
-    "drawer_shadow_blur": 5,
-    "badge_position": "bottom left",
-    "badge_corner_radius": 40,
-    "sale_badge_color_scheme": "accent-2",
-    "sold_out_badge_color_scheme": "inverse",
-    "accent_icons": "text",
-    "social_twitter_link": "",
-    "social_facebook_link": "",
-    "social_pinterest_link": "",
-    "social_instagram_link": "",
-    "social_tiktok_link": "",
-    "social_tumblr_link": "",
-    "social_snapchat_link": "",
-    "social_youtube_link": "",
-    "social_vimeo_link": "",
-    "predictive_search_enabled": true,
-    "predictive_search_show_vendor": false,
-    "predictive_search_show_price": false,
-    "currency_code_enabled": true,
-    "cart_type": "notification",
-    "show_vendor": false,
-    "show_cart_note": false,
     "sections": {
-      "announcement-bar": {
-        "type": "announcement-bar",
+      "announcement": {
+        "type": "announcement",
         "blocks": {
-          "announcement-bar-0": {
+          "400518da-3e62-4866-8b4d-9cd2859bf619": {
             "type": "announcement",
             "settings": {
-              "announcement_title": "Promo banner placeholder text",
-              "announcement_link": "\/"
-            }
-          },
-          "eb1dc5e2-6f32-4d7e-bc72-14443c1b2a54": {
-            "type": "announcement",
-            "settings": {
-              "announcement_title": "20% OFF Sitewide until 9\/12",
-              "announcement_link": "\/"
-            }
-          },
-          "06078cc0-bac5-4a3e-8d5e-fb9cadffce6c": {
-            "type": "announcement",
-            "settings": {
-              "announcement_title": "30% OFF Sitewide until 9\/12",
-              "announcement_link": "\/"
+              "title": "20% OFF Sitewide until 9\/12"
             }
           }
         },
         "block_order": [
-          "announcement-bar-0",
-          "eb1dc5e2-6f32-4d7e-bc72-14443c1b2a54",
-          "06078cc0-bac5-4a3e-8d5e-fb9cadffce6c"
+          "400518da-3e62-4866-8b4d-9cd2859bf619"
         ],
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "menu": "main-menu",
+          "header_logo": "shopify:\/\/shop_images\/img-logo.png",
+          "header_logo_black": "shopify:\/\/shop_images\/image-logo-black.png"
+        }
+      },
+      "cart": {
+        "type": "cart",
         "settings": {
         }
       },
       "footer": {
         "type": "footer",
         "settings": {
-          "footer_left_links": "footer",
-          "footer_right_links": "footer-right",
-          "footer_logo": "shopify:\/\/shop_images\/logo-black.png",
-          "footer_instagram": "shopify:\/\/shop_images\/instagram.png",
-          "footer_instagram_url": "https:\/\/www.instagram.com\/appliedlabs\/",
-          "footer_copyright_address": "1234 Placeholder St. New York, NY",
-          "footer_copyright_policy": "Privacy Policy",
-          "footer_copyright_year": "© 2022 D.Gregory"
+          "footer_icon": "shopify:\/\/shop_images\/image-footer.png",
+          "footer_title1": "Newsletter",
+          "footer_title2": "Again faster",
+          "footer_title3": "Get Help",
+          "menu1": "footer",
+          "menu2": "footer-column-menu-2",
+          "copyright": "2020 Again Faster"
         }
       },
-      "navbar": {
-        "type": "navbar",
+      "affiliate-outfitting-header": {
+        "type": "affiliate-outfitting-header",
         "settings": {
-          "nav_link_left": "main-menu",
-          "nav_link_right": "navlink-right",
-          "logo_link": "shopify:\/\/collections",
-          "nav_logo": "shopify:\/\/shop_images\/logo.png",
-          "nav_logo_black": "shopify:\/\/shop_images\/logo-black.png"
+          "header_subtitle": "Commercial gym",
+          "header_title": "Affiliate Outfitting",
+          "header_img": "shopify:\/\/shop_images\/AF_Affiliate_outlifting_Hero_1.png"
+        }
+      },
+      "affiliate-outfitting-evoluation-banner": {
+        "type": "affiliate-outfitting-evoluation-banner",
+        "settings": {
+          "menu": "affiliate-outfitting-navlink",
+          "title": "Don't make costly mistakes at startup. We listen to your needs and provide expertise regarding equipment selection and layout design so you're ready to start training when you open your doors.",
+          "description": "Again Faster Equipment has supplied thousands of fitness affiliates and commercial gyms around the world since 2006. We are excited to help you design your new gym or upgrade your existing facility with the highest quality equipment at the best prices around.",
+          "banner_img": "shopify:\/\/shop_images\/Brooke_3pm_Workout-02_2.png"
+        }
+      },
+      "affiliate-outfitting-packages": {
+        "type": "affiliate-outfitting-packages",
+        "blocks": {
+          "095feef4-0107-48ef-89a5-1b2bee218505": {
+            "type": "packages",
+            "settings": {
+              "packages_num": "5",
+              "packages_subtitle": "Athletic package",
+              "packages_items": "packages-items",
+              "packages_viewmore": "view-more"
+            }
+          },
+          "777c16b2-cf73-4c72-8c73-f3e2b0114a4d": {
+            "type": "packages",
+            "settings": {
+              "packages_num": "10",
+              "packages_subtitle": "Athletic package",
+              "packages_items": "packages-items",
+              "packages_viewmore": "view-more"
+            }
+          },
+          "1088f697-5172-484f-8e8b-3ee2afeddfde": {
+            "type": "packages",
+            "settings": {
+              "packages_num": "15",
+              "packages_subtitle": "Athletic package",
+              "packages_items": "packages-items",
+              "packages_viewmore": "view-more"
+            }
+          }
+        },
+        "block_order": [
+          "095feef4-0107-48ef-89a5-1b2bee218505",
+          "777c16b2-cf73-4c72-8c73-f3e2b0114a4d",
+          "1088f697-5172-484f-8e8b-3ee2afeddfde"
+        ],
+        "settings": {
+          "packages_title": "Affiliate packages",
+          "packages_description": "Ready to stop planning and start training? Our equipment packages provide the right amount of equipment to get you up and running fast."
+        }
+      },
+      "section-affiliate": {
+        "type": "section-affiliate",
+        "blocks": {
+          "eec104cc-1dc2-4fae-96be-fff3c80b4231": {
+            "type": "sections",
+            "settings": {
+              "banner_image": "shopify:\/\/shop_images\/picture_1.png",
+              "banner_header": "Pullup rings",
+              "banner_description": "As the centerpiece of your gym, the Again Faster Competition Series lineup is sure to live up to its name. Featuring heavy-duty 11-gauge 3in x 3in uprights, this line has been designed in conjunction with top strength and conditioning athletes in mind."
+            }
+          },
+          "77d482d8-f50b-4ab3-9204-3bfb4ac2802b": {
+            "type": "sections",
+            "settings": {
+              "banner_image": "shopify:\/\/shop_images\/picture_2.jpg",
+              "banner_header": "Bumper plates",
+              "banner_description": "Our Crumb Rubber Bumper Plates have supplied thousands of gyms across the country with an affordable, yet durable bumper plate. For gyms looking for kilogram weightlifting plates, we also have a Pro Competition Series of bumpers."
+            }
+          },
+          "0e04ea70-122d-4c85-ac37-1f90d72631ae": {
+            "type": "sections",
+            "settings": {
+              "banner_image": "shopify:\/\/shop_images\/picture_3.jpg",
+              "banner_header": "Olympic barbells",
+              "banner_description": "The Evolution and Team Barbells have been fan favorites from the start. The Evolution bar is the perfect bushing bar for those doing general lifting or up to intermediate lifting in any sport, while the Team Bar is a hybrid bearing offering a smooth spin with increased durability for any level athlete."
+            }
+          },
+          "1d99c28f-4d71-4228-9a25-ab5f9f1c08a4": {
+            "type": "sections",
+            "settings": {
+              "banner_image": "shopify:\/\/shop_images\/picture_4.jpg",
+              "banner_header": "Weights",
+              "banner_description": "From kettlebells to sandbags, Again Faster carries all of the most popular products requested by affiliates at the quality your members deserve."
+            }
+          },
+          "bc3c0334-607e-47b2-9529-0b5aee7b58b4": {
+            "type": "sections",
+            "settings": {
+              "banner_image": "shopify:\/\/shop_images\/picture_5.jpg",
+              "banner_header": "Medicine balls",
+              "banner_description": "Our handsewn medicine balls have quickly became one of our most popular products. A textured grip, modern look, and color-coded strips are a few features that make these great for any gym."
+            }
+          },
+          "2843ddf5-8047-45f3-a5ce-ca372139606f": {
+            "type": "sections",
+            "settings": {
+              "banner_image": "shopify:\/\/shop_images\/picture_6.jpg",
+              "banner_header": "Storage",
+              "banner_description": "Determining the equipment you need is only half the battle. We will help figure out the best storage solutions to optimize floor and create the professional look you are seeking. We offer a wide range of space-saving options to fit any budget."
+            }
+          },
+          "3080ad1f-ef8e-4de3-a32a-dfd142fe0c05": {
+            "type": "sections",
+            "settings": {
+              "banner_image": "shopify:\/\/shop_images\/picture_7.jpg",
+              "banner_header": "Flooring",
+              "banner_description": "Gym flooring is a very important, yet often overlooked part of the facility outfitting process. We offer high-performance rubber flooring in multiple colors as well as custom turf options. Tell us about the size of your space and we'll help you determine what will work best."
+            }
+          }
+        },
+        "block_order": [
+          "eec104cc-1dc2-4fae-96be-fff3c80b4231",
+          "77d482d8-f50b-4ab3-9204-3bfb4ac2802b",
+          "0e04ea70-122d-4c85-ac37-1f90d72631ae",
+          "1d99c28f-4d71-4228-9a25-ab5f9f1c08a4",
+          "bc3c0334-607e-47b2-9529-0b5aee7b58b4",
+          "2843ddf5-8047-45f3-a5ce-ca372139606f",
+          "3080ad1f-ef8e-4de3-a32a-dfd142fe0c05"
+        ],
+        "settings": {
+          "banner_title": "Why again faster?",
+          "banner_heading": "Again Faster stands behind our products. Our barbells and rigs are guaranteed for life, and all products carry a strong",
+          "banner_heading_span": "warranty"
+        }
+      },
+      "afilitate-outfitting-contact": {
+        "type": "afilitate-outfitting-contact",
+        "blocks": {
+          "e3d5a7b2-6994-4164-9eb6-f864e7afe407": {
+            "type": "slide",
+            "settings": {
+              "detail_title": "FINANCING INFORMATION",
+              "detail_description": "Again Faster offers instant credit applications through PayPal Credit and custom financing options for large orders and new gym builds.",
+              "btn_text": "Learn more",
+              "btn_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "e3d5a7b2-6994-4164-9eb6-f864e7afe407"
+        ],
+        "settings": {
+          "title": "Consultation",
+          "description": "Looking to customize a package or build your own? Our team is here to help build your dream gym."
         }
       }
     },
@@ -185,144 +203,6 @@
   },
   "presets": {
     "Default": {
-      "colors_solid_button_labels": "#ffffff",
-      "colors_accent_1": "#121212",
-      "gradient_accent_1": "",
-      "colors_accent_2": "#334fb4",
-      "gradient_accent_2": "",
-      "colors_text": "#121212",
-      "colors_outline_button_labels": "#121212",
-      "colors_background_1": "#ffffff",
-      "gradient_background_1": "",
-      "colors_background_2": "#f3f3f3",
-      "gradient_background_2": "",
-      "type_header_font": "assistant_n4",
-      "heading_scale": 100,
-      "type_body_font": "assistant_n4",
-      "body_scale": 100,
-      "page_width": 1200,
-      "spacing_sections": 0,
-      "spacing_grid_horizontal": 8,
-      "spacing_grid_vertical": 8,
-      "buttons_border_thickness": 1,
-      "buttons_border_opacity": 100,
-      "buttons_radius": 0,
-      "buttons_shadow_opacity": 0,
-      "buttons_shadow_horizontal_offset": 0,
-      "buttons_shadow_vertical_offset": 4,
-      "buttons_shadow_blur": 5,
-      "variant_pills_border_thickness": 1,
-      "variant_pills_border_opacity": 55,
-      "variant_pills_radius": 40,
-      "variant_pills_shadow_opacity": 0,
-      "variant_pills_shadow_horizontal_offset": 0,
-      "variant_pills_shadow_vertical_offset": 4,
-      "variant_pills_shadow_blur": 5,
-      "inputs_border_thickness": 1,
-      "inputs_border_opacity": 55,
-      "inputs_radius": 0,
-      "inputs_shadow_opacity": 0,
-      "inputs_shadow_horizontal_offset": 0,
-      "inputs_shadow_vertical_offset": 4,
-      "inputs_shadow_blur": 5,
-      "card_style": "standard",
-      "card_image_padding": 0,
-      "card_text_alignment": "left",
-      "card_color_scheme": "background-2",
-      "card_border_thickness": 0,
-      "card_border_opacity": 10,
-      "card_corner_radius": 0,
-      "card_shadow_opacity": 0,
-      "card_shadow_horizontal_offset": 0,
-      "card_shadow_vertical_offset": 4,
-      "card_shadow_blur": 5,
-      "collection_card_style": "standard",
-      "collection_card_image_padding": 0,
-      "collection_card_text_alignment": "left",
-      "collection_card_color_scheme": "background-2",
-      "collection_card_border_thickness": 0,
-      "collection_card_border_opacity": 10,
-      "collection_card_corner_radius": 0,
-      "collection_card_shadow_opacity": 0,
-      "collection_card_shadow_horizontal_offset": 0,
-      "collection_card_shadow_vertical_offset": 4,
-      "collection_card_shadow_blur": 5,
-      "blog_card_style": "standard",
-      "blog_card_image_padding": 0,
-      "blog_card_text_alignment": "left",
-      "blog_card_color_scheme": "background-2",
-      "blog_card_border_thickness": 0,
-      "blog_card_border_opacity": 10,
-      "blog_card_corner_radius": 0,
-      "blog_card_shadow_opacity": 0,
-      "blog_card_shadow_horizontal_offset": 0,
-      "blog_card_shadow_vertical_offset": 4,
-      "blog_card_shadow_blur": 5,
-      "text_boxes_border_thickness": 0,
-      "text_boxes_border_opacity": 10,
-      "text_boxes_radius": 0,
-      "text_boxes_shadow_opacity": 0,
-      "text_boxes_shadow_horizontal_offset": 0,
-      "text_boxes_shadow_vertical_offset": 4,
-      "text_boxes_shadow_blur": 5,
-      "media_border_thickness": 1,
-      "media_border_opacity": 5,
-      "media_radius": 0,
-      "media_shadow_opacity": 0,
-      "media_shadow_horizontal_offset": 0,
-      "media_shadow_vertical_offset": 4,
-      "media_shadow_blur": 5,
-      "popup_border_thickness": 1,
-      "popup_border_opacity": 10,
-      "popup_corner_radius": 0,
-      "popup_shadow_opacity": 0,
-      "popup_shadow_horizontal_offset": 0,
-      "popup_shadow_vertical_offset": 4,
-      "popup_shadow_blur": 5,
-      "drawer_border_thickness": 1,
-      "drawer_border_opacity": 10,
-      "drawer_shadow_opacity": 0,
-      "drawer_shadow_horizontal_offset": 0,
-      "drawer_shadow_vertical_offset": 4,
-      "drawer_shadow_blur": 5,
-      "badge_position": "bottom left",
-      "badge_corner_radius": 40,
-      "sale_badge_color_scheme": "accent-2",
-      "sold_out_badge_color_scheme": "inverse",
-      "accent_icons": "text",
-      "social_twitter_link": "",
-      "social_facebook_link": "",
-      "social_pinterest_link": "",
-      "social_instagram_link": "",
-      "social_tiktok_link": "",
-      "social_tumblr_link": "",
-      "social_snapchat_link": "",
-      "social_youtube_link": "",
-      "social_vimeo_link": "",
-      "predictive_search_enabled": true,
-      "predictive_search_show_vendor": false,
-      "predictive_search_show_price": false,
-      "currency_code_enabled": true,
-      "cart_type": "notification",
-      "show_vendor": false,
-      "show_cart_note": false,
-      "sections": {
-        "announcement-bar": {
-          "type": "announcement-bar",
-          "blocks": {
-            "announcement-bar-0": {
-              "type": "announcement",
-              "settings": {
-              }
-            }
-          },
-          "block_order": [
-            "announcement-bar-0"
-          ],
-          "settings": {
-          }
-        }
-      }
     }
   }
 }

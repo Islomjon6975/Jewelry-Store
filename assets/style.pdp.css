@@ -44,11 +44,12 @@
 
 .o-image {
     background: crimson ;
-    height: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items:center !important;
-    justify-content: center !important;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
 }
 
 .o-gul {

@@ -1,0 +1,70 @@
+{{ 'style.navbar.css' | asset_url | stylesheet_tag }}
+
+<div class="navbar__nav {% unless template == 'index' %}navbar-border{% endunless %} ">
+  <div class="nav-col">
+    <ul class="nav-items">
+      {% for link in section.settings.nav_link_left.links %}
+        <li class="nav-item">
+          <a href="{{ link.url }}" class="nav-link p {% unless template == 'index' %}nav-black{% endunless %}">{{ link.title | escape  }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="nav-logo">
+    {% if template == 'index' %}
+      <a href="{{ section.settings.logo_link }}">
+        <img src="{{ section.settings.nav_logo.src | img_url: "144x" }}" alt="logo" class="logo">
+      </a>
+    {% else %}
+      <a href="{{ section.settings.logo_link }}">
+        <img src="{{ section.settings.nav_logo_black.src | img_url: "144x" }}" alt="logo" class="logo">
+      </a>
+    {% endif %}
+  </div>
+  <div class="nav-col nav-right">
+    <ul class="nav-items">
+      {% for link in section.settings.nav_link_right.links %}
+        <li class="nav-item">
+          <a href="{{ link.url }}" class="nav-link p {% unless template == 'index' %}nav-black{% endunless %}">{{ link.title | escape  }}</a>
+        </li>
+      {% endfor %}
+      <li class="nav-item">
+        <a href="#" id="cart-count" class="nav-link p  {% unless template == 'index' %}nav-black{% endunless %}">Cart (0)</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Navbar",
+    "settings": [
+      {
+        "id": "nav_link_left",
+        "type": "link_list",
+        "label": "Nav Link Left"
+      },
+      {
+        "id": "nav_link_right",
+        "type": "link_list",
+        "label": "Nav Link Right"
+      },
+      {
+        "id": "logo_link",
+        "type": "url",
+        "label": "Logo Url"
+      },
+      {
+        "id": "nav_logo",
+        "type": "image_picker",
+        "label": "Logo"
+      }, {
+        "id": "nav_logo_black",
+        "type": "image_picker",
+        "label": "Logo Black"
+      }
+    ]
+  }
+{% endschema %}
+

@@ -1,0 +1,114 @@
+{{ 'style.plp.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'script.sort_by.js' | asset_url }}" defer></script>
+
+
+<div class="plp">
+  <div class="plp__header">
+    <img src="{{ section.settings.plp_hero | img_url: 'large' }}" alt="plp-hero" class="plp__hero">
+    {%- comment -%} ---------- Product Types ------------- {%- endcomment -%}
+    <div class="plp__header__nav">
+      <form class="filter-form">
+        {%- for filter in collection.filters -%}
+            <ul class="filter-group-display plp__header__items">
+              <li class="filter-group-display__list-item plp__header__item">
+                  <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset plp__header__link h3">All</a>
+              </li>
+              {%- for filter_value in filter.values -%}
+                <li class="filter-group-display__list-item plp__header__item">
+                  <label  onclick="this.form.submit()" for="Filter-{{ filter.param_name }}-{{ forloop.index }}" class="plp__header__link h3">
+                    <input onclick="this.form.submit()" hidden type="checkbox" name="{{ filter_value.param_name }}" value="{{ filter_value.value }}" id="Filter-{{ filter.param_name }}-{{ forloop.index }}" {% if filter_value.active -%}checked{%- endif %} {% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}>{{ filter_value.label }}</label>
+                </li>
+              {%- endfor -%}
+            </ul>
+        {%- endfor -%}
+      </form>
+    </div>
+  </div>
+    {%- comment -%} ---------- Products Container ------------- {%- endcomment -%}
+  <div class="products__container">
+    {%- comment -%} ---------- Products Selection ------------- {%- endcomment -%}
+    <div class="products__selection__wrapper">
+      {%- comment -%} ---------- Products Sort ------------- {%- endcomment -%}
+      <div class="sort__wrapper">
+        <label class="label h4" for="sort">Sort By</label>
+        <select class="sort-by select h4" id="sort-by">
+          {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+          Sort By
+          {% for option in collection.sort_options %}
+            <option class="option h4" value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
+              {{ option.name }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="collection__wrapper">
+        <label class="label h4" for="collections">Collections</label>
+        <select class="select h4" name="" id="collections">
+          {% for collection in section.settings.plp_collections %}
+            <option class="option h4" value="{{ collection.title }}"><a href="{{ collection.url }}">{{ collection.title }}</a></option>
+          {% endfor %}
+        </select>
+        
+      </div>
+    </div>
+    {% paginate collection.products by 6 %}
+      <div class="products__list">
+        {% assign banner_markup = collection.metafields.accentuate.banner_content %}
+        {% assign banner_image = collection.metafields.accentuate.banner_image %}
+        {% for item in (1..banner_markup.size) %}
+          <div class="product-banner">
+            <div class="product-banner__img-box">
+              {% if banner_image[forloop.index0] != blank %}
+                <img class="product-banner__img" src="{{ banner_image[forloop.index0][0].src }}" width height loading="lazy" alt="" loading="lazy">
+              {% endif %}
+            </div>
+            <div class="product-banner__content">
+              {% if banner_markup[forloop.index0] != blank %}
+                {{ banner_markup[forloop.index0] }}
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+
+          {% for product in collection.products %}
+            {% render 'product', product: {{product}} %}
+          {% endfor %}
+      </div>
+      <div class="pagination">
+        <a href="{{ paginate.previous.url }}" class="pagination__link h4 {% if paginate.previous.url %}pagination-active{% endif %}">Previous</a>
+        <div class="pagination__content">
+          {% for part in paginate.parts %}
+            {% if part.is_link -%}
+                {{ part.title | link_to: part.url }}
+            {%- else -%}
+                <span>{{ part.title }}</span>
+            {% endif %}
+          {%- endfor %}
+        </div>
+        <a href="{{ paginate.next.url }}" class="pagination__link {% if paginate.next.url %}pagination-active{% endif %}">Next</a>
+      </div>
+    {% endpaginate %}
+</div>
+
+{% schema %}
+  {
+    "name": "Product List Page",
+    "settings": [
+      {
+        "id": "plp_hero",
+        "type": "image_picker",
+        "label": "PLP Hero"
+      }, {
+        "id": "plp_nav_list",
+        "type": "link_list",
+        "label": "PLP Header List"
+      },
+      {
+        "id": "plp_collections",
+        "type": "collection_list",
+        "label": "Collections List"
+      }
+    ]
+  }
+{% endschema %}

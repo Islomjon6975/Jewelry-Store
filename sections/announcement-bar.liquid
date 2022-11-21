@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+{{ 'style.announcement.css' | asset_url | stylesheet_tag}}
+
+<div class="announcement swiper mySwiper">
+  <div class="swiper-wrapper">
+    {% for announcement in section.blocks %}
+      <div class="announcement-item swiper-slide">
+        <a href="{{ announcement.settings.announcement_link }}" class="announcement__link p">{{ announcement.settings.announcement_title }}</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Announcement",
+    "max_blocks": 3,
+    "blocks": [
+      {
+        "name": "Announcement",
+        "type": "announcement",
+        "settings": [
+          {
+            "id": "announcement_title",
+            "type": "text",
+            "label": "Announcement Title",
+            "default": "Promo banner placeholder text"
+          }, {
+            "id": "announcement_link",
+            "type": "url",
+            "label": "Announcement Url",
+            "default": "/"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    direction: 'horizontal',
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 1,
+    grabCursor: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
+</script>

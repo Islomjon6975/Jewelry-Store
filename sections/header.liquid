@@ -1,55 +1,40 @@
-{{ 'style-header.css' | asset_url | stylesheet_tag}}
-<div class="header">
-  <div class="header__nav">
-    {% if template == 'index' %}
-      <a href="#">
-        <img src="{{ section.settings.header_logo.src | img_url: '240x'}}" alt="logo" class="logo">
-      </a>
-    {% else %}
-      <a href="#">
-        <img src="{{ section.settings.header_logo_black.src | img_url: '240x'}}" alt="logo" class="logo">
-      </a>
-    {% endif %}
-    <ul class="nav__items">
-      {% for link in section.settings.menu.links %}
-        <li class="nav__item">
-          <a class="nav__link p" href="{{ link.url }}">{{link.title | escape }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
+{{ 'style.header.css' | asset_url | stylesheet_tag }}
 
-    <div class="header__icons">
-      {% render 'icon-search' %}
-      <a href="/account/login">
-        {% render 'icon-account' %}
-      </a>
-      <div class="basket__counter--wrapper">
-        {% render 'icon-basket' %}
-        <span class="basket__counter"></span>
-      </div>
+<style>
+  .header {
+    background-image: url('{{ section.settings.hero_image | img_url: '1440x661' }}');
+  }
+</style>
+
+<div class="header">
+  <div class="rich-text">
+    <h1 class="rich-text__title">{{ section.settings.header_title }}</h1>
+    {% render 'primary-button', title: section.settings.header_btn  %}
+    <div class="header-arrow">
+      {% render 'icon-arrow'  %}
     </div>
   </div>
 
 </div>
 
-
 {% schema %}
   {
-    "name": "Navigations",
+    "name": "Header",
     "settings": [
       {
-        "type": "link_list",
-        "id": "menu",
-        "label": "Menu"
-      }, {
+        "id": "hero_image",
         "type": "image_picker",
-        "id": "header_logo",
-        "label": "Logo"
+        "label": "Hero Image"
       }, {
-        "type": "image_picker",
-        "id": "header_logo_black",
-        "label": "Logo black"
+        "id": "header_title",
+        "type": "text",
+        "label": "Rich Text",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Amet."
+      }, {
+        "id": "header_btn",
+        "type": "text",
+        "label": "Rich Text Button",
+        "default": "Shop Collection"
       }
     ]
   }

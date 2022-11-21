@@ -1,102 +1,85 @@
-{{ 'style-footer.css' | asset_url | stylesheet_tag }}
-
-<style>
-  .footer__container {
-    background-image: url("{{ section.settings.footer_icon | img_url: '449X180' }}");
-  }
-</style>
+{{ 'style.footer.css' | asset_url | stylesheet_tag }}
 
 <div class="footer">
   <div class="footer__container">
-    <div class="footer__form footer__col1">
-      <h4 class="footer__title h5">{{ section.settings.footer_title1 }}
-      </h4>
-      <div class="footer__input__wrapper">
-        <div class="news-letter__form">
-          {% form 'customer' %}
-            <input name="contact[tags]" type="hidden" value="newsletter"/>
-            <input class="footer__input p" placeholder="Enter your email" type="email" name="contact[email]"/>
-            <button type="submit" class="footer-arrow" name="commit">
-              {% render 'icon-arrow-black' %}
-            </button>
-          {% endform %}
-        </div>
-      </div>
-      <div class="footer__socials">
-        {% render 'icon-facebook' %}
-        {% render 'icon-instagram' %}
-        {% render 'icon-email' %}
-      </div>
-    </div>
-
-    <div class="footer__col2">
-      <h4 class="footer__title h5">{{ section.settings.footer_title2 }}
-      </h4>
-      <ul class="footer__items">
-        {% for link in section.settings.menu1.links %}
-          <li class="footer__item">
-            <a class="footer__link p" href="{{ link.url }}">{{link.title | escape }}
-            </a>
+    <div class="footer-col footer-col1">
+      <ul class="footer-items">
+        {% for link in section.settings.footer_left_links.links %}
+          <li class="footer-item">
+            <a href="{{ link.url }}" class="footer-link p">{{ link.title | escape  }}</a>
           </li>
         {% endfor %}
       </ul>
     </div>
-    <div class="footer__col3">
-      <h4 class="footer__title h5">{{ section.settings.footer_title3 }}
-      </h4>
-      <ul class="footer__items">
-        {% for link in section.settings.menu2.links %}
-          <li class="footer__item">
-            <a class="footer__link p" href="{{ link.url }}">{{link.title | escape }}
-            </a>
+    <div class="footer-col footer-col2">
+      <div class="footer__logo--wrapper">
+        <img src="{{ section.settings.footer_logo | img_url: 'medium' }}" alt="footer-logo">
+      </div>
+      <div class="footer-copyright__container">
+        <a class="footer-copyright__title p" href="#">{{ section.settings.footer_copyright_address }}</a>
+        <a class="footer-copyright__title p" href="#">{{ section.settings.footer_copyright_policy }}</a>
+        <a class="footer-copyright__title p" href="#">{{ section.settings.footer_copyright_year }}</a>
+      </div>
+    </div>
+    <div class="footer-col footer-col3">
+      <ul class="footer-items">
+        {% for link in section.settings.footer_right_links.links %}
+          <li class="footer-item">
+            <a href="{{ link.url }}" class="footer-link p">{{ link.title | escape  }}</a>
           </li>
         {% endfor %}
+        <li class="footer-item">
+          <a href="{{ section.settings.footer_instagram_url}}" target="_blank">
+            <img src="{{ section.settings.footer_instagram.src | img_url: 'medium' }}" alt="footer-ingstagram">
+          </a>
+        </li>
       </ul>
     </div>
   </div>
-  <p class="footer__copyright small-p">©{{section.settings.copyright }}
-    . All Rights Reserved</p>
 </div>
 
 {% schema %}
   {
-    "name": "Footer Image",
+    "name": "Footer",
     "settings": [
       {
-        "id": "footer_icon",
+        "id": "footer_left_links",
+        "type": "link_list",
+        "label": "Footer Left Links"
+      },
+      {
+        "id": "footer_right_links",
+        "type": "link_list",
+        "label": "Footer Right Links"
+      },
+      {
+        "id": "footer_logo",
         "type": "image_picker",
-        "label": "Footer Image"
+        "label": "Footer Logo"
       },
       {
-        "id": "footer_title1",
-        "type": "text",
-        "label": "Footer Title 1",
-        "default": "Newsletter"
-      },
-      {
-        "id": "footer_title2",
-        "type": "text",
-        "label": "Footer Title 2",
-        "default": "Again faster"
-      },
-      {
-        "id": "footer_title3",
-        "type": "text",
-        "label": "Footer Title 3",
-        "default": "Get Help"
+        "id": "footer_instagram",
+        "type": "image_picker",
+        "label": "Footer Icon"
       }, {
-        "type": "link_list",
-        "id": "menu1",
-        "label": "Menu 1"
+        "id": "footer_instagram_url",
+        "type": "url",
+        "label": "Footer Icon Url"
       }, {
-        "type": "link_list",
-        "id": "menu2",
-        "label": "Menu 2"
-      }, {
-        "id": "copyright",
+        "id": "footer_copyright_address",
         "type": "text",
-        "label": "Copyright",
-        "default": "2020 Again Faster"
+        "label": "Copyright Address",
+        "default": "1234 Placeholder St. New York, NY"
+      }, {
+        "id": "footer_copyright_policy",
+        "type": "text",
+        "label": "Copyright Policy",
+        "default": "Privacy Policy"
+      }, {
+        "id": "footer_copyright_year",
+        "type": "text",
+        "label": "Copyright Year",
+        "default": "© 2022 D.Gregory"
       }
     ]
   }

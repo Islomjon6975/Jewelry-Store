@@ -3,13 +3,13 @@
     width: 600px;
     height: 100vh;
     background-color: var(--primary-dark-pink-background);
-    padding: 45px 87px;
+    padding: 45px 67px;
     border: 1px solid black;
     position: fixed;
     top: 0;
     right: -600px;
     z-index: 999;
-    transition: all .8s ease;
+    transition: all .10s ease;
 }
 
 .cart__container {

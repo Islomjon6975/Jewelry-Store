@@ -1,0 +1,307 @@
+<style>
+  .contact-container {
+    background-color: white !important;
+    padding: 2rem 10rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7rem;
+    justify-items: start;
+    align-items: flex-start;
+  }
+  .contact__consultation {}
+  .contact__title,
+  .detail__title {
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31px;
+    letter-spacing: 0.08em;
+    text-align: left;
+    margin-bottom: 2.4rem;
+    text-transform: uppercase;
+
+  }
+  .contact__description,
+  .detail__description {
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0;
+    text-align: left;
+    color: black !important;
+
+  }
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .form__title {
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0;
+    text-align: left;
+
+  }
+  .full-name {
+    display: flex;
+    gap: 2rem;
+  }
+  .first-name,
+  .last-name,
+  .email,
+  .gym-name,
+  .details-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+  }
+  .first-name input,
+  .last-name input,
+  .email input,
+  .gym-name input,
+  .details-box textarea {
+    border: none;
+    outline: none;
+    padding-bottom: 0.5rem;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0;
+    text-align: left;
+    border-bottom: 1px solid #c4c4c4;
+  }
+  .first-name label,
+  .details-box label,
+  .last-name label,
+  .email label,
+  .gym-name label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .details-box textarea {
+    padding: 0.5rem;
+    border: 1px solid #c4c4c4 !important;
+  }
+  .btn--submit {
+    border: none;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.175em;
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+  .swatch {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .swatch__box {
+    margin-left: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+  }
+  #option_1,
+  #option_2 {
+    display: none;
+  }
+
+
+
+  #option_2 {}
+  .option__label {
+    position: relative;
+
+  }
+  .option__label::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -2.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid rgba(46, 46, 46, 0.596);
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+  .option__label::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -2rem;
+    width: 1rem;
+    height: 1rem;
+    /* border: 1px solid black; */
+    background-color: black;
+    border-radius: 50%;
+    transform: translateX(-18%) translateY(-50%);
+    display: none;
+  }
+  #option_1,
+  #option_2:checked~.option__label-2::after {
+    display: inline-block !important;
+  }
+  .detail-container {
+    margin: 6rem 0;
+    padding: 8rem;
+    /* padding-bottom: 10rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #d4d4d44a !important;
+  }
+  .detail__title {
+    text-align: center !important;
+    margin: 0;
+  }
+  .detail__description {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .detail__btn {
+    color: black;
+    justify-self: center;
+    text-decoration: none;
+    display: flex;
+    gap: 2.2rem;
+    padding: 1rem 2rem;
+    align-items: center;
+    border: solid 1px black;
+    justify-content: center;
+    align-self: center;
+  }
+</style>
+{% for block in section.blocks %}
+  <div class="detail-container">
+    <h2 class="detail__title">
+      {{block.settings.detail_title}}
+    </h2>
+    <div class="detail__description">
+      {{block.settings.detail_description}}
+    </div>
+    <a href="{{block.settings.btn_text}}" class="detail__btn">
+      <span>{{block.settings.btn_text}}
+      </span>
+      <span>&rarr;</span>
+    </a>
+  </div>
+{% endfor %}
+<div class="contact-container">
+  <div class="contact__consultation">
+    <h2 class="contact__title">
+      {{section.settings.title}}
+    </h2>
+    <p class="contact__description">
+      {{section.settings.description}}
+    </p>
+  </div>
+  <form class="contact__form">
+    <div class="form__title">Complete the information below and a member of our team will reach out to you.</div>
+    <div class="full-name">
+      <div class="first-name">
+        <label for="name">First name</label>
+        <input type="text" id="name" required placeholder="First name"/>
+      </div>
+      <div class="last-name">
+        <label for="last-name">First name</label>
+        <input type="text" id="last-name" required placeholder="Last name"/>
+      </div>
+    </div>
+    <div class="email">
+      <label for="email">Email</label>
+      <input type="email" required placeholder="example@gmail.com" id="email"/>
+    </div>
+    <div class="swatch">
+      <div class="swatch__content">I'm interested in</div>
+      <div class="swatch__box">
+        <div class="option option_1">
+          <input type="radio" name="swatch__options" id="option_1"/>
+          <label class="option__label option__label-1" for="option_1">Outfitting a new gym</label>
+        </div>
+        <div class="option option_2">
+          <input type="radio" name="swatch__options" id="option_2"/>
+          <label class="option__label option__label-2" for="option_2">Updating an existing gym</label>
+        </div>
+      </div>
+    </div>
+    <div class="gym-name">
+      <label for="gym-name">Gym Name</label>
+      <input placeholder="Again Faster" type="text" required id="gym-name"/>
+    </div>
+    <div class="details-box">
+      <label for="details-area">Additional Details</label>
+      <textarea name="details-area" id="" cols="30" rows="5" id="details-area" class="details-area"></textarea>
+    </div>
+    <button aria-label="btn--submit" class="btn btn--submit">Submit</button>
+  </form>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Afilitate Contact",
+    "blocks": [
+      {
+        "name": "Detail block",
+        "type": "slide",
+        "settings": [
+          {
+            "type": "text",
+            "id": "detail_title",
+            "label": "title ",
+            "default": "FINANCING INFORMATION"
+          }, {
+            "type": "text",
+            "id": "detail_description",
+            "label": "description",
+            "default": "Again Faster offers instant credit applications through PayPal Credit and custom financing options for large orders and new gym builds."
+          }, {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button text",
+            "default": "Learn more"
+          }, {
+            "type": "url",
+            "id": "btn_url",
+            "label": "Button url"
+          }
+
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Contact title ",
+        "default": "Consultation"
+      }, {
+        "type": "text",
+        "id": "description",
+        "label": "Contact description",
+        "default": "Looking to customize a package or build your own? Our team is here to help build your dream gym."
+      }
+
+    ]
+  }
+{% endschema %}

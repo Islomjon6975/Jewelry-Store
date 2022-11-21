@@ -1,0 +1,35 @@
+{{ 'style-home-rich-text.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .rich-text {
+    background-image: url("{{ section.settings.hero_img | img_url: '1440x989' }}")
+  }
+</style>
+
+<div class="rich-text">
+  <h1 class="rich-text__title h1">{{section.settings.richtext_title | default: 'Team barbell'}}
+  </h1>
+  <p class="rich-text__description p">{{section.settings.richtext_description | default: 'Team Barbell was to design a piece of equipment that matches the performance and quality of other elite level competition bars.'}}
+  </p>
+
+  {% render 'secondary-button-white', title: section.settings.secondary_btn  %}
+</div>
+
+
+{% schema %}
+  {
+    "name": "Hero",
+    "settings": [
+      {
+        "id": "hero_img",
+        "type": "image_picker",
+        "label": "Hero Image"
+      }, {
+        "id": "secondary_btn",
+        "type": "text",
+        "label": "Secondary Button",
+        "default": "Explore"
+      }
+    ]
+  }
+{% endschema %}

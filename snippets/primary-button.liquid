@@ -1,5 +1,2 @@
-{{ 'style.primary-button.css' | asset_url | stylesheet_tag }}
-
-<button class="primary-btn h4">
-  {{ title }}
+<button aria-label="btn--submit" type="submit" class="primary-button h5 {{type}} {{ class }}">{{ title }}
 </button>

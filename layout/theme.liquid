@@ -1,41 +1,32 @@
 <!doctype html>
-<html class="no-js" lang="{{ request.locale.iso_code }}">
+<html>
   <head>
+    <title>{{ page_title }}
+    </title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="{{ page_description | escape }}">
+    <meta name="theme-color" content="#317EFB"/>
     <link rel="canonical" href="{{ canonical_url }}">
-    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     {{ content_for_header }}
-    <!-- ======================================== Header hook for plugins ======================================== -->
-    <!-- ======================================== Styles ======================================== -->
+    <!-- Header hook for plugins -->
     {{ 'style.fonts.css' | asset_url | stylesheet_tag }}
-    {{ 'style.side-cart.css' | asset_url | stylesheet_tag}}
     {{ 'style.base.css' | asset_url | stylesheet_tag }}
-    {{ 'style.normalize.css' | asset_url | stylesheet_tag }}
-    {{ 'style.typography.css' | asset_url | stylesheet_tag }}
-    <!-- ======================================== Js ======================================== -->
-      <style>
-@font-face {
-  font-family: "MinionPro-Regular";
-  src: local("MinionPro-Regular"), url('{{ "MinionPro-Regular" | asset_url }}') format("woff");
-  font-display: swap;
-}
-@font-face {
-  font-family: "SF New Republic";
-  src: local("SF New Republic"), url('{{ "SF New Republic" | asset_url }}') format("woff");
-  font-display: swap;
-}
-</style><script src="{{ 'script.side-cart.js' | asset_url }}" defer> </script>
+    {{ 'style-normalize.css' | asset_url | stylesheet_tag }}
+    {{ 'style.bundle.css' | asset_url | stylesheet_tag }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="{{ 'js.fetch-Api.js' | asset_url }}" defer></script>
 
   </head>
-
-  <body class="gradient">
-    {% section 'announcement-bar' %}
-    {% section 'navbar' %}
-    {% section 'side-cart' %}
-    {{ content_for_layout }}
+  <body class="{% if template == 'index' %}home{% endif %}">
+    {% section 'announcement' %}
+    {% section 'header' %}
+    {% section 'cart' %}
+    <main role="main">
+      {{ content_for_layout }}
+    </main>
     {% section 'footer' %}
   </body>
 </html>

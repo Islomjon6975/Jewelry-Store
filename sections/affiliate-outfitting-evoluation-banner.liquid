@@ -1,0 +1,54 @@
+{{ 'style.affiliate-outfitting-evoluation-banner.css' | asset_url | stylesheet_tag}}
+
+
+<div class="affiliate-outfitting-evoluation-banner__container">
+  <div class="affiliate-outfitting-evoluation-banner__navbar">
+    <ul>
+      {% for link in section.settings.menu.links %}
+        <li>
+          <a class="h5" href="{{ link.url }}">{{link.title | escape}}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="affiliate-outfitting-evoluation-banner__body">
+    <div class="affiliate-outfitting-evoluation-banner__body__content">
+      <h4 class="affiliate-outfitting-evoluation-banner__body__title">{{ section.settings.title }}
+      </h4>
+      <p class="affiliate-outfitting-evoluation-banner__body__description">{{ section.settings.description }}
+      </p>
+    </div>
+    <div class="affiliate-outfitting-evoluation-banner__body__image-wrapper">
+      <img class="affiliate-outfitting-evoluation-banner__body__image lazyload" src="{{ section.settings.banner_img.src | img_url: '1024x688' }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.banner_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.banner_img.alt | escape }}">
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Af-out Evoluation Banner",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu links"
+      }, {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Don't make costly mistakes at startup. We listen to your needs and provide expertise regarding equipment selection and layout design so you're ready to start training when you open your doors."
+      }, {
+        "type": "text",
+        "id": "description",
+        "label": "Description",
+        "default": "Again Faster Equipment has supplied thousands of fitness affiliates and commercial gyms around the world since 2006. We are excited to help you design your new gym or upgrade your existing facility with the highest quality equipment at the best prices around."
+      }, {
+        "type": "image_picker",
+        "id": "banner_img",
+        "label": "Banner Image"
+      }
+    ]
+  }
+{% endschema %}

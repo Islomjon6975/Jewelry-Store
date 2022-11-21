@@ -1,0 +1,89 @@
+{{ 'style-home-banners.css' | asset_url | stylesheet_tag}}
+<script src="lazysizes.min.js" async=""></script>
+
+
+<div class="home-banner">
+    <div class="home-banner__image-big__wrapper">
+        <img class="banner_img lazyload"
+            src="{{ section.settings.banner_image.src | img_url: '1024x827' }}"
+            data-src="{{ img_url }}"
+            data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
+            data-aspectratio="{{ section.settings.banner_image.aspect_ratio }}"
+            data-sizes="auto"
+            data-parent-fit="cover"
+            alt="{{ section.settings.banner_image.alt | escape }}">
+    </div>
+
+    <div class="home-banner__wrapper">
+        <div class="home-banner__image-small__wrapper">
+            <img class="banner_img lazyload"
+                src="{{ section.settings.banner_imagesmall.src | img_url: '462x628' }}"
+                data-src="{{ img_url }}"
+                data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
+                data-aspectratio="{{ section.settings.banner_imagesmall.aspect_ratio }}"
+                data-sizes="auto"
+                data-parent-fit="cover"
+                alt="{{ section.settings.banner_imagesmall.alt | escape }}">
+        </div>
+        <h5 class="banner__subtitle h5">{{section.settings.banner_subtitle}}</h5>
+        <h3 class="banner__title h3">{{section.settings.banner_title}}</h3>
+        <p class="banner__description p">{{section.settings.banner_description}}</p>
+        <a class="banner__link link" href="{{ section.settings.banner_url }}">{{ section.settings.banner_url_name }}</a>
+        
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Banner",
+
+    "settings": [
+        {
+            "id": "banner_image",
+            "type": "image_picker",
+            "label": "Banner Image 1"
+        },
+        {
+            "id": "banner_imagesmall",
+            "type": "image_picker",
+            "label": "Banner Image 2"
+        },
+        {
+            "id": "banner_subtitle",
+            "type": "text",
+            "label": "Banner Subtitle",
+            "default": "Best seller"
+        },
+        {
+            "id": "banner_title",
+            "type": "text",
+            "label": "Banner Title",
+            "default": "TRULY, AN ALL IN ONE BARBELL"
+        },
+        {
+            "id": "banner_description",
+            "type": "text",
+            "label": "Banner Description",
+            "default": "Design that matches the performance and quality of other elite level competition bars"
+        },
+        {
+            "id": "banner_url_name",
+            "type": "text",
+            "label": "Banner Url Name",
+            "default": "Shop weights"
+        },
+        {
+            "id": "banner_url",
+            "type": "url",
+            "label": "Banner Url"
+        }
+    ],
+
+    "presets": [
+        {
+            "category": "Heeeee",
+            "name": "Heee name"
+        }
+    ]
+}
+{% endschema %}

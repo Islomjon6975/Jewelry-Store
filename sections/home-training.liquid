@@ -1,0 +1,50 @@
+{{ 'style-home-training.css' | asset_url | stylesheet_tag }}
+
+<style>
+    .training__wrapper {
+        background-image: url("{{section.settings.training_img | img_url: '1440x688'}}");
+    }
+</style>
+
+<div class="training__container">
+    <div class="training__wrapper">
+        <h4 class="training__title h2">{{ section.settings.training_title }}</h4>
+        <p class="training__description p">{{ section.settings.training_description }}</</p>
+        <div class="rich-text__btn">
+            <div class="rich-text__btn-text h4">{{section.settings.training_btn }}</div>
+            {% render 'icon-arrow' %}
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Training",
+    "settings": [
+        {
+            "id": "training_img",
+            "type": "image_picker",
+            "label": "Training Background Image"
+        },
+        {
+            "id": "training_title",
+            "type": "text",
+            "label": "Training Title",
+            "default": "Training in comfort"
+        },
+        {
+            "id": "training_description",
+            "type": "text",
+            "label": "Training Description",
+            "default": "Incredibly soft Airlume combed and ringspun cotton + poly fabric provides excellent stretch and recovery during even the most intense workouts."
+        },
+        {
+            "id": "training_btn",
+            "type": "text",
+            "label": "Training Button",
+            "default": "Shop now"
+        }
+    ]
+}
+{% endschema %}

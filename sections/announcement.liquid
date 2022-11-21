@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+{{ 'style-announcement.css' | asset_url | stylesheet_tag}}
+
+<div class="announcement swiper mySwiper">
+  <div class="swiper-wrapper">
+    {% for announcement in section.blocks %}
+      <div class="announcement__wrapper swiper-slide">
+        <a class="announcement__link h5" href="#" class="announcement__text">{{ announcement.settings.title  }}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Announcement",
+    "max_blocks": 3,
+    "blocks": [
+      {
+        "name": "Announcement",
+        "type": "announcement",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Announcement title",
+            "default": "20% OFF Sitewide until 9/12"
+          }
+        ]
+
+      }
+    ]
+
+  }
+{% endschema %}
+
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    direction: 'horizontal',
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
+</script>

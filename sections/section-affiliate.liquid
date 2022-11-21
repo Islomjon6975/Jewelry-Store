@@ -1,0 +1,72 @@
+{{ 'style.affiliate.css' | asset_url | stylesheet_tag }}
+
+<div class="affiliate__container">
+    <div>
+        <h4 class="affiliate__title">{{ section.settings.banner_title }}</h4>
+        <h3 class="affiliate__heading">{{ section.settings.banner_heading }} <span class="affiliate__span" >{{ section.settings.banner_heading_span }}</span> .</h3>
+    </div>
+    <div class="affiliate__wrapper">
+        {% for sections in section.blocks %}
+            <div class="affiliate__div">
+                <div class="affiliate__image--wrapper">
+                    <img class="affiliate__image" src="{{ sections.settings.banner_image | img_url: 'large' }}" alt="">
+                </div>
+                <div class="affiliate__content">
+                    <h4 class="affiliate__header">{{ sections.settings.banner_header }}</h4>
+                    <p class="affiliate__description">{{ sections.settings.banner_description }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Affiliate Outfitting",
+        "settings": [
+            {
+                "type": "text",
+                "id": "banner_title",
+                "label": "Banner Title",
+                "default": "lorem ipsum"
+            },
+            {
+                "type": "text",
+                "id": "banner_heading",
+                "label": "Banner Heading",
+                "default": "lorem ipsum"
+            },
+            {
+                "type": "text",
+                "id": "banner_heading_span",
+                "label": "Banner Heading Span",
+                "default": "lorem ipsum"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "sections",
+                "name": "Sections",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "banner_image",
+                        "label": "Banner Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "banner_header",
+                        "label": "Banner Header",
+                        "default": "lorem ipsum"
+                    },
+                    {
+                        "type": "text",
+                        "id": "banner_description",
+                        "label": "Banner Description",
+                        "default": "lorem ipsum dolor set amet"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

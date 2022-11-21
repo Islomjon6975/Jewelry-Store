@@ -1,0 +1,57 @@
+<!-- /templates/customers/login.liquid -->
+{{ 'style.login.css' | asset_url | stylesheet_tag }}
+
+  <div class="login__container">
+  {% form 'customer_login' %}
+  {{ form.errors | default_errors }}
+    <h3 class="h3 login__title">{{ 'general.login_page.login_title' }}</h3>
+    <div class="login__wrapper">
+      <div class="input-box">
+        <label class="login__label" for="email">{{ 'general.login_page.login_email' | t }}</label>
+        <input class="login__input" type="email" value="" name="customer[email]"/>
+      </div>
+    </div>
+
+    <div class="login__wrapper">
+      <div class="input-box">
+        <label class="login__label" for="password">{{ 'general.login_page.login_password' | t }}</label>
+        <input class="login__input" type="password" value="" name="customer[password]"/>
+      </div>
+    </div>
+
+    <p class="login__forgot">{{ 'general.login_page.login_forgot_password' | t }}</p>
+    
+    <button  aria-label="btn--submit" class="login__btn" type="submit">{{ 'general.login_page.login_log_in' | t }}</button>
+
+  {% endform %}
+    <p class="login__alreadyHaveAnAccount">{{ 'general.login_page.login_dont_have_account_yet' | t }}</p>
+    <form action="/account/register">
+      <button  aria-label="btn--submit" class="login__btn--secondary" type="submit">{{ 'general.login_page.login_create_account' | t }}</button>
+    </form>
+
+  </div>
+
+{% form 'recover_customer_password' %}
+
+      {{ form.errors | default_errors }}
+    <div class="recover__container">
+      <h3 class="h3 login__title">Reset Password</h3>
+
+      <label for="customer_email">Email Address</label>
+      <input class="login__input" type="email" name="email"/>
+
+      <input class="forgot__btn" type="submit" value="Submit"/>
+    </div
+{% endform %}
+
+<script>
+  const forgotPassword = document.querySelector('.login__forgot')
+  const loginContainer = document.querySelector('.login__container')
+  const forgotContainer = document.querySelector('.recover__container')
+  forgotContainer.style.display = 'none'
+  forgotPassword.addEventListener('click', () => {
+      loginContainer.style.display = 'none'
+      forgotContainer.style.display = 'flex'
+
+  })
+</script>

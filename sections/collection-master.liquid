@@ -1,0 +1,64 @@
+{{ 'style-collection-master.css' | asset_url | stylesheet_tag }}
+<script src="lazysizes.min.js" async=""></script>
+
+<div class="collection-master">
+    <div class="collection-hero">
+        <div class="rich-text">
+            <p class="eyebrow h5">{{ collection.metafields.accentuate.eyebrow | newline_to_br }}</p>
+            <h2 class="title h2">{{ collection.metafields.accentuate.title }}</h2>
+
+            {% render 'secondary-button-black', title: collection.metafields.accentuate.cta_label, url: collection.metafields.accentuate.cta_url  %}
+        </div>
+        <div class="master-images">
+            <div class="big-image__container">
+                {% for item in collection.metafields.accentuate.image_1 %}
+                    <img class="banner_img lazyload"
+                    src="{{ item.src }}"
+                    data-src="{{ img_url }}"
+                    data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
+                    data-aspectratio="{{ item.aspect_ratio }}"
+                    data-sizes="auto"
+                    data-parent-fit="cover"
+                    alt="{{ item.alt | escape }}">
+                {% endfor %}
+            </div>
+            <div class="small-image__container">
+                {% for item in collection.metafields.accentuate.image_2 %}
+                    <img class="banner_img lazyload"
+                    src="{{ item.src }}"
+                    data-src="{{ img_url }}"
+                    data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
+                    data-aspectratio="{{ item.aspect_ratio }}"
+                    data-sizes="auto"
+                    data-parent-fit="cover"
+                    alt="{{ item.alt | escape }}">
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="product-collections">
+        {% assign products = collection.metafields.accentuate.collection_products | split: '|' %}
+        {% for item in products %}
+            <div class="product-collection">
+                <div class="product__image__wrappper">
+                    <img class="banner_img lazyload"
+                    src="{{ collections[item].image | img_url : 'medium' }}"
+                        data-src="{{ img_url }}"
+                        data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
+                        data-aspectratio="{{ collections[item].image.aspect_ratio }}"
+                        data-sizes="auto"
+                        data-parent-fit="cover"
+                        class="product_img"
+                        alt="{{ collections[item].image.alt | escape }}">
+                </div>
+                <div class="product_wrapper">
+                    <a href="{{ collections[item].url }}" class="h5 product__title ">{{ collections[item].title  }}</a>
+                    {% render 'icon-arrow-black' %}
+                </div>
+            </div>
+        {% endfor %}
+        
+    </div>
+</div>
+

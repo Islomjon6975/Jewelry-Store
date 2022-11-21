@@ -256,11 +256,12 @@
     border: 1px solid black;
     max-width: 1140px;
     width: 100%;
-    height: fit-content;
+    height: 491px;
 }
 
 .pdp__banner__image {
     flex: 1;
+    height: 100%;
 }
 
 .pdp__banner__content {

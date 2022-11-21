@@ -196,21 +196,11 @@ form.addEventListener("submit", (e) => {
     // }
   });
 
-const mycartProducts = document.querySelector('.cart__products')
+const mycartProducts = document.querySelector('.cart__product__remove')
 mycartProducts.addEventListener('click', (e) => {
-    const target = e.target.closest(".item__control")
-    if(!target) return
-    const operator = target.dataset.operator
-    const cartItem = target.closest('.cart__product')
-    if(operator === 'remove') {
-        console.log(cartItem?.dataset?.id, 'remove')
-        sideCart.deleteItem({itemID:cartItem?.dataset?.id})
-    }
-    if(operator === 'plus') {
-        sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
-    }  
-    if(operator === 'minus') {
-        sideCart.decreaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
-    }
+    const cartItem = document.querySelector('.cart__product')
+    console.log(cartItem?.dataset?.id, 'remove')
+    sideCart.deleteItem({itemID:cartItem?.dataset?.id})
+    
 })
   

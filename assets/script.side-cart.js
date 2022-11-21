@@ -203,6 +203,7 @@ mycartProducts.addEventListener('click', (e) => {
     const operator = target.dataset.operator
     const cartItem = target.closest('.cart__product')
     if(operator === 'remove') {
+        console.log(cartItem.id, 'remove')
         sideCart.deleteItem({itemID:cartItem.dataset.id})
     }
     if(operator === 'plus') {

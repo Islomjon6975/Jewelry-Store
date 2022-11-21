@@ -30,7 +30,7 @@
     display: flex;
     justify-content: center;
     align-items:center;
-    border: 1px solid black;
+    border: none !important;
 }
 
 .product__big-image--wrapper {

@@ -24,13 +24,14 @@
 }
 
 .pdp__images--wrapper {
-    height: 400px;
+    height: 300px;
     width: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
     gap: 20px;
+    background: green;
 }
 
 .pdp__image--item {

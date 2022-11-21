@@ -29,70 +29,72 @@
     </div>
     </div>
   {%- endcomment -%}
-  <form id="form-product" class="pdp__container" data-selling_plan_id="{{ product.selling_plan_groups.size }}" data-noVariant="{{ product.has_only_default_variant }}>
-    <div class="pdp__image--container ">
-      <div thumbsSlider="" class="swiper mySwiperPdp product__small-images">
-        <div class="swiper-wrapper product__small-images__swiper--wrapper">
-          {% for item in product.images %}
-            <div class="swiper-slide product__small-image--wrapper">
-              <img class="product__small-image" src="{{ item.src | img_url: '720x900' }}" loading="lazy" alt="{{ item.alt | escape }}"/>
-            </div>
-          {% endfor %}
+  <form id="form-product" data-selling_plan_id="{{ product.selling_plan_groups.size }}" data-noVariant="{{ product.has_only_default_variant }}">
+    <div class="pdp__container">
+      <div class="pdp__image--container ">
+        <div thumbsSlider="" class="swiper mySwiperPdp product__small-images">
+          <div class="swiper-wrapper product__small-images__swiper--wrapper">
+            {% for item in product.images %}
+              <div class="swiper-slide product__small-image--wrapper">
+                <img class="product__small-image" src="{{ item.src | img_url: '720x900' }}" loading="lazy" alt="{{ item.alt | escape }}"/>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="swiper mySwiper2Pdp product__big-image--container">
+          <div class="swiper-wrapper">
+            {% for item in product.images %}
+              <div class="swiper-slide product__big-image--wrapper">
+                <img srcset="{%- if item.src.width >= 165 -%}{{ item.src | image_url: width: 165 }} 165w,{%- endif -%}
+                                                                                      {%- if item.src.width >= 360 -%}{{ item.src | image_url: width: 360 }} 360w,{%- endif -%}
+                                                                                      {%- if item.src.width >= 533 -%}{{ item.src | image_url: width: 533 }} 533w,{%- endif -%}
+                                                                                      {%- if item.src.width >= 720 -%}{{ item.src | image_url: width: 720 }} 720w,{%- endif -%}
+                                                                                      {%- if item.src.width >= 940 -%}{{ item.src | image_url: width: 940 }} 940w,{%- endif -%}
+                                                                                      {%- if item.src.width >= 1066 -%}{{ item.src | image_url: width: 1066 }} 1820w,{%- endif -%}
+                                                                                      {{ item.src | image_url }} {{ item.src.width }}w
+                                                                                    " src="{{ item.src | image_url: width: 648 }}" sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)" alt="{{ item.src.alt | escape }}" class="product__big-image"
+                  {% unless lazy_load==false %}
+                  loading="lazy"{% endunless %} width="{{ item.src.width }}" height="{{ item.src.height }}">
+              </div>
+            {% endfor %}
+          </div>
         </div>
       </div>
-      <div class="swiper mySwiper2Pdp product__big-image--container">
-        <div class="swiper-wrapper">
-          {% for item in product.images %}
-            <div class="swiper-slide product__big-image--wrapper">
-              <img srcset="{%- if item.src.width >= 165 -%}{{ item.src | image_url: width: 165 }} 165w,{%- endif -%}
-                                                {%- if item.src.width >= 360 -%}{{ item.src | image_url: width: 360 }} 360w,{%- endif -%}
-                                                {%- if item.src.width >= 533 -%}{{ item.src | image_url: width: 533 }} 533w,{%- endif -%}
-                                                {%- if item.src.width >= 720 -%}{{ item.src | image_url: width: 720 }} 720w,{%- endif -%}
-                                                {%- if item.src.width >= 940 -%}{{ item.src | image_url: width: 940 }} 940w,{%- endif -%}
-                                                {%- if item.src.width >= 1066 -%}{{ item.src | image_url: width: 1066 }} 1820w,{%- endif -%}
-                                                {{ item.src | image_url }} {{ item.src.width }}w
-                                              " src="{{ item.src | image_url: width: 648 }}" sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)" alt="{{ item.src.alt | escape }}" class="product__big-image"
-                {% unless lazy_load==false %}
-                loading="lazy"{% endunless %} width="{{ item.src.width }}" height="{{ item.src.height }}">
-            </div>
-          {% endfor %}
+      <div class="pdp__details--container">
+        <h4 class="product__type">{{ product.type }}</h4>
+        <h1 class="product__title">{{ product.title }}</h1>
+        <h2 class="product__price">{{ product.price | money }}</h2>
+        {% if product.variants  %}
+          <select class="select select_size h4" id="" data-set="{{ product.variants }}">
+            <option class="option h4" value="Select Size" selected disabled>Select Size</option>
+            {% for variant in product.variants %}
+              <script>
+                console.log({{variant | json }}, 'variant')
+              </script>
+              <option data-variant={{variant}} class="option option_size h4" value="{{ variant.option1 }}">{{ variant.option1 }}
+              </option>
+            {% endfor %}
+          </select>
+        {% endif %}
+        {% render 'secondary-button', title: 'Add To Cart', width: '253px' %}
+        <div class="pdp__product__info">
+          {% assign product_info = product.metafields.accentuate.product_info %}
+          {{ product_info }}
         </div>
-      </div>
-    </div>
-    <div class="pdp__details--container">
-      <h4 class="product__type">{{ product.type }}</h4>
-      <h1 class="product__title">{{ product.title }}</h1>
-      <h2 class="product__price">{{ product.price | money }}</h2>
-      {% if product.variants  %}
-        <select class="select select_size h4" id="" data-set="{{ product.variants }}">
-          <option class="option h4" value="Select Size" selected disabled>Select Size</option>
-          {% for variant in product.variants %}
-            <script>
-              console.log({{variant | json }}, 'variant')
-            </script>
-            <option data-variant={{variant}} class="option option_size h4" value="{{ variant.option1 }}">{{ variant.option1 }}
-            </option>
-          {% endfor %}
-        </select>
-      {% endif %}
-      {% render 'secondary-button', title: 'Add To Cart', width: '253px' %}
-      <div class="pdp__product__info">
-        {% assign product_info = product.metafields.accentuate.product_info %}
-        {{ product_info }}
-      </div>
-      <div class="pdp__product__description">
-        {% assign product_description = product.metafields.accentuate.product_description %}
-        {{ product_description }}
-      </div>
-      <div class="pdp__product__details">
-        {% assign product_details = product.metafields.accentuate.product_details %}
-        {{ product_details }}
-      </div>
-      <div class="pdp__product__contact">
-        {% assign product_contact = product.metafields.accentuate.product_contact_us %}
-        {{ product_contact }}
-      </div>
+        <div class="pdp__product__description">
+          {% assign product_description = product.metafields.accentuate.product_description %}
+          {{ product_description }}
+        </div>
+        <div class="pdp__product__details">
+          {% assign product_details = product.metafields.accentuate.product_details %}
+          {{ product_details }}
+        </div>
+        <div class="pdp__product__contact">
+          {% assign product_contact = product.metafields.accentuate.product_contact_us %}
+          {{ product_contact }}
+        </div>
 
+      </div>
     </div>
   </form>
   <div class="pdp__banner__metafield">

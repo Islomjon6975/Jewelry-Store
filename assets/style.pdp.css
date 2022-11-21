@@ -36,9 +36,9 @@
 .product__big-image--wrapper {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items:center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items:center !important;
     border: 1px solid black;
     background: crimson;
 }

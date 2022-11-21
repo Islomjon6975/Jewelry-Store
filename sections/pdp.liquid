@@ -28,7 +28,7 @@
     </div>
   </div>
   <div class="pdp__container">
-    <div class="pdp__image--container">
+    <div class="pdp__image--container pdp__image--wrapper">
       <div thumbsSlider="" class="swiper mySwiperPdp o-imagee">
         <div class="swiper-wrapper o-image">
           {% for item in product.images %}
@@ -43,14 +43,14 @@
           {% for item in product.images %}
             <div class="swiper-slide big-image">
               <img srcset="
-                                    {%- if item.src.width >= 165 -%}{{ item.src | image_url: width: 165 }} 165w,{%- endif -%}
-                                    {%- if item.src.width >= 360 -%}{{ item.src | image_url: width: 360 }} 360w,{%- endif -%}
-                                    {%- if item.src.width >= 533 -%}{{ item.src | image_url: width: 533 }} 533w,{%- endif -%}
-                                    {%- if item.src.width >= 720 -%}{{ item.src | image_url: width: 720 }} 720w,{%- endif -%}
-                                    {%- if item.src.width >= 940 -%}{{ item.src | image_url: width: 940 }} 940w,{%- endif -%}
-                                    {%- if item.src.width >= 1066 -%}{{ item.src | image_url: width: 1066 }} 1820w,{%- endif -%}
-                                    {{ item.src | image_url }} {{ item.src.width }}w
-                                  " src="{{ item.src | image_url: width: 648 }}" sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)" alt="{{ item.src.alt | escape }}" class="motion-reduce"
+                                                  {%- if item.src.width >= 165 -%}{{ item.src | image_url: width: 165 }} 165w,{%- endif -%}
+                                                  {%- if item.src.width >= 360 -%}{{ item.src | image_url: width: 360 }} 360w,{%- endif -%}
+                                                  {%- if item.src.width >= 533 -%}{{ item.src | image_url: width: 533 }} 533w,{%- endif -%}
+                                                  {%- if item.src.width >= 720 -%}{{ item.src | image_url: width: 720 }} 720w,{%- endif -%}
+                                                  {%- if item.src.width >= 940 -%}{{ item.src | image_url: width: 940 }} 940w,{%- endif -%}
+                                                  {%- if item.src.width >= 1066 -%}{{ item.src | image_url: width: 1066 }} 1820w,{%- endif -%}
+                                                  {{ item.src | image_url }} {{ item.src.width }}w
+                                                " src="{{ item.src | image_url: width: 648 }}" sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)" alt="{{ item.src.alt | escape }}" class="motion-reduce"
                 {% unless lazy_load==false %}
                 loading="lazy"{% endunless %} width="{{ item.src.width }}" height="{{ item.src.height }}">
               {%- comment -%}
@@ -62,28 +62,6 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
-
-      {%- comment -%}
-        <div thumbsSlider="" class=" pdp__images--wrapper swiper mySwiper">
-        <div class="swiper-wrapper ">
-        {% for item in product.images %}
-        <div class="swiper-slide ">
-        <img class="pdp__image--item lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
-        </div>
-        {% endfor %}
-        </div>
-        </div>
-        <div class="pdp__image--wrapper swiper mySwiper2">
-        <div class="swiper-wrapper">
-        {% for item in product.images %}
-        <div class="swiper-slide">
-        <img class="pdp__image lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
-        </div>
-        {% endfor %}
-        </div>
-        </div>
-      {%- endcomment -%}
-
     </div>
     <div class="pdp__details--container">
       <h4 class="product__type">{{ product.type }}</h4>

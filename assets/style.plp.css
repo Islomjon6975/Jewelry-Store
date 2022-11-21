@@ -133,6 +133,10 @@
     gap: 40px;
 }
 
+.pagination__content a {
+    text-decoration: none;
+}
+
 .pagination__content span {
     width: 40px;
     height: 40px;
@@ -141,13 +145,8 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-}
-
-.pagination__content span {
     background: #FFFFFF;
 }
-
-
 
 .pagination__link {
     height: 100%;

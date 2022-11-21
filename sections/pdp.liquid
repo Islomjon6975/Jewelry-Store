@@ -222,6 +222,7 @@
   const options = document.querySelectorAll('.option_size');
   const productTitle = document.querySelector('.product__title');
   const productPrice = document.querySelector('.product__price');
+  console.log({{ product.variants | json }}, 'product variants')
   select.addEventListener('change', (e) => {
     const productVariants = {{ product.variants | json }};
     productVariants.forEach(variant => {

@@ -177,6 +177,7 @@ form.addEventListener("submit", (e) => {
     addToCartBtn.addEventListener('click',function(e){
         e.preventDefault()
         sideCart.addToCart()
+        console.assert.log('added')
     })
 
     // const addToCartBtns2 = document.querySelectorAll('.product__details--text-btn')

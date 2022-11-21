@@ -57,7 +57,7 @@ class Cart {
         for (let item of cartDetails.items) {
             console.log(item, 'item')
             const template = `
-                <div class="cart__product" length=${cartDetails.items.length} data-id="${item.key}" data-amount="${item.quantity}>
+                <div class="cart__product" length=${cartDetails.items.length} data-id="${item.id}" data-amount="${item.quantity}>
                     <div class="cart__product__image-wrapper">
                         <img src="${ item.image }" alt="${ item.title }" class="cart__product__image">
                     </div>
@@ -65,11 +65,11 @@ class Cart {
                         <h2 class="cart__product__title">">${ item.title }</h2>
                         <h3 class="cart__product__price">${this.formatter.format(item.price / 100)}</h3>
                         <div class="cart__product__calculation">
-                            <button data-operator="minus" class="cart__product__decrement">-</button>
+                            <button data-operator="minus" class="cart__product__decrement item__control">-</button>
                             <span class="cart__product__count">${item.quantity}</span>
-                            <button data-operator="plus" class="cart__product__increment">+</button>
+                            <button data-operator="plus" class="cart__product__increment item__control">+</button>
                         </div>
-                        <h4 data-operator="remove" class="cart__product__remove">
+                        <h4 data-operator="remove" class="cart__product__remove item__control">
                             <a href="#" class="cart__product__remove-link h4">Remove</a>
                         </h4>
                     </div>
@@ -198,7 +198,7 @@ form.addEventListener("submit", (e) => {
 
 const mycartProducts = document.querySelector('.cart__products')
 mycartProducts.addEventListener('click', (e) => {
-    const target = e.target.closest(".cart__product__remove")
+    const target = e.target.closest(".item__control")
     if(!target) return
     const operator = target.dataset.operator
     const cartItem = target.closest('.cart__product')

@@ -1,0 +1,19 @@
+.secondary-btn {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-width: 253px;
+    padding: 11px 48px;
+    /* height: 44px; */
+    background: var(--primary-black);
+    border-radius: 2px;
+    border: none;
+    position: relative;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    transition: transform .4s ease-in-out;
+    color: var(--primary-white);
+}
+
+.secondary-btn:active {
+    transform: scale(0.97);
+}

@@ -1,0 +1,22 @@
+
+.announcement {
+    width: 100%;
+    height: 50px;
+    background-color: var(--primary-black);
+}
+
+.announcement-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.announcement__link {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: var(--secondary-white);
+    text-decoration: none;
+}

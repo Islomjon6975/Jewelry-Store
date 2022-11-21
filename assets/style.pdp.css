@@ -253,7 +253,7 @@
 .pdp__banner__wrapper {
     display: flex;
     align-items:center;
-    border: 1px solid black;
+    border: 1px solid var(--primary-black);
     max-width: 1140px;
     width: 100%;
     height: 491px;
@@ -261,6 +261,10 @@
 
 .pdp__banner__image {
     flex: 1;
+    height: 100%;
+}
+
+.banner__img {
     height: 100%;
 }
 

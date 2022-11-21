@@ -47,9 +47,11 @@
 }
 
 .product__small-images {
-    width: 138px;
+    width: 238px;
     height: 100%;
     background: blue;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Product Details */

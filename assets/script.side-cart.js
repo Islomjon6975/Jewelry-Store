@@ -79,15 +79,15 @@ class Cart {
 
         
 
-        const sideCartTotalPrice = document.querySelector(".subtotal");
-        sideCartTotalPrice.textContent = this.formatter.format(cartDetails.total_price / 100);
+        const sideCartTotalPrice = document.querySelector(".cart__footer__title");
+        sideCartTotalPrice.textContent = `Subtotal ${this.formatter.format(cartDetails.total_price / 100)}`;
 
-        const sideCartItemCart = document.querySelector(".basket__counter");
-        sideCartItemCart.textContent = cartDetails.item_count
-        if(Number(cartDetails.item_count) > 0) {
-            const basketCounter = document.querySelector('.basket__counter')
-            basketCounter.classList.add('basket__counter-style')
-        } 
+        const sideCartItemCart = document.querySelector("#cart-count");
+        sideCartItemCart.innerText = `Cart (${cartDetails.item_count})`
+        // if(Number(cartDetails.item_count) > 0) {
+        //     const basketCounter = document.querySelector('.basket__counter')
+        //     basketCounter.classList.add('basket__counter-style')
+        // } 
     }
 
     async toggleCart() {

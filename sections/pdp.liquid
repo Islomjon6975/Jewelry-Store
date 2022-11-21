@@ -29,26 +29,22 @@
   </div>
   <div class="pdp__container">
     <div class="pdp__image--container">
-      <div class="">
-        <div thumbsSlider="" class="swiper mySwiper">
-          <div class="swiper-wrapper pdp__images--wrapper">
-            {% for item in product.images %}
-              <div class="swiper-slide ">
-                <img class="pdp__image--item lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
-              </div>
-            {% endfor %}
-          </div>
+      <div thumbsSlider="" class=" pdp__images--wrapper swiper mySwiper">
+        <div class="swiper-wrapper ">
+          {% for item in product.images %}
+            <div class="swiper-slide ">
+              <img class="pdp__image--item lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
+            </div>
+          {% endfor %}
         </div>
       </div>
-      <div class="pdp__image--wrapper">
-        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-          <div class="swiper-wrapper">
-            {% for item in product.images %}
-              <div class="swiper-slide">
-                <img class="pdp__image lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
-              </div>
-            {% endfor %}
-          </div>
+      <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="pdp__image--wrapper swiper mySwiper2">
+        <div class="swiper-wrapper">
+          {% for item in product.images %}
+            <div class="swiper-slide">
+              <img class="pdp__image lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
+            </div>
+          {% endfor %}
         </div>
       </div>
     </div>

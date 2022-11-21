@@ -117,6 +117,16 @@
 
 }
 
+.cart__product__calculation {
+    display: flex;
+    align-items:center;
+    gap: 10px;
+}
+
+.cart__product__decrement {
+    
+}
+
 .cart__product__remove-lin:active {
     color: rgb(222, 156, 169);
     

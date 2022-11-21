@@ -29,7 +29,7 @@
   </div>
   <div class="pdp__container">
     <div class="pdp__image--container">
-      <div thumbsSlider="" class="swiper mySwiper o-image">
+      <div thumbsSlider="" class="swiper mySwiperPdp o-image">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="https://swiperjs.com/demos/images/nature-1.jpg"/>
@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper mySwiper2">
+      <div class="swiper mySwiper2Pdp big-image">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="https://swiperjs.com/demos/images/nature-1.jpg"/>
@@ -234,14 +234,14 @@
     })
   })
 
-  var swiper = new Swiper(".mySwiper", {
+  var pdpswiper = new Swiper(".mySwiperPdp", {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true
   });
-  var swiper2 = new Swiper(".mySwiper2", {
+  var pdpswiper2 = new Swiper(".mySwiper2Pdp", {
     loop: true,
     spaceBetween: 10,
     navigation: {

@@ -29,11 +29,11 @@
   </div>
   <div class="pdp__container">
     <div class="pdp__image--container ">
-      <div thumbsSlider="" class="swiper mySwiperPdp o-imagee">
-        <div class="swiper-wrapper o-image">
+      <div thumbsSlider="" class="swiper mySwiperPdp">
+        <div class="swiper-wrapper">
           {% for item in product.images %}
-            <div class="swiper-slide swiper-slide2">
-              <img class="o-gul-item" src="{{ item.src | img_url: '720x900' }}" loading="lazy" alt="{{ item.alt | escape }}"/>
+            <div class="swiper-slide">
+              <img src="{{ item.src | img_url: '720x900' }}" loading="lazy" alt="{{ item.alt | escape }}"/>
             </div>
           {% endfor %}
         </div>
@@ -42,25 +42,19 @@
         <div class="swiper-wrapper">
           {% for item in product.images %}
             <div class="swiper-slide big-image image-open">
-              <img srcset="
-                                                                                  {%- if item.src.width >= 165 -%}{{ item.src | image_url: width: 165 }} 165w,{%- endif -%}
-                                                                                  {%- if item.src.width >= 360 -%}{{ item.src | image_url: width: 360 }} 360w,{%- endif -%}
-                                                                                  {%- if item.src.width >= 533 -%}{{ item.src | image_url: width: 533 }} 533w,{%- endif -%}
-                                                                                  {%- if item.src.width >= 720 -%}{{ item.src | image_url: width: 720 }} 720w,{%- endif -%}
-                                                                                  {%- if item.src.width >= 940 -%}{{ item.src | image_url: width: 940 }} 940w,{%- endif -%}
-                                                                                  {%- if item.src.width >= 1066 -%}{{ item.src | image_url: width: 1066 }} 1820w,{%- endif -%}
-                                                                                  {{ item.src | image_url }} {{ item.src.width }}w
-                                                                                " src="{{ item.src | image_url: width: 648 }}" sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)" alt="{{ item.src.alt | escape }}" class="motion-reduce"
+              <img srcset="{%- if item.src.width >= 165 -%}{{ item.src | image_url: width: 165 }} 165w,{%- endif -%}
+                                  {%- if item.src.width >= 360 -%}{{ item.src | image_url: width: 360 }} 360w,{%- endif -%}
+                                  {%- if item.src.width >= 533 -%}{{ item.src | image_url: width: 533 }} 533w,{%- endif -%}
+                                  {%- if item.src.width >= 720 -%}{{ item.src | image_url: width: 720 }} 720w,{%- endif -%}
+                                  {%- if item.src.width >= 940 -%}{{ item.src | image_url: width: 940 }} 940w,{%- endif -%}
+                                  {%- if item.src.width >= 1066 -%}{{ item.src | image_url: width: 1066 }} 1820w,{%- endif -%}
+                                  {{ item.src | image_url }} {{ item.src.width }}w
+                                " src="{{ item.src | image_url: width: 648 }}" sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)" alt="{{ item.src.alt | escape }}" class="motion-reduce"
                 {% unless lazy_load==false %}
                 loading="lazy"{% endunless %} width="{{ item.src.width }}" height="{{ item.src.height }}">
-              {%- comment -%}
-                <img class="big-image" src="{{ item.src | img_url: '120x200' }}" loading="lazy" alt="{{ item.alt | escape }}"/>
-              {%- endcomment -%}
             </div>
           {% endfor %}
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
     </div>
     <div class="pdp__details--container">

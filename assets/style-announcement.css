@@ -1,0 +1,25 @@
+
+.announcement {
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    height: 40px;
+}
+
+.announcement__wrapper {
+    width: 100%;
+    height: 40px;
+    background: #FBFBFB;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.announcement__link {
+    color: #000000;
+    text-decoration: none;
+}

@@ -1,0 +1,51 @@
+
+.home-banner {
+    max-width: 1920px;
+    width: 100%;
+    margin: auto;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-banner__image-big__wrapper {
+    width: 60%;
+}
+
+.banner_img {
+    width: 100%;
+}
+
+.home-banner__wrapper {
+    width: 35%;
+    padding-right: 82px;
+}
+
+.home-banner__image-small__wrapper {
+    width: 100%;
+}
+
+.banner_img-small {
+   
+}
+
+.banner__subtitle {
+    margin-top: 40px;
+}
+
+.banner__title {
+    margin: 8px 0px 18px 0px;
+    width: 100%;
+    font-weight: 600;
+}
+
+.banner__description {
+    margin-bottom: 40px;
+}
+
+.banner__link {
+    padding-bottom: 8px;
+    border-bottom: 1px solid black;
+    text-decoration: none;
+}

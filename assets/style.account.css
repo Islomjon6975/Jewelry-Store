@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 20px 0px;
+}
+
+.customer__title {
+    text-align: center;
+}
+
+.customer-info {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.customer-info__title {
+    font-size: 18px;
+    font-weight: 700;
+}

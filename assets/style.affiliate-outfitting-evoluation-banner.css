@@ -1,0 +1,76 @@
+
+.affiliate-outfitting-evoluation-banner__container {
+    max-width: 1920px;
+    width: 100%;
+}
+
+.affiliate-outfitting-evoluation-banner__navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F1F1F1;
+    height: 60px;
+}
+
+.affiliate-outfitting-evoluation-banner__navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 49px;
+}
+
+.affiliate-outfitting-evoluation-banner__navbar li {
+    list-style-type: none;
+}
+
+.affiliate-outfitting-evoluation-banner__navbar a {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 168%;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+}
+
+.affiliate-outfitting-evoluation-banner__body {
+    width: 100%;
+    padding: 80px 40px 120px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 72px;
+}
+
+.affiliate-outfitting-evoluation-banner__body__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.affiliate-outfitting-evoluation-banner__body__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 168%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+.affiliate-outfitting-evoluation-banner__body__description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 167.5%;
+    color: #767676;
+}
+
+.affiliate-outfitting-evoluation-banner__body__image-wrapper {
+    width: 620px;
+}
+
+.affiliate-outfitting-evoluation-banner__body__image {
+    width: 100%;
+}

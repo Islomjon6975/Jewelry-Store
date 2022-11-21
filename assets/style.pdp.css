@@ -256,6 +256,7 @@
     border: 1px solid black;
     max-width: 1140px;
     width: 100%;
+    height: fit-content;
 }
 
 .pdp__banner__image {

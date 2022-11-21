@@ -29,13 +29,14 @@
     height: 100%;
 }
 
-/* .o-imagee {
+.o-imagee {
     width: 150px !important;
     height: 100% ;
     display: flex !important;
     flex-direction: column;
     align-items:center !important;
-} */
+    background: blue;
+}
 
 /* .o-image {
     background: crimson ;

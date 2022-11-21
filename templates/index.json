@@ -1,50 +1,51 @@
 {
   "sections": {
-    "home-rich-text": {
-      "type": "home-rich-text",
+    "header": {
+      "type": "header",
       "settings": {
-        "hero_img": "shopify:\/\/shop_images\/hero_2dba6c55-3adc-4cc4-b18b-1305b106b582.jpg",
-        "secondary_btn": "Explore"
+        "hero_image": "shopify:\/\/shop_images\/hero-image.png",
+        "header_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Amet.",
+        "header_btn": "Shop Collection"
       }
     },
-    "home-products": {
-      "type": "home-products",
+    "featured-collections": {
+      "type": "featured-collections",
       "settings": {
-        "collection_list": [
-          "barbel-tools",
-          "garage-package",
-          "gdc",
-          "jerk-block-set",
-          "medicine-balls"
-        ]
+        "collect_title": "jewelry that not only entices the eye but enchants the soul",
+        "collect_img": "shopify:\/\/shop_images\/image1.png",
+        "product_list": [
+          "medici",
+          "ophelia",
+          "alla",
+          "button-ruby"
+        ],
+        "collect_btn": "SHOP ALL"
       }
     },
-    "home-banners": {
-      "type": "home-banners",
+    "banners": {
+      "type": "banners",
       "settings": {
-        "banner_image": "shopify:\/\/shop_images\/banner.jpg",
-        "banner_imagesmall": "shopify:\/\/shop_images\/image-home-banner-small.jpg",
-        "banner_subtitle": "Best seller",
-        "banner_title": "TRULY, AN ALL IN ONE BARBELL",
-        "banner_description": "Design that matches the performance and quality of other elite level competition bars",
-        "banner_url_name": "Shop weights",
-        "banner_url": ""
+        "banner_img": "shopify:\/\/shop_images\/banners-img1.png",
+        "banner_cta_line": "shopify:\/\/shop_images\/banners-lines.png",
+        "cta_img": "shopify:\/\/shop_images\/banner-flower.png",
+        "cta_title": "Lorem ipsum dolor sit Amet.",
+        "cta_description": "Convallis ac faucibus maecenas blandit elit. Placerat tellus fermentum in amet ac vitae, justo, pellentesque. Diam massa neque, blandit proin dapibus nec."
       }
     },
-    "home-training": {
-      "type": "home-training",
+    "email-signup": {
+      "type": "email-signup",
       "settings": {
-        "training_img": "shopify:\/\/shop_images\/training.jpg",
-        "training_title": "Training in comfort",
-        "training_description": "Incredibly soft Airlume combed and ringspun cotton + poly fabric provides excellent stretch and recovery during even the most intense workouts.",
-        "training_btn": "Shop now"
+        "bg_img": "shopify:\/\/shop_images\/email-cta-image.jpg",
+        "email_cta_title": "Lorem ipsum dolor sit amet consectetur adipiscing.",
+        "email_cta_input_placeholder": "Enter your Email",
+        "email_cta_btn": "Sign up"
       }
     }
   },
   "order": [
-    "home-rich-text",
-    "home-products",
-    "home-banners",
-    "home-training"
+    "header",
+    "featured-collections",
+    "banners",
+    "email-signup"
   ]
 }

@@ -32,16 +32,17 @@
 .o-imagee {
     width: 150px !important;
     height: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items:center !important;
-    justify-content: center !important;
+    
     background: blue !important;
 }
 
 .o-image {
     background: crimson !important;
     height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items:center !important;
+    justify-content: center !important;
 }
 
 .o-gul {
@@ -50,8 +51,8 @@
 }
 
 .o-gul-item {
-    width: 78px;
-    height: 78px;
+    width: 78px !important;
+    height: 78px !important;
 }
 
 .pdp__images--wrapper {

@@ -23,6 +23,11 @@
     justify-self: end;
 }
 
+.o-image {
+    display: flex;
+    flex-direction: column;
+}
+
 .pdp__images--wrapper {
     height: 300px;
     width: 150px;

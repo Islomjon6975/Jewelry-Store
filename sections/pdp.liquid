@@ -30,12 +30,26 @@
   <div class="pdp__container">
     <div class="pdp__image--container">
       <div class="pdp__images--wrapper">
-        {% for item in product.images %}
-          <img class="pdp__image--item lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
-        {% endfor %}
+        <div thumbsSlider="" class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            {% for item in product.images %}
+              <div class="swiper-slide">
+                <img class="pdp__image--item lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
       </div>
       <div class="pdp__image--wrapper">
-        <img class="pdp__image lazyload" src="{{ product.featured_image.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+          <div class="swiper-wrapper">
+            {% for item in product.images %}
+              <div class="swiper-slide">
+                <img class="pdp__image lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
       </div>
     </div>
     <div class="pdp__details--container">
@@ -92,10 +106,6 @@
       </div>
     {% endfor %}
   </div>
-
-  {%- comment -%}
-    You might also like
-  {%- endcomment -%}
   <div class="pdp__you-might-also-like">
     <h2 class="pdp__you-might-also-like__title">You might also like</h2>
     {% assign selected_handles = product.metafields.accentuate.banner_image | split: "|" %}
@@ -155,8 +165,27 @@
     })
   })
 
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true
+  });
+  var swiper2 = new Swiper(".mySwiper2", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    thumbs: {
+      swiper: swiper
+    }
+  });
 
-  var swiperr = new Swiper(".swiperLikes", {
+
+  var youMightAlsoLike = new Swiper(".swiperLikes", {
     direction: "horizontal",
     slidesPerView: 4,
     spaceBetween: 40,

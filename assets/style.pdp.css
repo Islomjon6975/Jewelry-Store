@@ -39,6 +39,10 @@
     background: blue;
 }
 
+.o-image {
+    background: crimson;
+}
+
 .o-gul {
     display: block;
     width: 78px;

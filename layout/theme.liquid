@@ -27,26 +27,15 @@
   src: local("SF New Republic"), url('{{ "SF New Republic" | asset_url }}') format("woff");
   font-display: swap;
 }
-</style>
+</style><script src="{{ 'script.side-cart.js' | asset_url }}" defer> </script>
+
   </head>
 
-    <body class="gradient"> {% section 'announcement-bar' %}
+  <body class="gradient">
+    {% section 'announcement-bar' %}
     {% section 'navbar' %}
     {% section 'side-cart' %}
     {{ content_for_layout }}
     {% section 'footer' %}
   </body>
 </html>
-
-<script>
-  let cartOpen = document.querySelector('#cart-count');
-  let sideCartNav = document.querySelector('.side-cart');
-  let closeCart = document.querySelector('.close__cart');
-  cartOpen.addEventListener('click', () => {
-    sideCartNav.classList.add('open-side-cart');
-  })
-
-  closeCart.addEventListener('click', () => {
-    sideCartNav.classList.remove('open-side-cart');
-  })
-</script>

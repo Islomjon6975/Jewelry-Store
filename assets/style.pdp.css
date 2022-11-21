@@ -65,7 +65,7 @@
     opacity: 0.4;
 }
 
-.product__small-image--wrapper .swiper-slide-active {
+.product__small-images__swiper--wrapper .swiper-slide-active {
     opacity: 1;
 }
 

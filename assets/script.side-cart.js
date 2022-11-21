@@ -200,7 +200,7 @@ mycartProducts.addEventListener('click', (e) => {
     const target = e.target.closest(".cart__product__remove")
     if(!target) return
     const operator = target.dataset.operator
-    const cartItem = target.closest('.mycart__product')
+    const cartItem = target.closest('.cart__product')
     if(operator === 'remove') {
         sideCart.deleteItem({itemID:cartItem.dataset.id})
     }
@@ -212,5 +212,3 @@ mycartProducts.addEventListener('click', (e) => {
     }
 })
   
-let aaa = document.querySelector('.product__item-selected')
-console.log(aaa, 'selected')

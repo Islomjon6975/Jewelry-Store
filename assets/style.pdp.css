@@ -30,15 +30,15 @@
 }
 
 .o-imagee {
-    width: 150px !important;
-    height: 100% !important;
+    width: 150px ;
+    height: 100% ;
     display: flex !important;
     flex-direction: column !important;
     align-items:center !important;
 }
 
 .o-image {
-    background: crimson !important;
+    background: crimson ;
     height: 100% !important;
     display: flex !important;
     flex-direction: column !important;

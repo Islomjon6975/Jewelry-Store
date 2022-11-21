@@ -39,10 +39,10 @@
 </html>
 
 <script>
-  let cartOpen = document.querySelector('.side-cart-open');
+  let cartOpen = document.querySelector('#cart-count');
   let sideCartNav = document.querySelector('.side-cart')
   cartOpen.addEventListener('click', () => {
-    sideCartNav.classList.remove('open-side-cart')
-    console.log('open cart')
+    sideCartNav.classList.add('open-side-cart');
+    console.log('open cart');
   })
 </script>

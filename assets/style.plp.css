@@ -143,7 +143,7 @@
     text-decoration: none;
 }
 
-.pagination__content .pagination-active {
+.pagination__content span {
     background: #FFFFFF;
 }
 

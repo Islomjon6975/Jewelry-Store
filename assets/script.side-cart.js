@@ -212,5 +212,5 @@ mycartProducts.addEventListener('click', (e) => {
     }
 })
   
-let aaa = document.querySelector('.product__item-selected:selected')
+let aaa = document.querySelector('.product__item-selected')
 console.log(aaa, 'selected')

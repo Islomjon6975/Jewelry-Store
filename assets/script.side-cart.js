@@ -196,12 +196,14 @@ form.addEventListener("submit", (e) => {
     // }
   });
 
-const removeItem = document.querySelector('.cart__product__remove')
-removeItem.addEventListener('click', async(e) => {
+async function remove() {
     await sideCart.renderCartItems()
-    const cartItem = document.querySelector('.cart__product')
-    console.log(cartItem?.dataset?.id, 'remove')
-    sideCart.deleteItem({itemID:cartItem?.dataset?.id})
-    
-})
-  
+    const removeItem = document.querySelector('.cart__product__remove')
+    removeItem.addEventListener('click', (e) => {
+        const cartItem = document.querySelector('.cart__product')
+        console.log(cartItem?.dataset?.id, 'remove')
+        sideCart.deleteItem({itemID:cartItem?.dataset?.id})
+    })
+}
+remove()
+

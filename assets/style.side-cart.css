@@ -124,7 +124,26 @@
 }
 
 .cart__product__decrement {
-    
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.cart__product__increment {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.cart__product__count {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cart__product__remove-lin:active {

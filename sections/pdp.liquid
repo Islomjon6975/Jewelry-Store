@@ -46,13 +46,13 @@
             {% for item in product.images %}
               <div class="swiper-slide product__big-image--wrapper">
                 <img srcset="{%- if item.src.width >= 165 -%}{{ item.src | image_url: width: 165 }} 165w,{%- endif -%}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                              {%- if item.src.width >= 360 -%}{{ item.src | image_url: width: 360 }} 360w,{%- endif -%}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                              {%- if item.src.width >= 533 -%}{{ item.src | image_url: width: 533 }} 533w,{%- endif -%}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                              {%- if item.src.width >= 720 -%}{{ item.src | image_url: width: 720 }} 720w,{%- endif -%}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                              {%- if item.src.width >= 940 -%}{{ item.src | image_url: width: 940 }} 940w,{%- endif -%}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                              {%- if item.src.width >= 1066 -%}{{ item.src | image_url: width: 1066 }} 1820w,{%- endif -%}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                              {{ item.src | image_url }} {{ item.src.width }}w
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            " src="{{ item.src | image_url: width: 648 }}" sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)" alt="{{ item.src.alt | escape }}" class="product__big-image"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  {%- if item.src.width >= 360 -%}{{ item.src | image_url: width: 360 }} 360w,{%- endif -%}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  {%- if item.src.width >= 533 -%}{{ item.src | image_url: width: 533 }} 533w,{%- endif -%}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  {%- if item.src.width >= 720 -%}{{ item.src | image_url: width: 720 }} 720w,{%- endif -%}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  {%- if item.src.width >= 940 -%}{{ item.src | image_url: width: 940 }} 940w,{%- endif -%}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  {%- if item.src.width >= 1066 -%}{{ item.src | image_url: width: 1066 }} 1820w,{%- endif -%}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  {{ item.src | image_url }} {{ item.src.width }}w
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                " src="{{ item.src | image_url: width: 648 }}" sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)" alt="{{ item.src.alt | escape }}" class="product__big-image"
                   {% unless lazy_load==false %}
                   loading="lazy"{% endunless %} width="{{ item.src.width }}" height="{{ item.src.height }}">
               </div>
@@ -165,68 +165,59 @@
   const options = document.querySelectorAll('.option_size');
   const productTitle = document.querySelector('.product__title');
   const productPrice = document.querySelector('.product__price');
-  console
-    .log(select, 'select')
-    console
-    .log(options, 'options')
-    console
-    .log(productTitle, 'productTitle')
-    console
-    .log(productPrice, 'productPrice')
-  console
-  .log({{ product | json }}, 'productt')
-select
-.addEventListener('change', (e) => {
-  const productVariants = {{ product.variants | json }};
-  productVariants.forEach(variant => {
-    if (variant.option1 == e.target.value) {
-      productTitle.innerText = variant.name
-        ? variant.name
-        : "{{ product.title }}"
-      const varaintPrice = new Intl.NumberFormat('en-US', opt).format(variant.price / 100);
-      productPrice.innerText = `${varaintPrice}`
-    }
+  select.addEventListener('change', (e) => {
+    const productVariants = {{ product.variants | json }};
+    console.log(productVariants, 'productVariants')
+    productVariants.forEach(variant => {
+      if (variant.option1 == e.target.value) {
+        console.log(variant, 'variant')
+        productTitle.innerText = variant.name
+          ? variant.name
+          : "{{ product.title }}"
+        const varaintPrice = new Intl.NumberFormat('en-US', opt).format(variant.price / 100);
+        productPrice.innerText = `${varaintPrice}`
+      }
+    })
   })
-})
 
-var pdpswiper = new Swiper(".mySwiperPdp", {
-  direction: "vertical",
-  spaceBetween: 10,
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-  mousewheel: true,
-  pagination: {
-    clickable: true
-  }
+  var pdpswiper = new Swiper(".mySwiperPdp", {
+    direction: "vertical",
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    mousewheel: true,
+    pagination: {
+      clickable: true
+    }
 
-});
-var pdpswiper2 = new Swiper(".mySwiper2Pdp", {
-  direction: "horizontal",
-  spaceBetween: 10,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
-  thumbs: {
-    swiper: pdpswiper
-  },
-  mousewheel: true,
-  pagination: {
-    clickable: true
-  }
-});
+  });
+  var pdpswiper2 = new Swiper(".mySwiper2Pdp", {
+    direction: "horizontal",
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    thumbs: {
+      swiper: pdpswiper
+    },
+    mousewheel: true,
+    pagination: {
+      clickable: true
+    }
+  });
 
 
-var youMightAlsoLike = new Swiper(".swiperLikes", {
-  direction: "horizontal",
-  slidesPerView: 4,
-  spaceBetween: 40,
-  mousewheel: true,
-  loop: true,
-  pagination: {
-    el: ".swiperLikes-pagination",
-    clickable: true
-  }
-});
+  var youMightAlsoLike = new Swiper(".swiperLikes", {
+    direction: "horizontal",
+    slidesPerView: 4,
+    spaceBetween: 40,
+    mousewheel: true,
+    loop: true,
+    pagination: {
+      el: ".swiperLikes-pagination",
+      clickable: true
+    }
+  });
 </script>

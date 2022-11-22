@@ -62,7 +62,7 @@ class Cart {
                         <img src="${ item.image }" alt="${ item.title }" class="cart__product__image">
                     </div>
                     <div class="cart__product__details">
-                        <h2 class="cart__product__title">">${ item.title }</h2>
+                        <h2 class="cart__product__title">${ item.title }</h2>
                         <h3 class="cart__product__price">${this.formatter.format(item.price / 100)}</h3>
                         <div class="cart__product__calculation">
                             <button onclick="decreaseItemQuantity('${item.key}', ${item.quantity})" data-operator="minus" class="cart__product__decrement item__control">-</button>

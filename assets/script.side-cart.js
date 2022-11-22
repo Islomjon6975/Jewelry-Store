@@ -69,7 +69,7 @@ class Cart {
                             <span class="cart__product__count">${item.quantity}</span>
                             <button data-operator="plus" class="cart__product__increment item__control">+</button>
                         </div>
-                        <h4 data-operator="remove" class="cart__product__remove item__control">
+                        <h4 onclick="removeItem(${item.key})" data-operator="remove" class="cart__product__remove item__control">
                             <a href="#" class="cart__product__remove-link h4">Remove</a>
                         </h4>
                     </div>
@@ -197,29 +197,32 @@ form.addEventListener("submit", (e) => {
   });
 
 
+function removeItem(itemKey) {
+    console.log(itemKey,'removed')
+}
 
 
 
-const mycartProducts = document.querySelector('.cart__products')
-mycartProducts?.addEventListener('click', (e) => {
-    const target = e.target.closest(".item__control")
-    console.log(target, 'target')
-    if(!target) return
-    const operator = target.dataset.operator
-    console.log(operator, 'operator')
-    const cartItem = target.closest(".item-pro")
-    console.log(cartItem, 'cartItem')
-    if(operator === 'remove') {
-        console.log(cartItem.dataset.id,'removed')
-        sideCart.deleteItem({itemID:cartItem.dataset.id})
-    }
-    if(operator === 'plus') {
-        sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
-    }  
-    if(operator === 'minus') {
-        sideCart.decreaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
-    }
-})
+// const mycartProducts = document.querySelector('.cart__products')
+// mycartProducts?.addEventListener('click', (e) => {
+//     const target = e.target.closest(".item__control")
+//     console.log(target, 'target')
+//     if(!target) return
+//     const operator = target.dataset.operator
+//     console.log(operator, 'operator')
+//     const cartItem = target?.closest(".item-pro")
+//     console.log(cartItem, 'cartItem')
+//     if(operator === 'remove') {
+//         console.log(cartItem.dataset.id,'removed')
+//         sideCart.deleteItem({itemID:cartItem.dataset.id})
+//     }
+//     if(operator === 'plus') {
+//         sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
+//     }  
+//     if(operator === 'minus') {
+//         sideCart.decreaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
+//     }
+// })
 
 
     // const removeItem = document.querySelector('.cart__products .cart__product__remove')

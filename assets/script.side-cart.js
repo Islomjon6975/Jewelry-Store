@@ -208,7 +208,7 @@ async function lastOperations() {
         if(!target) return
         const operator = target.dataset.operator
         console.log(operator, 'operator')
-        const cartItem = target.closest('.cart__product')
+        const cartItem = e.target.closest('.cart__product')
         console.log(cartItem, 'cartItem')
         if(operator === 'remove') {
             console.log(cartItem.dataset.id,'removed')

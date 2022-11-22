@@ -202,13 +202,13 @@ async function lastOperations() {
     await sideCart.updateCart()
 
     const mycartProducts = document.querySelector('.cart__products')
-    mycartProducts.addEventListener('click', (e) => {
+    mycartProducts?.addEventListener('click', (e) => {
         const target = e.target.closest(".item__control")
         console.log(target, 'target')
         if(!target) return
         const operator = target.dataset.operator
         console.log(operator, 'operator')
-        const cartItem = target.closest('.cart__item')
+        const cartItem = target.closest(".cart__item")
         console.log(cartItem, 'cartItem')
         if(operator === 'remove') {
             console.log(cartItem.dataset.id,'removed')

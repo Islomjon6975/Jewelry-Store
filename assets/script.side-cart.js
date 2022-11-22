@@ -198,36 +198,36 @@ form.addEventListener("submit", (e) => {
 
 async function remove () {
     await sideCart.renderCartItems()
-    const cartItem = document.querySelector('.cart__product')
+    const cartItem = document.querySelector('.cart__products .cart__product')
     console.log(cartItem?.dataset?.id, 'remove')
     sideCart.deleteItem({itemID:cartItem?.dataset?.id})
 }
 
-const removeItem = document.querySelector('.cart__product__remove')
-removeItem.addEventListener('click', remove)
+const removeItem = document.querySelector('.cart__products .cart__product__remove')
+removeItem?.addEventListener('click', remove)
   
 
 
 async function increment () {
     await sideCart.renderCartItems()
-    const cartItem = document.querySelector('.cart__product')
+    const cartItem = document.querySelector('.cart__products .cart__product')
     console.log(cartItem?.dataset?.id, 'plus')
     sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
 
 }
 
-const cart__product__increment = document.querySelector('.cart__product__increment')
-cart__product__increment.addEventListener('click', increment)
+const cart__product__increment = document.querySelector('.cart__products .cart__product__increment')
+cart__product__increment?.addEventListener('click', increment)
   
 
 
 async function decrement () {
     await sideCart.renderCartItems()
-    const cartItem = document.querySelector('.cart__product')
+    const cartItem = document.querySelector('.cart__products .cart__product')
     console.log(cartItem?.dataset?.id, 'decrement')
     sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
 }
 
-const cart__product__decrement = document.querySelector('.cart__product__decrement')
-cart__product__decrement.addEventListener('click', decrement)
+const cart__product__decrement = document.querySelector('.cart__products .cart__product__decrement')
+cart__product__decrement?.addEventListener('click', decrement)
   

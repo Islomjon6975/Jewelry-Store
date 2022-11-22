@@ -65,9 +65,9 @@ class Cart {
                         <h2 class="cart__product__title">">${ item.title }</h2>
                         <h3 class="cart__product__price">${this.formatter.format(item.price / 100)}</h3>
                         <div class="cart__product__calculation">
-                            <button data-operator="minus" class="cart__product__decrement item__control">-</button>
+                            <button onclick="decreaseItemQuantity('${item.key}', ${item.quantity})" data-operator="minus" class="cart__product__decrement item__control">-</button>
                             <span class="cart__product__count">${item.quantity}</span>
-                            <button data-operator="plus" class="cart__product__increment item__control">+</button>
+                            <button onclick="increaseItemQuantity('${item.key}', ${item.quantity})" data-operator="plus" class="cart__product__increment item__control">+</button>
                         </div>
                         <h4 onclick="removeItem('${item.key}')" data-operator="remove" class="cart__product__remove item__control">
                             <a href="#" class="cart__product__remove-link h4">Remove</a>
@@ -200,6 +200,17 @@ form.addEventListener("submit", (e) => {
 async function removeItem(itemKey) {
     console.log(itemKey,'removed')
     await sideCart.deleteItem({itemID: itemKey})
+}
+
+async function increaseItemQuantity(itemKey, quatity) {
+    console.log(itemKey, quatity,'increase')
+    await sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: quatity})
+}
+
+
+async function decreaseItemQuantity(itemKey, quatity) {
+    console.log(itemKey, quatity,'decrease')
+    await sideCart.decreaseItemAmount({itemID:cartItem.dataset.id, itemAmount: quatity})
 }
 
 

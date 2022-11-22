@@ -203,8 +203,8 @@ async function lastOperations() {
     console.log(removeItem, 'removeItem')
     removeItem?.addEventListener('click', async() => {
         await sideCart.updateCart()
-        console.log(cartItem?.dataset?.id, 'remove')
         const cartItem = document.querySelector('.cart__products .cart__product')
+        console.log(cartItem?.dataset?.id, 'remove')
         sideCart.deleteItem({itemID:cartItem?.dataset?.id})
     })
     

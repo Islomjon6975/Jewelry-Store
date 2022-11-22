@@ -57,7 +57,7 @@ class Cart {
         for (let item of cartDetails.items) {
             console.log(item, 'item')
             const template = `
-                <div class="cart__product" length=${cartDetails.items.length} data-id="${item.key}" data-amount="${item.quantity}>
+                <div class="cart__product cart__item" length=${cartDetails.items.length} data-id="${item.key}" data-amount="${item.quantity}>
                     <div class="cart__product__image-wrapper">
                         <img src="${ item.image }" alt="${ item.title }" class="cart__product__image">
                     </div>
@@ -208,7 +208,7 @@ async function lastOperations() {
         if(!target) return
         const operator = target.dataset.operator
         console.log(operator, 'operator')
-        const cartItem = e.target.closest('.cart__product')
+        const cartItem = target.closest('.cart__item')
         console.log(cartItem, 'cartItem')
         if(operator === 'remove') {
             console.log(cartItem.dataset.id,'removed')

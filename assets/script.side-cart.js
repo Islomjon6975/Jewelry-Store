@@ -69,7 +69,7 @@ class Cart {
                             <span class="cart__product__count">${item.quantity}</span>
                             <button data-operator="plus" class="cart__product__increment item__control">+</button>
                         </div>
-                        <h4 onclick="removeItem(${item.key})" data-operator="remove" class="cart__product__remove item__control">
+                        <h4 onclick="removeItem("${item.key}")" data-operator="remove" class="cart__product__remove item__control">
                             <a href="#" class="cart__product__remove-link h4">Remove</a>
                         </h4>
                     </div>

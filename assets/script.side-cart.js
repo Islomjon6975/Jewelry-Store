@@ -196,38 +196,46 @@ form.addEventListener("submit", (e) => {
     // }
   });
 
-
-const removeItem = document.querySelector('.cart__products .cart__product__remove')
-console.log(removeItem, 'removeItem')
-removeItem?.addEventListener('click', async() => {
+async function lastOperations() { 
     await sideCart.updateCart()
-    console.log(cartItem?.dataset?.id, 'remove')
-    const cartItem = document.querySelector('.cart__products .cart__product')
-    sideCart.deleteItem({itemID:cartItem?.dataset?.id})
-})
-  
+
+    const removeItem = document.querySelector('.cart__products .cart__product__remove')
+    console.log(removeItem, 'removeItem')
+    removeItem?.addEventListener('click', async() => {
+        await sideCart.updateCart()
+        console.log(cartItem?.dataset?.id, 'remove')
+        const cartItem = document.querySelector('.cart__products .cart__product')
+        sideCart.deleteItem({itemID:cartItem?.dataset?.id})
+    })
+    
+
+    async function increment () {
+        await sideCart.renderCartItems()
+        const cartItem = document.querySelector('.cart__products .cart__product')
+        console.log(cartItem?.dataset?.id, 'plus')
+        sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
+
+    }
+
+    const cart__product__increment = document.querySelector('.cart__products .cart__product__increment')
+    cart__product__increment?.addEventListener('click', increment)
+    
 
 
-async function increment () {
-    await sideCart.renderCartItems()
-    const cartItem = document.querySelector('.cart__products .cart__product')
-    console.log(cartItem?.dataset?.id, 'plus')
-    sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
+    async function decrement () {
+        await sideCart.renderCartItems()
+        const cartItem = document.querySelector('.cart__products .cart__product')
+        console.log(cartItem?.dataset?.id, 'decrement')
+        sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
+    }
+
+    const cart__product__decrement = document.querySelector('.cart__products ~.cart__product__decrement')
+    cart__product__decrement?.addEventListener('click', decrement)
 
 }
 
-const cart__product__increment = document.querySelector('.cart__products .cart__product__increment')
-cart__product__increment?.addEventListener('click', increment)
-  
+lastOperations()
 
 
-async function decrement () {
-    await sideCart.renderCartItems()
-    const cartItem = document.querySelector('.cart__products .cart__product')
-    console.log(cartItem?.dataset?.id, 'decrement')
-    sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
-}
 
-const cart__product__decrement = document.querySelector('.cart__products ~.cart__product__decrement')
-cart__product__decrement?.addEventListener('click', decrement)
   

@@ -134,14 +134,18 @@
 }
 
 .pagination__content a {
+    text-decoration: none;
+}
+
+.pagination__content span {
     width: 40px;
     height: 40px;
-    background: #FFFFFF;
     border-radius: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    background: #FFFFFF;
 }
 
 .pagination__link {

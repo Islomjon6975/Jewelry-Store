@@ -14,8 +14,20 @@
     {{ 'style.side-cart.css' | asset_url | stylesheet_tag}}
     {{ 'style.base.css' | asset_url | stylesheet_tag }}
     {{ 'style.normalize.css' | asset_url | stylesheet_tag }}
-  {{ 'style.typography.css' | asset_url | stylesheet_tag }}
+    {{ 'style.typography.css' | asset_url | stylesheet_tag }}
     <!-- ======================================== Js ======================================== -->
+      <style>
+@font-face {
+  font-family: "MinionPro-Regular";
+  src: local("MinionPro-Regular"), url('{{ "MinionPro-Regular" | asset_url }}') format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF New Republic";
+  src: local("SF New Republic"), url('{{ "SF New Republic" | asset_url }}') format("woff");
+  font-display: swap;
+}
+</style><script src="{{ 'script.side-cart.js' | asset_url }}" defer> </script>
 
   </head>
 
@@ -27,12 +39,3 @@
     {% section 'footer' %}
   </body>
 </html>
-
-<script>
-  let cartOpen = document.querySelector('.side-cart-open');
-  let sideCartNav = document.querySelector('.side-cart')
-  cartOpen.addEventListener('click', () => {
-    sideCartNav.classList.remove('open-side-cart')
-    console.log('open cart')
-  })
-</script>

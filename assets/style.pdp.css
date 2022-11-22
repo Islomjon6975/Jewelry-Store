@@ -24,133 +24,53 @@
     justify-self: end;
 }
 
-.big-image {
+.product__big-image--container {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items:center;
+    border: none !important;
 }
 
-.o-imagee {
-    width: 150px !important;
-    height: 100% ;
-    /* display: flex !important;
-    flex-direction: column;
-    align-items:center !important; */
-    background: blue;
-}
-
-
-/* .o-image {
-    background: crimson ;
-    height: 100% !important;
+.product__big-image--wrapper {
+    width: 100%;
+    height: 100%;
     display: flex !important;
-    flex-direction: column !important;
-    align-items:center !important;
     justify-content: center !important;
-} */
-
-.o-gul {
-    width: 78px !important;
-    height: 78px !important;
+    align-items:center !important;
 }
 
-.o-gul-item {
-    width: 78px !important;
-    height: 78px !important;
+.product__big-image {
 }
 
-.mySwiperPdp .swiper-slide {
-    width: 25%;
+.product__small-images {
+    width: 138px;
     height: 100%;
-    opacity: 0.4;
+    
 }
 
-.mySwiperPdp .swiper-slide-thumb-active {
-    opacity: 1;
-}
-
-.mySwiper2Pdp {
-    width: 100%;
-    height: 100%;
+.product__small-images__swiper--wrapper {
+    width: 100% !important;
     display: flex;
     justify-content: center;
-    align-items:center;
-    background: red;
+    align-items:center;    
 }
 
-.pdp__images--wrapper {
-    height: 300px;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    gap: 20px;
-    background: green;
-}
-
-.pdp__image--item {
+.product__small-image--wrapper {
     width: 78px;
     height: 78px;
 }
 
-.pdp__image--item:hover {
-    transform: scale(1.1);
-}
 
-.pdp__image--wrapper {
-    height: 100%;
-    width: 100%;
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-}
 
-.pdp__image {
-    height: 100%;
-}
-
-/* Image Modal */
-
-.image-modal {
-    width: 100%;
-    min-height: 100vh;
-    position: absolute;
-    top: -50px;
-    left: 0;
-    z-index: 999;
-    background-color: white;
-    display: none;
-}
-
-.image-modal__wrapper {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    position: relative;
+.product__small-image {
     width: 100%;
     height: 100%;
 }
 
-.close {
-    position: absolute;
-    top: 56px;
-    right: 32px;
-}
-
-.modal__images {
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: center;
-}
-
-.modal__image {
-    width: 300px;
-    border: 1px solid black;
+.product__small-image:active {
+    transform: scale(0.97);
 }
 
 /* Product Details */

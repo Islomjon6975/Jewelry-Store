@@ -57,7 +57,7 @@ class Cart {
         for (let item of cartDetails.items) {
             console.log(item, 'item')
             const template = `
-                <div class="cart__product cart__item" length=${cartDetails.items.length} data-id="${item.key}" data-amount="${item.quantity}>
+                <div class="cart__product item-pro" length=${cartDetails.items.length} data-id="${item.key}" data-amount="${item.quantity}>
                     <div class="cart__product__image-wrapper">
                         <img src="${ item.image }" alt="${ item.title }" class="cart__product__image">
                     </div>
@@ -198,29 +198,28 @@ form.addEventListener("submit", (e) => {
 
 
 
-async function lastOperations() { 
-    await sideCart.updateCart()
 
-    const mycartProducts = document.querySelector('.cart__products')
-    mycartProducts?.addEventListener('click', (e) => {
-        const target = e.target.closest(".item__control")
-        console.log(target, 'target')
-        if(!target) return
-        const operator = target.dataset.operator
-        console.log(operator, 'operator')
-        const cartItem = target.closest(".cart__item")
-        console.log(cartItem, 'cartItem')
-        if(operator === 'remove') {
-            console.log(cartItem.dataset.id,'removed')
-            sideCart.deleteItem({itemID:cartItem.dataset.id})
-        }
-        if(operator === 'plus') {
-            sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
-        }  
-        if(operator === 'minus') {
-            sideCart.decreaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
-        }
-    })
+
+const mycartProducts = document.querySelector('.cart__products')
+mycartProducts?.addEventListener('click', (e) => {
+    const target = e.target.closest(".item__control")
+    console.log(target, 'target')
+    if(!target) return
+    const operator = target.dataset.operator
+    console.log(operator, 'operator')
+    const cartItem = target.closest(".item-pro")
+    console.log(cartItem, 'cartItem')
+    if(operator === 'remove') {
+        console.log(cartItem.dataset.id,'removed')
+        sideCart.deleteItem({itemID:cartItem.dataset.id})
+    }
+    if(operator === 'plus') {
+        sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
+    }  
+    if(operator === 'minus') {
+        sideCart.decreaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
+    }
+})
 
 
     // const removeItem = document.querySelector('.cart__products .cart__product__remove')
@@ -255,9 +254,7 @@ async function lastOperations() {
     // const cart__product__decrement = document.querySelector('.cart__products ~.cart__product__decrement')
     // cart__product__decrement?.addEventListener('click', decrement)
 
-}
 
-lastOperations()
 
 
 

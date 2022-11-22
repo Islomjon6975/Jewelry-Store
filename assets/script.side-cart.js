@@ -202,15 +202,15 @@ async function removeItem(itemKey) {
     await sideCart.deleteItem({itemID: itemKey})
 }
 
-async function increaseItemQuantity(itemKey, quatity) {
-    console.log(itemKey, quatity,'increase')
-    await sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: quatity})
+async function increaseItemQuantity(itemKey, quantity) {
+    console.log(itemKey, quantity,'increase')
+    await sideCart.increaseItemAmount({itemID:itemKey, itemAmount: quantity})
 }
 
 
-async function decreaseItemQuantity(itemKey, quatity) {
-    console.log(itemKey, quatity,'decrease')
-    await sideCart.decreaseItemAmount({itemID:cartItem.dataset.id, itemAmount: quatity})
+async function decreaseItemQuantity(itemKey, quantity) {
+    console.log(itemKey, quantity,'decrease')
+    await sideCart.decreaseItemAmount({itemID:itemKey, itemAmount: quantity})
 }
 
 

@@ -196,15 +196,15 @@ form.addEventListener("submit", (e) => {
     // }
   });
 
-async function remove () {
+async function removeItemFunction () {
     await sideCart.renderCartItems()
-    const cartItem = document.querySelector('.cart__products .cart__product')
     console.log(cartItem?.dataset?.id, 'remove')
+    const cartItem = document.querySelector('.cart__products .cart__product')
     sideCart.deleteItem({itemID:cartItem?.dataset?.id})
 }
 
 const removeItem = document.querySelector('.cart__products .cart__product__remove')
-removeItem?.addEventListener('click', remove)
+removeItem?.addEventListener('click', removeItemFunction())
   
 
 
@@ -228,6 +228,6 @@ async function decrement () {
     sideCart.increaseItemAmount({itemID:cartItem.dataset.id, itemAmount: cartItem.dataset.amount})
 }
 
-const cart__product__decrement = document.querySelector('.cart__products .cart__product__decrement')
+const cart__product__decrement = document.querySelector('.cart__products ~.cart__product__decrement')
 cart__product__decrement?.addEventListener('click', decrement)
   

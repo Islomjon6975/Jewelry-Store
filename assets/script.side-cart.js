@@ -198,6 +198,7 @@ form.addEventListener("submit", (e) => {
 
 
 const removeItem = document.querySelector('.cart__products .cart__product__remove')
+console.log(removeItem, 'removeItem')
 removeItem?.addEventListener('click', async() => {
     await sideCart.updateCart()
     console.log(cartItem?.dataset?.id, 'remove')

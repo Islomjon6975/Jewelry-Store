@@ -103,7 +103,6 @@ class Cart {
         const hasOnlyDefaultVariant = document.querySelector('#form-product')
         const novariant = document.querySelector('.product-details__noVariant')
         const variantId = document.querySelector(".product__item-selected");
-        console.log(variantId.dataset.variantid, 'variantid')
         const formData = {
             items: [{
                 id: hasOnlyDefaultVariant.getAttribute('data-noVariant') == 'true' ? novariant.getAttribute('data-id') :  variantId.dataset.variantid,

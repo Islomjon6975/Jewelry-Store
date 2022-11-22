@@ -1,4 +1,27 @@
+function ProductDetailsChangeDependingOnVariant() {
+    const opt = {
+        style: 'currency',
+        currency: 'USD'
+    };
+    const select = document.querySelector('.select_size');
+    const options = document.querySelectorAll('.option_size');
+    const productTitle = document.querySelector('.product__title');
+    const productPrice = document.querySelector('.product__price');
+    console.log({{ product | json }}, 'productt')
+    select.addEventListener('change', (e) => {
+    const productVariants = {{ product.variants | json }};
+    productVariants.forEach(variant => {
+        if (variant.option1 == e.target.value) {
+        productTitle.innerText = variant.name
+            ? variant.name
+            : "{{ product.title }}"
+        const varaintPrice = new Intl.NumberFormat('en-US', opt).format(variant.price / 100);
+        productPrice.innerText = `${varaintPrice}`
+        }
+    })
+}
 
+ProductDetailsChangeDependingOnVariant()
 
 class Cart {
     formatter = new Intl.NumberFormat('en-US', {

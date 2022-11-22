@@ -1,12 +1,14 @@
 {
   "sections": {
-    "account": {
-      "type": "graphql-account",
+    "main": {
+      "type": "main-account",
       "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "account"
+    "main"
   ]
 }

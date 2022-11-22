@@ -1,12 +1,14 @@
 {
   "sections": {
-    "register": {
-      "type": "graphql-register",
+    "main": {
+      "type": "main-register",
       "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "register"
+    "main"
   ]
 }

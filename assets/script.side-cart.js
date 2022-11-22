@@ -199,12 +199,12 @@ form.addEventListener("submit", (e) => {
 async function lastOperations() { 
     await sideCart.updateCart()
 
+    var cartItem = document.querySelector('.cart__products .cart__product')
     const removeItem = document.querySelector('.cart__products .cart__product__remove')
     console.log(removeItem, 'removeItem')
+    console.log(cartItem, 'cartItem')
     removeItem?.addEventListener('click', async() => {
         await sideCart.updateCart()
-        const cartItem = document.querySelector('.cart__products .cart__product')
-        console.log(cartItem, 'cartItem')
         console.log(cartItem?.dataset?.id, 'remove')
         sideCart.deleteItem({itemID:cartItem?.dataset?.id})
     })

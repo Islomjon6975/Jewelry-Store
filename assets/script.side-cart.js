@@ -197,8 +197,9 @@ form.addEventListener("submit", (e) => {
   });
 
 
-function removeItem(itemKey) {
+async function removeItem(itemKey) {
     console.log(itemKey,'removed')
+    await sideCart.deleteItem({itemID: itemKey})
 }
 
 

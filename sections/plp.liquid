@@ -47,7 +47,7 @@
         <label class="label h4" for="collections">Collections</label>
         <select class="select h4" name="" id="collection_list">
           {% for collection in collections %}
-            <option class="option h4" value="{{ collection.title }}"><a href="{{ collection.url }}">{{ collection.title }}</a></option>
+            <option class="option h4" value="{{ collection.url }}"><a href="{{ collection.url }}">{{ collection.title }}</a></option>
           {% endfor %}
         </select>
         

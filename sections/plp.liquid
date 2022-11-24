@@ -1,5 +1,6 @@
 {{ 'style.plp.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'script.sort_by.js' | asset_url }}" defer></script>
+<script src="{{ 'script.plp.js' | asset_url }}" defer></script>
 
 
 <div class="plp">
@@ -44,8 +45,8 @@
 
       <div class="collection__wrapper">
         <label class="label h4" for="collections">Collections</label>
-        <select class="select h4" name="" id="collections">
-          {% for collection in section.settings.plp_collections %}
+        <select class="select h4" name="" id="collection_list">
+          {% for collection in collections %}
             <option class="option h4" value="{{ collection.title }}"><a href="{{ collection.url }}">{{ collection.title }}</a></option>
           {% endfor %}
         </select>

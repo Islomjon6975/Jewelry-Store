@@ -29,7 +29,8 @@
 }
 </style><script src="{{ 'script.side-cart.js' | asset_url }}" defer> </script>
 
-  </head>
+  {% include "onvoard-initialize-head" %}
+</head>
 
   <body class="gradient">
     {% section 'announcement-bar' %}
@@ -41,5 +42,6 @@
     {% include 'swymSnippet' %}
     {% include 'smile-initializer' %}
 
+{% include "onvoard-appscripts" %}
 </body>
 </html>

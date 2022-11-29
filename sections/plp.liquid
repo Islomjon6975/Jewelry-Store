@@ -72,9 +72,9 @@
           </div>
         {% endfor %}
 
-          {% for product in collection.products %}
-            {% render 'product', product: {{product}} %}
-          {% endfor %}
+        {% for product in collection.products %}
+          {% render 'product', product: {{product}} %}
+        {% endfor %}
       </div>
       <div class="pagination">
         <a href="{{ paginate.previous.url }}" class="pagination__link h4 {% if paginate.previous.url %}pagination-active{% endif %}">Previous</a>

@@ -112,6 +112,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
+    grid-template-areas: 'p1 p2 p3'
+    'p4 b1 b1'
+    'p5 p6';
 }
 
 

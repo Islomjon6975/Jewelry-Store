@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link
+      rel="preconnect"
+      href="https://cdn.shopify.com"
+      crossorigin>
     {{ content_for_header }}
     <!-- ======================================== Header hook for plugins ======================================== -->
     <!-- ======================================== Styles ======================================== -->
     {{ 'style.fonts.css' | asset_url | stylesheet_tag }}
-    {{ 'style.side-cart.css' | asset_url | stylesheet_tag}}
+    {{ 'style.side-cart.css' | asset_url | stylesheet_tag }}
     {{ 'style.base.css' | asset_url | stylesheet_tag }}
     {{ 'style.normalize.css' | asset_url | stylesheet_tag }}
     {{ 'style.typography.css' | asset_url | stylesheet_tag }}
@@ -29,8 +32,8 @@
 }
 </style><script src="{{ 'script.side-cart.js' | asset_url }}" defer> </script>
 
-  {% include "onvoard-initialize-head" %}
-</head>
+    {% include "onvoard-initialize-head" %}
+  </head>
 
   <body class="gradient">
     {% section 'announcement-bar' %}
@@ -38,10 +41,10 @@
     {% section 'side-cart' %}
     {{ content_for_layout }}
     {% section 'footer' %}
-  
+
     {% include 'swymSnippet' %}
     {% include 'smile-initializer' %}
 
-{% include "onvoard-appscripts" %}
-</body>
+    {% include "onvoard-appscripts" %}
+  </body>
 </html>

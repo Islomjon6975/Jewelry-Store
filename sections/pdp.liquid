@@ -1,6 +1,6 @@
-{{ 'style.pdp.css' | asset_url | stylesheet_tag}}
+{{ 'style.pdp.css' | asset_url | stylesheet_tag }}
 {{ 'style.card.css' | asset_url | stylesheet_tag }}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="{{ 'script.pdp.js' | asset_url }}" defer></script>
 <style>
@@ -16,27 +16,33 @@
 
 <div class="pdp">
   {%- comment -%}
-    <div class="image-modal">
-    <div class="image-modal__wrapper">
-    <span class="close">
-    {% render 'icon-close' %}
-    </span>
-    <div class="modal__images">
-    {% for item in product.images %}
-    <img class="modal__image lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
-    {% endfor %}
-    </div>
-    </div>
-    </div>
-  {%- endcomment -%}
-  <form id="form-product" data-selling_plan_id="{{ product.selling_plan_groups.size }}" data-noVariant="{{ product.has_only_default_variant }}">
+  <div class="image-modal">
+  <div class="image-modal__wrapper">
+  <span class="close">
+  {% render 'icon-close' %}
+  </span>
+  <div class="modal__images">
+  {% for item in product.images %}
+  <img class="modal__image lazyload" src="{{ item.src | img_url }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ section.settings.pdp_img.aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ section.settings.pdp_img.alt | escape }}">
+  {% endfor %}
+  </div>
+  </div>
+  </div>
+  {%- endcomment -%}<form
+    id="form-product"
+    data-selling_plan_id="{{ product.selling_plan_groups.size }}"
+    data-noVariant="{{ product.has_only_default_variant }}">
     <div class="pdp__container">
       <div class="pdp__image--container ">
         <div thumbsSlider="" class="swiper mySwiperPdp product__small-images">
           <div class="swiper-wrapper product__small-images__swiper--wrapper">
             {% for item in product.images %}
               <div class="swiper-slide product__small-image--wrapper">
-                <img class="product__small-image" src="{{ item.src | img_url: '720x900' }}" loading="lazy" alt="{{ item.alt | escape }}"/>
+                <img
+                  class="product__small-image"
+                  src="{{ item.src | img_url: '720x900' }}"
+                  loading="lazy"
+                  alt="{{ item.alt | escape }}" />
               </div>
             {% endfor %}
           </div>
@@ -45,16 +51,30 @@
           <div class="swiper-wrapper">
             {% for item in product.images %}
               <div class="swiper-slide product__big-image--wrapper">
-                <img srcset="{%- if item.src.width >= 165 -%}{{ item.src | image_url: width: 165 }} 165w,{%- endif -%}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          {%- if item.src.width >= 360 -%}{{ item.src | image_url: width: 360 }} 360w,{%- endif -%}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          {%- if item.src.width >= 533 -%}{{ item.src | image_url: width: 533 }} 533w,{%- endif -%}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          {%- if item.src.width >= 720 -%}{{ item.src | image_url: width: 720 }} 720w,{%- endif -%}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          {%- if item.src.width >= 940 -%}{{ item.src | image_url: width: 940 }} 940w,{%- endif -%}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          {%- if item.src.width >= 1066 -%}{{ item.src | image_url: width: 1066 }} 1820w,{%- endif -%}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          {{ item.src | image_url }} {{ item.src.width }}w
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        " src="{{ item.src | image_url: width: 648 }}" sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)" alt="{{ item.src.alt | escape }}" class="product__big-image"
-                  {% unless lazy_load==false %}
-                  loading="lazy"{% endunless %} width="{{ item.src.width }}" height="{{ item.src.height }}">
+                <img
+                  srcset="{%- if item.src.width >= 165 -%}
+                  {{ item.src | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if item.src.width >= 360 -%}
+                  {{ item.src | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if item.src.width >= 533 -%}
+                  {{ item.src | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if item.src.width >= 720 -%}
+                  {{ item.src | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if item.src.width >= 940 -%}
+                  {{ item.src | image_url: width: 940 }} 940w,{%- endif -%}
+                {%- if item.src.width >= 1066 -%}
+                  {{ item.src | image_url: width: 1066 }} 1820w,{%- endif -%}
+                {{ item.src | image_url }} {{ item.src.width }}w
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "
+                src="{{ item.src | image_url: width: 648 }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                alt="{{ item.src.alt | escape }}"
+                class="product__big-image"
+                {% unless lazy_load == false %}
+                loading="lazy"
+                {% endunless %}
+                width="{{ item.src.width }}"
+                height="{{ item.src.height }}">
               </div>
             {% endfor %}
           </div>
@@ -65,11 +85,22 @@
         <h1 class="product__title">{{ product.title }}</h1>
         <h2 class="product__price">{{ product.price | money }}</h2>
         {% unless product.variants[0].title == 'Default Title' %}
-          {% if product.variants  %}
-            <select class="select select_size h4" id="" data-set="{{ product.variants }}">
-              <option class="option h4 " value="Select Size" selected disabled>Select Size</option>
+          {% if product.variants %}
+            <select
+              class="select select_size h4"
+              id=""
+              data-set="{{ product.variants }}">
+              <option
+                class="option h4 "
+                value="Select Size"
+                selected
+                disabled>Select Size</option>
               {% for variant in product.variants %}
-                <option data-variant="{{variant}}" data-variantid="{{ variant.id }}" class="option option_size h4 product__item-selected" value="{{ variant.option1 }}">{{ variant.option1 }}
+                <option
+                  data-variant="{{variant}}"
+                  data-variantid="{{ variant.id }}"
+                  class="option option_size h4 product__item-selected"
+                  value="{{ variant.option1 }}">{{ variant.option1 }}
                 </option>
               {% endfor %}
             </select>
@@ -105,7 +136,15 @@
       <div class="pdp__banner__wrapper">
         <div class="pdp__banner__image">
           {% if product_banner_image[forloop.index0] != blank %}
-            <img class="banner__img lazyload" src="{{  product_banner_image[forloop.index0][0].src }}" data-src="{{ img_url }}" data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]" data-aspectratio="{{ product_banner_image[forloop.index0][0].aspect_ratio }}" data-sizes="auto" data-parent-fit="cover" alt="{{ product_banner_image[forloop.index0][0].alt | escape }}">
+            <img
+              class="banner__img lazyload"
+              src="{{  product_banner_image[forloop.index0][0].src }}"
+              data-src="{{ img_url }}"
+              data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
+              data-aspectratio="{{ product_banner_image[forloop.index0][0].aspect_ratio }}"
+              data-sizes="auto"
+              data-parent-fit="cover"
+              alt="{{ product_banner_image[forloop.index0][0].alt | escape }}">
           {% endif %}
         </div>
         <div class="pdp__banner__content">
@@ -126,7 +165,10 @@
           <div class="swiper-slide">
             <div class="card">
               <div class="card__image-wrapper">
-                <img src="{{ item.featured_image.src | img_url}}" alt="{{ item.handle }}" class="card__img">
+                <img
+                  src="{{ item.featured_image.src | img_url}}"
+                  alt="{{ item.handle }}"
+                  class="card__img">
               </div>
               <div class="card__details">
                 <h3 class="card__title">{{ item.title }}</h3>
@@ -205,7 +247,6 @@
       clickable: true
     }
   });
-
 
   var youMightAlsoLike = new Swiper(".swiperLikes", {
     direction: "horizontal",
